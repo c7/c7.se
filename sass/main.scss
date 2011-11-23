@@ -1,0 +1,165 @@
+/* #Variables
+================================================== */
+
+  $green: #7CAF3C;
+  $gray: #aaa;
+
+/* #Imports
+================================================== */
+
+  @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300);
+
+  @import "skeleton";
+  @import "syntax";
+  @import "base";
+
+/* #Site Styles
+================================================== */
+
+.font-bold { font-weight: 700; }
+.font-normal { font-weight: 400; }
+.font-book { font-weight: 300; }
+
+.hidden { display: none; }
+
+/* #Page Styles
+================================================== */
+
+.highlight {
+  margin-top: 2em;
+  font-family: Monaco, Monospace;
+  font-size: 13px;
+
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+
+  pre {
+    overflow: scroll;
+  }
+}
+
+.huge {
+  font-size: 4em;
+  line-height: 1.1em;
+  font-weight: 400;
+  color: darken($gray, 40);
+  .greeting {
+    vertical-align: top;
+    color: lighten($gray, 5);
+  }
+}
+
+.amp {
+  font-family: Baskerville, Palatino, "Book Antiqua", serif;
+  font-style: italic;
+}
+
+#logo {
+  min-height: 80px;
+  background: transparent url("/images/logo.png") no-repeat top right;
+  text-indent: -5000em;
+  margin: 0;
+}
+
+#main {
+  background: #fff;
+  min-height: 300px;
+  padding-bottom: 1em;
+}
+
+#footer {
+  padding: 2em 0;
+  min-height: 288px;
+
+
+  h1, h2, h3, a:hover {
+    color: rgba(#fff, 0.8);
+  }
+}
+
+#twitter_update_list, #flickr {
+  display: hidden;
+}
+
+#twitter_update_list li {
+  -webkit-font-smoothing: antialiased;
+  text-shadow:rgba(0,0,0,0.01) 0 0 0;
+
+  line-height: 1.5em;
+  font-size: 1em;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: rgba(#000, 0.8) 1px 1px 2px;
+  margin-bottom: 2em;
+
+  span {
+    display: block;
+  }
+}
+
+#flickr ul li {
+  float: left;
+  padding-right: 0.8em;
+
+  img {
+    border-width: 1px;
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+  }
+}
+
+/* #Media Queries
+================================================== */
+
+  /* Larger than standard 960 (devices and browsers) */
+  @media only screen and (min-width: 960px) {
+    #logo {
+      background-image: url("/images/logo_normal.png");
+      min-height: 170px;
+    }
+    .huge { font-size: 4.1em; }
+  }
+
+  /* Smaller than standard 960 (devices and browsers) */
+  @media only screen and (max-width: 959px) {
+    .huge { font-size: 3.3em; }
+  }
+
+  /* Tablet Portrait size to standard 960 (devices and browsers) */
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+    #logo {
+      background-image: url("/images/logo_medium.png");
+      min-height: 135px;
+    }
+  }
+
+  /* All Mobile Sizes (devices and browser) */
+  @media only screen and (max-width: 767px) {
+    #logo {
+      background: transparent url("/images/logo_square_small_crushed.png") no-repeat top center;
+      min-height: 225px;
+    }
+
+    .huge { font-size: 2.9em; margin-bottom: 1em; }
+  }
+
+  /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    h2 { margin-top: 0.5em; }
+  }
+
+  /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+  @media only screen and (max-width: 479px) {
+    h2 { margin-top: 1em; }
+
+    .huge { font-size: 2.1em; }
+    #flickr img {
+      width: 50px;
+      height: 50px;
+    }
+
+  }

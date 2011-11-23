@@ -1,0 +1,23 @@
+# ----------------------- #
+#      Main Configs       #
+# ----------------------- #
+
+url: http://c7.se
+title: Code7 Interactive
+author: Peter Hellberg
+
+# ----------------------- #
+#    Jekyll               #
+# ----------------------- #
+
+source: site
+destination: .public
+
+markdown:    rdiscount
+pygments:    true
+lsi:         false
+
+permalink: /:title
+
+# Google Analytics
+google_analytics_tracking_id: UA-940629-1
