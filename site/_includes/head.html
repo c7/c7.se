@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>{{page.title}} - {{site.title}}</title>
-    <meta name="author" content="{{site.author}}">{% if page.keywords %}
+    <meta name="author" content="{{site.author}}">
+    {% if page.keywords %}
     <meta name="keywords" content="{{page.keywords }}">
     {% endif %}
-    {% capture canonical %}{{ site.url }}{{ page.url | remove:'index' | remove:'.html' | strip_slash }}{% endcapture %}<link rel="canonical" href="{{ canonical }}">
 
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -19,7 +19,4 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="/main.css">
-
-    <script src="/javascripts/jquery-1.7.1.min.js"></script>
-    <script src="/javascripts/jquery.flickr-1.0-min.js"></script>
   </head>
