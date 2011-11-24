@@ -3,6 +3,7 @@ source "http://rubygems.org"
 group :development do
   gem "rake",             "~> 0.9"
   gem "rdiscount",        "~> 1.6"
+  gem "haml",             "~> 3.1.3"
   gem "liquid",           "2.2.2"
   gem "jekyll",           "~> 0.11"
   gem "yajl-ruby",        "~> 1.1"
