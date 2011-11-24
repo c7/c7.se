@@ -10,37 +10,60 @@ title: Peter Hellberg, a Freelance Ruby Developer
       <div class="hidden"><a class="org url" href="http://c7.se/">Code7 Interactive</a></div>
 
     </div>
-    <div class="offset-by-one five columns">
-      <a class="large-photo" href="http://www.flickr.com/photos/peterhellberg/5804666342/lightbox/" title="Peter Hellberg"><img src="http://new.c7.se/images/peter.jpg" alt="Peter Hellberg" class="photo" /></a>
+    <div class="offset-by-one four columns">
+      <a rel="me" href="http://www.flickr.com/photos/peterhellberg/5804666342/lightbox/" title="Peter Hellberg"><img src="http://new.c7.se/images/peter.jpg" alt="Peter Hellberg" class="photo" /></a>
     </div>
   </div>
   <div class="row">
     <div class="ten columns">
-      <div class="add-bottom">
-        <h2>My latest project:</h2>
-        <h3><a href="http://peterhellberg.github.com/pinch/">Pinch</a></h3>
-        Retrieve a file from inside a zip file, over the network! Pretty sweet, eh?
-      </div>
-      <!--
-      <h2>Articles</h2>
+      <div id="current-projects">
+        <h2>Current projects</h2>
 
-      {% for article in site.posts limit:1 %}
-      {% include article.html %}
-      {% endfor %}
+        <div class="project add-bottom">
+          <h3><a href="http://peterhellberg.github.com/pinch/">Pinch</a></h3>
+          <span>Retrieve a file from inside a zip file, over the network! Pretty sweet, eh?</span>
+        </div>
 
-      <div class="recent-articles">
-        <ul>
-          {% for article in site.posts limit:15 offset:1 %}
-          <li>
-              <a href="{{ article.url }}">{{ article.title }}</a>
-          </li>
-          {% endfor %}
-        </ul>
+        <div class="project">
+          <h3><a href="http://coffeescriptcookbook.com/">CoffeeScript Cookbook</a></h3>
+          <span>CoffeeScript recipes for the community by the community.</span>
+        </div>
       </div>
-      -->
+
+      <div id="presentations">
+        <h2>Presentations</h2>
+
+        <div class="presentation add-bottom">
+          <h3><a href="http://speakerdeck.com/u/peterhellberg/p/pinch-some-crazy-http-zip-magic">Pinch - Some crazy HTTP ZIP Magic</a></h3>
+          <span>The inner workings of Pinch</span>
+        </div>
+
+        <div class="presentation">
+          <h3><a href="http://speakerdeck.com/u/peterhellberg/p/rubygems-a-quick-intro">RubyGems - A quick intro</a></h3>
+          <span>A quick introduction to making your own RubyGems.</span>
+        </div>
+      </div>
+
+      <div id="articles">
+        <h2>Articles</h2>
+
+        {% for article in site.posts limit:1 %}
+        {% include article.html %}
+        {% endfor %}
+
+        <div class="recent-articles">
+          <ul>
+            {% for article in site.posts limit:15 offset:1 %}
+            <li>
+                <a href="{{ article.url }}">{{ article.title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
     </div>
     <div class="offset-by-one five columns">
-      <h2>Contact</h2>
+      <h2>Contact information</h2>
 
       <h3>Email <span class="amp">&amp;</span> Jabber</h3>
       <p>
@@ -50,7 +73,22 @@ title: Peter Hellberg, a Freelance Ruby Developer
       <h3>Twitter</h3>
       <p>
         <a rel="me" class="url twitter" href="http://twitter.com/peterhellberg">@peterhellberg</a>
+
       </p>
+
+      <h3>GitHub</h3>
+      <p>
+        <a rel="me" class="url github" href="https://github.com/peterhellberg">@peterhellberg</a>
+      </p>
+
+      <h3>Address</h3>
+      <div class="adr">
+        <div class="street-address">Mosstenabacken 1</div>
+        <div>
+          <span class="postal-code">124 32</span>
+          <span class="locality">Bandhagen</span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
