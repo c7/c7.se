@@ -68,53 +68,13 @@
   padding-bottom: 1em;
 }
 
+#current-projects, #presentations {
+  margin-bottom: 3em;
+}
+
 #page {
   h2 {
     margin-top: 1em;
-  }
-}
-
-#footer {
-  padding: 2em 0;
-  min-height: 288px;
-
-
-  h1, h2, h3, a:hover {
-    color: rgba(#fff, 0.8);
-  }
-}
-
-#twitter_update_list, #flickr {
-  display: hidden;
-}
-
-#twitter_update_list li {
-  -webkit-font-smoothing: antialiased;
-  text-shadow:rgba(0,0,0,0.01) 0 0 0;
-
-  line-height: 1.5em;
-  font-size: 1em;
-  font-weight: 400;
-  color: #fff;
-  text-shadow: rgba(#000, 0.8) 1px 1px 2px;
-  margin-bottom: 2em;
-
-  span {
-    display: block;
-  }
-}
-
-#flickr ul li {
-  float: left;
-  padding-right: 0.8em;
-
-  img {
-    border-width: 1px;
-    width: 100px;
-    height: 100px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
   }
 }
 
@@ -146,7 +106,7 @@
   /* All Mobile Sizes (devices and browser) */
   @media only screen and (max-width: 767px) {
     #logo {
-      background: transparent url("/images/logo_square_small_crushed.png") no-repeat top center;
+      background: transparent url("/images/logo_square_small.png") no-repeat top center;
       min-height: 225px;
     }
 
@@ -163,10 +123,4 @@
     h2 { margin-top: 1em; }
 
     #page h1, .huge { font-size: 2.1em; }
-
-    #flickr img {
-      width: 50px;
-      height: 50px;
-    }
-
   }
