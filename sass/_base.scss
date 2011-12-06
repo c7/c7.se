@@ -56,7 +56,7 @@
   body {
     border-top: 8px solid $green;
     background: #fff;
-    color: #444;
+    color: #442;
 
     line-height: 2.4rem;
     font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; font-weight:300; font-stretch:normal;
@@ -80,8 +80,8 @@
   }
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
   h1 { font-size: 46px; font-size: 4.6rem; line-height: 50px; margin-bottom: 14px; font-weight: 400; }
-  h2 { font-size: 38px; font-size: 3.8rem; line-height: 44px; margin-bottom: 14px; font-weight: 300; color: darken($gray, 35) }
-  h3 { font-size: 28px; font-size: 2.8rem; line-height: 34px; margin-bottom: 8px; font-weight: 300; color: darken($gray, 15) }
+  h2 { font-size: 38px; font-size: 3.8rem; line-height: 44px; margin-bottom: 14px; font-weight: 400; color: darken($gray, 35) }
+  h3 { font-size: 26px; font-size: 2.6rem; line-height: 1.3em; margin-bottom: 4px; font-weight: 300; color: darken($gray, 15) }
   h4 { font-size: 21px; line-height: 30px; margin-bottom: 4px; font-weight: 200}
   h5 { font-size: 17px; line-height: 24px; font-weight: 300; }
   h6 { font-size: 14px; line-height: 21px; font-weight: 300; }
