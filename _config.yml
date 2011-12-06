@@ -17,7 +17,7 @@ markdown:    rdiscount
 pygments:    true
 lsi:         false
 
-permalink: /:title
+permalink: /:title/
 
 # Google Analytics
 google_analytics_tracking_id: UA-940629-1
