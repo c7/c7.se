@@ -25,14 +25,18 @@
 /* #Page Styles
 ================================================== */
 
-.highlight {
-  margin-top: 2em;
+.highlight, p code, h4 code, li code {
+  margin-top: 0.4em;
+  margin-bottom: 1em;
   font-family: Monaco, Monospace;
   font-size: 13px;
+  padding: 0.3em 0.5em;
+  border: 1px solid #ddd;
+  background: #fafafa;
 
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 
   pre {
     overflow: scroll;
@@ -56,8 +60,8 @@
 }
 
 #logo {
-  min-height: 80px;
-  background: transparent url("/images/logo.png") no-repeat top right;
+  background: transparent url("/images/logo_square_small.png") no-repeat top center;
+  min-height: 225px;
   text-indent: -5000em;
   margin: 0;
 }
@@ -68,8 +72,18 @@
   padding-bottom: 1em;
 }
 
-#current-projects, #presentations {
-  margin-bottom: 3em;
+#current-projects, #articles, #presentations {
+  margin-bottom: 2.2em;
+}
+
+.recent-articles {
+  h2 {
+    line-height: 1.9em;
+  }
+
+  li {
+    margin-bottom: 1.5em;
+  }
 }
 
 #page {
@@ -78,39 +92,89 @@
   }
 }
 
+.article-content {
+  h2 { margin-top: 1em; }
+  h3 {
+    margin-top: 1.5em;
+    font-size: 1.4em;
+    color: #333;
+    font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    margin-bottom: 0.5em;
+  }
+  h4 { font-size: 1.1em; margin-top: 1.5em; }
+}
+
+a.follow-on-twitter {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
+
+  margin: 2em 0 1em 0;
+  background-color: #b1e0f0;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAUCAYAAACeXl35AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAXVJREFUSMet1j0oRWEcx/FbhPKaTErZ1K0bZUAWJnlZFMqiFCtSLF4Sm2JRiqtMNgxkEVKy4UZGFIPxRkThur5P/dXT6Z7nPOecO3yWc57n+Z3n/URq9hORLGjDMrbQixy3stkIm0JaJNBgKu98UIgZdFmGdWhhv7jAImptA9VQHEgDh+hGqUtlVfZeC9S9os92SGOOhtQwjaDEUW7MJezfO+pt57AFSUcDVxjUenfrEaicItcrsBLXSLk0Mi5znLYU1drOc5ubNY9Gkj4CtzGAJbSbVmCPYVH49YJVVJkCJ/GZxcB11JkC5/AlFVIhwo6wgiEUe23sJizgLURg1O/RNhsi7Bz5fgPVibGHjwCBnZk2fqPsPVNov5wcfsI23Y62mPRgHhXaywL5wt0APTtGkeksVb18kMVxKRXu8BMgbEc+1vO2KMNGiAXyhAmvNZHpYavc3N+WQTeYRrXNHWp6qfbPsJwQZ3jGI04QxyiaUe7nD+EPNT2xgtbFQ7IAAAAASUVORK5CYII=);
+  text-align:center;
+  display:block;
+
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  o-border-radius:3px;
+
+  border:1px solid rgba(56, 125, 160, 0.3);
+
+  padding:8px 0px 7px 0px;
+  color:#387da0;
+  text-shadow: rgba(255, 255, 255, 0.7) 0px 1px 0px;
+}
+
+a.follow-on-twitter:hover {
+  background-color: #226284;
+  color:#b1e0f0;
+  text-decoration:none;
+  text-shadow: rgba(0, 0, 0, 0.7) 0px -1px 0px;
+}
+
 /* #Media Queries
 ================================================== */
 
   /* Larger than standard 960 (devices and browsers) */
   @media only screen and (min-width: 960px) {
-    #logo {
-      background-image: url("/images/logo_normal.png");
-      min-height: 170px;
-    }
     #page h1, .huge { font-size: 4.1em; }
+    .article-content {
+      p { max-width: 640px; }
+     }
   }
 
   /* Smaller than standard 960 (devices and browsers) */
   @media only screen and (max-width: 959px) {
     #page h1, .huge { font-size: 3.3em; }
+    h2 { font-size: 2em; }
   }
 
   /* Tablet Portrait size to standard 960 (devices and browsers) */
   @media only screen and (min-width: 768px) and (max-width: 959px) {
-    #logo {
-      background-image: url("/images/logo_medium.png");
-      min-height: 135px;
+    .article-content {
+      p { max-width: 700px; }
+     }
+
+    .recent-articles {
+      h2 {
+        font-size: 2em;
+        line-height: 1.6em;
+      }
+
+      li {
+        margin-bottom: 0.6em;
+        a { font-size: 0.9em; }
+      }
     }
   }
 
   /* All Mobile Sizes (devices and browser) */
   @media only screen and (max-width: 767px) {
-    #logo {
-      background: transparent url("/images/logo_square_small.png") no-repeat top center;
-      min-height: 225px;
-    }
-
-    #page h1, .huge { font-size: 2.9em; margin-bottom: 1em; }
+    #page h1, .huge { font-size: 2.9em; margin-bottom: 0.4em; }
   }
 
   /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
@@ -122,5 +186,5 @@
   @media only screen and (max-width: 479px) {
     h2 { margin-top: 1em; }
 
-    #page h1, .huge { font-size: 2.1em; }
+    #page h1, .huge { font-size: 2.4em; }
   }
