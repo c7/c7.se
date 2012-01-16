@@ -16,6 +16,16 @@ title: Peter Hellberg, a Freelance Ruby Developer
   </div>
   <div class="row">
     <div class="ten columns">
+      <div id="articles">
+        <h2>Latest article</h2>
+
+        {% for article in site.posts limit:1 %}
+          <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+          <section class="article-summary">{{ article.summary }}</section>
+        {% endfor %}
+
+      </div>
+
       <div id="current-projects">
         <h2>Current projects</h2>
 
@@ -43,25 +53,6 @@ title: Peter Hellberg, a Freelance Ruby Developer
           <span>A quick introduction to making your own RubyGems.</span>
         </div>
       </div>
-<!--
-      <div id="articles">
-        <h2>Articles</h2>
-
-        {% for article in site.posts limit:1 %}
-        {% include article.html %}
-        {% endfor %}
-
-        <div class="recent-articles">
-          <ul>
-            {% for article in site.posts limit:15 offset:1 %}
-            <li>
-                <a href="{{ article.url }}">{{ article.title }}</a>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
--->
     </div>
     <div class="offset-by-one five columns">
       <h2>Contact information</h2>
