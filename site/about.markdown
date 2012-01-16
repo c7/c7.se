@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-# About
+# About me, and the company
 
 ## Me
 
