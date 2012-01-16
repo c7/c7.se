@@ -185,7 +185,16 @@ end
 
 First you need to have a Redis server running.
 
-The final two pieces of the puzzle is a Goliath::Runner that takes care of running the application and a `config.rb` that contains the connection to Redis via a EM::Synchrony::ConnectionPool.
+The final two pieces of the puzzle is a `config.rb` that contains the connection to Redis via a
+EM::Synchrony::ConnectionPool and a Goliath::Runner that takes care of running the application.
+
+### config.rb
+
+{% highlight ruby %}
+config['redis'] = EM::Synchrony::ConnectionPool.new(size: 2) do
+  Redis.new
+end
+{% endhighlight %} 
 
 ### runner.rb
 
@@ -204,15 +213,8 @@ runner.app = Goliath::Rack::Builder.build(Api, runner.api)
 runner.run
 {% endhighlight %}
 
-### config.rb
 
-{% highlight ruby %}
-config['redis'] = EM::Synchrony::ConnectionPool.new(size: 2) do
-  Redis.new
-end
-{% endhighlight %} 
-
-#### Run `ruby runner.rb -s -e prod -c config.rb` and a server should spin up in production mode on port 9000.
+Run `ruby runner.rb -s -e prod -c config.rb` and a server should spin up in production mode on port 9000.
 
 ## Using the application
 
