@@ -102,6 +102,10 @@ end
 
 ### spec/api_spec.rb
 
+I hope that writing specs for Goliath will become less verbose in the
+future, currently it seems like I need to wrap each request in a
+`with_api` block.
+
 {% highlight ruby %}
 require_relative 'spec_helper'
 require_relative '../api'
@@ -177,7 +181,7 @@ end
 
 First you need to have a Redis server running.
 
-The final two pieces of the puzzle is a Goliath::Runner that takes care of running the application and a `config.rb` that contains a EM::Synchrony::ConnectionPool.
+The final two pieces of the puzzle is a Goliath::Runner that takes care of running the application and a `config.rb` that contains the connection to Redis via a EM::Synchrony::ConnectionPool.
 
 ### runner.rb
 
@@ -208,7 +212,9 @@ end
 
 ## Using the application
 
-### Add a new key value pair
+I like to use [cURL](http://curl.haxx.se/) when manually testing API's:
+
+### Adding a new key/value pair
 
 {% highlight ruby %}
 curl -X PUT http://0.0.0.0:9000/foo -d "value=bar"
