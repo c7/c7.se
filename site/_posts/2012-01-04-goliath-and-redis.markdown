@@ -175,6 +175,8 @@ end
 
 ## Starting the application
 
+First you need to have a Redis server running.
+
 The final two pieces of the puzzle is a Goliath::Runner that takes care of running the application and a `config.rb` that contains a EM::Synchrony::ConnectionPool.
 
 ### runner.rb
