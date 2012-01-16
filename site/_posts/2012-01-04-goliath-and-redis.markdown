@@ -44,9 +44,13 @@ which has built in support for
 {% highlight ruby %}
 source :rubygems
 
-gem "goliath", :git => "https://github.com/postrank-labs/goliath.git", :require => ["goliath/api", "log4r"]
+gem "goliath",
+    :git => "https://github.com/postrank-labs/goliath.git",
+    :require => ["goliath/api", "log4r"]
+
 gem "hiredis", "~> 0.3.1"
-gem "redis",   "~> 2.2.2", :require => ["redis/connection/synchrony", "redis"]
+gem "redis",   "~> 2.2.2",
+    :require => ["redis/connection/synchrony", "redis"]
 
 group :test do
   gem "em-http-request", "~> 1.0.1"
