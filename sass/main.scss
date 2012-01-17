@@ -62,9 +62,16 @@
 
 #logo {
   background: transparent url("/images/logo_square_small.png") no-repeat top center;
-  min-height: 225px;
+  min-height: 220px;
   text-indent: -5000em;
   margin: 0;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  #logo {
+    background: transparent url("/images/logo_square_2x.png") no-repeat top center;
+    background-size: 196px 196px;
+  }
 }
 
 #main {
