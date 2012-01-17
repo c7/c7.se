@@ -12,6 +12,7 @@
   @import "skeleton";
   @import "syntax";
   @import "base";
+  @import "twitter";
 
 /* #Site Styles
 ================================================== */
@@ -102,38 +103,6 @@
     margin-bottom: 0.5em;
   }
   h4 { font-size: 1.1em; margin-top: 1.5em; }
-}
-
-a.follow-on-twitter {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  font-weight: 300;
-  font-size: 1.2em;
-
-  margin: 2em 0 1em 0;
-  background-color: #b1e0f0;
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAUCAYAAACeXl35AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAXVJREFUSMet1j0oRWEcx/FbhPKaTErZ1K0bZUAWJnlZFMqiFCtSLF4Sm2JRiqtMNgxkEVKy4UZGFIPxRkThur5P/dXT6Z7nPOecO3yWc57n+Z3n/URq9hORLGjDMrbQixy3stkIm0JaJNBgKu98UIgZdFmGdWhhv7jAImptA9VQHEgDh+hGqUtlVfZeC9S9os92SGOOhtQwjaDEUW7MJezfO+pt57AFSUcDVxjUenfrEaicItcrsBLXSLk0Mi5znLYU1drOc5ubNY9Gkj4CtzGAJbSbVmCPYVH49YJVVJkCJ/GZxcB11JkC5/AlFVIhwo6wgiEUe23sJizgLURg1O/RNhsi7Bz5fgPVibGHjwCBnZk2fqPsPVNov5wcfsI23Y62mPRgHhXaywL5wt0APTtGkeksVb18kMVxKRXu8BMgbEc+1vO2KMNGiAXyhAmvNZHpYavc3N+WQTeYRrXNHWp6qfbPsJwQZ3jGI04QxyiaUe7nD+EPNT2xgtbFQ7IAAAAASUVORK5CYII=);
-  text-align:center;
-  display:block;
-
-  border-radius:3px;
-  -moz-border-radius:3px;
-  -webkit-border-radius:3px;
-  o-border-radius:3px;
-
-  border:1px solid rgba(56, 125, 160, 0.3);
-
-  padding:8px 0px 7px 0px;
-  color:#387da0;
-  text-shadow: rgba(255, 255, 255, 0.7) 0px 1px 0px;
-}
-
-a.follow-on-twitter:hover {
-  background-color: #226284;
-  color:#b1e0f0;
-  text-decoration:none;
-  text-shadow: rgba(0, 0, 0, 0.7) 0px -1px 0px;
 }
 
 /* #Media Queries

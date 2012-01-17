@@ -1,0 +1,32 @@
+a.follow-on-twitter {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
+
+  margin: 2em 0 1em 0;
+  background-color: #b1e0f0;
+  background-position: 8px 2px;
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowNTgwMTE3NDA3MjA2ODExQTdCQUFEQjQyNTFEQ0FGNSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpDOUJDOTRDMkY5MjIxMURGQjc0REU3MzJCNTg5MzE4NiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpDOUJDOTRDMUY5MjIxMURGQjc0REU3MzJCNTg5MzE4NiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkRFQ0VBMjhENzUyMDY4MTFBN0JBQURCNDI1MURDQUY1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjA1ODAxMTc0MDcyMDY4MTFBN0JBQURCNDI1MURDQUY1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Vzhj4gAAAYNJREFUWMNj+P//P8NAYoZRB4w6YFA4wHXDY2pjXWLVUtsBCUC8EYg/A/F2ILanpwMmAPF/KP4GxMmUhgDIJy1ALEeEQSFIliPjw0BsSa4DziAZNAeIJXCo4wHiJzgcAMI/gTiQHAcYQ4MSZhAoXuuAmA1NXQUey5EdoUJOGigC4j9oht0AYhuoPDMQPyTCASC8i1QHpBEwcBoQhxNpOQwrkuIAUSB+RaIFhPBSqKOrgbgXFIKEogCUDo5B459ajvgGTTdsxKQBfiCeT+VQ+ADNYSuIcYA0Wk6gFIMS7DogbgdiIWJLQnUgnolWLpCL1SkpioUoTAsbKa0LllJg+R9cNSTMAZxEOEARWiST44BeQkWxIjS18+NxAMiRi8iw/BK0viBYFxRB4xhUwjlBcwAztDYrIqHIRcavcNUBuNJAKRWz3HMgNiCnPQBqxdym0PLz2Mp9UnIBM7R5dZ5Ei98CcQ5UP9XahHLQmhFWGJ2BNkBgbFDJ1gXEruQ05Ub7BaMOAADCUiGXQO/EDAAAAABJRU5ErkJggg==);
+  text-align:center;
+  display:block;
+
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  o-border-radius:3px;
+
+  border:1px solid rgba(56, 125, 160, 0.3);
+
+  padding:8px 0px 7px 0px;
+  color:#387da0;
+  text-shadow: rgba(255, 255, 255, 0.7) 0px 1px 0px;
+}
+
+a.follow-on-twitter:hover {
+  background-color: #226284;
+  color:#b1e0f0;
+  text-decoration:none;
+  text-shadow: rgba(0, 0, 0, 0.7) 0px -1px 0px;
+}
+
