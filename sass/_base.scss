@@ -54,7 +54,6 @@
   html { font-size: 62.5%; }
 
   body {
-    border-top: 8px solid $green;
     background: #fff;
     color: #442;
 
@@ -80,8 +79,8 @@
   }
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
   h1 { font-size: 46px; font-size: 4.6rem; line-height: 50px; margin-bottom: 14px; font-weight: 400; }
-  h2 { font-size: 38px; font-size: 3.8rem; line-height: 44px; margin-bottom: 14px; font-weight: 400; color: darken($gray, 40) }
-  h3 { font-size: 26px; font-size: 2.6rem; line-height: 1.3em; margin-bottom: 4px; font-weight: 300; color: darken($gray, 15) }
+  h2 { font-size: 38px; font-size: 3.8rem; line-height: 44px; margin-bottom: 14px; font-weight: 400; }
+  h3 { font-size: 26px; font-size: 2.6rem; line-height: 1.3em; margin-bottom: 4px; font-weight: 300; }
   h4 { font-size: 21px; line-height: 30px; margin-bottom: 4px; font-weight: 200}
   h5 { font-size: 17px; line-height: 24px; font-weight: 300; }
   h6 { font-size: 14px; line-height: 21px; font-weight: 300; }
@@ -107,7 +106,7 @@
 
 /* #Links
 ================================================== */
-  a, a:visited { text-decoration: none; outline: 0; color: $green; }
+  a, a:visited { text-decoration: none; outline: 0; }
   a:hover, a:focus { color: #000; text-decoration: underline; }
   p a, p a:visited { line-height: inherit; }
 
@@ -142,3 +141,24 @@
   .half-bottom { margin-bottom: 10px !important; }
   .add-bottom { margin-bottom: 20px !important; }
 
+tbody tr {
+  background-color: #F8F8F8;
+  border-top: 1px solid #CCC;
+  margin: 0;
+  padding: 0;
+}
+
+tr:nth-child(2n) {
+  background-color: white;
+}
+
+th,td {
+  border: 1px solid #CCC;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+
+th {
+  font-weight: bold;
+}

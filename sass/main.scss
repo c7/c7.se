@@ -2,7 +2,7 @@
 ================================================== */
 
   $green: #7CAF3C;
-  $gray: #aaa;
+  $gray: #AAAAAA;
 
 /* #Imports
 ================================================== */
@@ -14,6 +14,14 @@
   @import "base";
   @import "twitter";
 
+/* #Colors
+================================================== */
+
+body { border-top: 8px solid $green; }
+h2 { color: darken($gray, 40) }
+h2 { color: darken($gray, 15) }
+a, a:visited { color: $green; }
+
 /* #Site Styles
 ================================================== */
 
@@ -22,6 +30,7 @@
 .font-book { font-weight: 300; }
 
 .hidden { display: none; }
+
 
 /* #Page Styles
 ================================================== */
@@ -62,8 +71,8 @@
 
 #logo {
   background: transparent url("/images/logo_square_small.png") no-repeat top center;
-  min-height: 220px;
-  text-indent: -5000em;
+  min-height: 200px;
+  text-indent: -6000em;
   margin: 0;
 }
 
@@ -75,7 +84,7 @@
 }
 
 #main {
-  background: #fff;
+  background: #FFFFFF;
   min-height: 300px;
   padding-bottom: 1em;
 }
@@ -101,7 +110,10 @@
 }
 
 .article-content {
-  h2 { margin-top: 1em; }
+  h2 {
+    margin-top: 0.7em;
+    margin-bottom: 0.3em;
+  }
   h3 {
     margin-top: 1.5em;
     font-size: 1.4em;
