@@ -48,13 +48,13 @@ gem "goliath",
     :git => "https://github.com/postrank-labs/goliath.git",
     :require => ["goliath/api", "log4r"]
 
-gem "hiredis", "~> 0.3.1"
-gem "redis",   "~> 2.2.2",
+gem "hiredis", "~> 0.4"
+gem "redis",   "~> 2.2",
     :require => ["redis/connection/synchrony", "redis"]
 
 group :test do
-  gem "em-http-request", "~> 1.0.1"
-  gem "mock_redis", "~> 0.3.0"
+  gem "em-http-request", "~> 1.0"
+  gem "mock_redis", "~> 0.4"
 end
 {% endhighlight %}
 
@@ -153,7 +153,7 @@ This is a _very_ simple API, it can only do three things:
 
  1. Respond with “OK” and status code 200 `GET /`
  2. Add new data `PUT /foo?value=bar`
- 3. Retrieve a value `GET /bar`
+ 3. Retrieve a value `GET /foo`
 
 ### api.rb
 
