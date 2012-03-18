@@ -25,6 +25,9 @@ end
 
 desc "Deploy website to http://c7.se"
 task :deploy do
+  puts "## Building Jekyll site"
+  system("bundle exec jekyll")
+
   puts "## Deploying website via Rsync"
   ok_failed system("rsync -avze 'ssh -p #{ssh_port}' --delete #{public_dir}/ #{ssh_user}:#{document_root}")
 end
