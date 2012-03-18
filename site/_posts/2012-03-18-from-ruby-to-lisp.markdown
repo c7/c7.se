@@ -47,11 +47,11 @@ programming book. And it turns out to be something completely different.
 *(Hint: It’s a comic book in the same vein as 
 [Why’s (Poignant) Guide to Ruby](http://mislav.uniqpath.com/poignant-guide/book/))*
 
-I have created [repo](https://github.com/peterhellberg/land_of_lisp) on GitHub 
-where I will add notes and code while I read the book.
+I have a [repo](https://github.com/peterhellberg/land_of_lisp) on GitHub 
+where I will push notes and code while I read the book.
 
-Instead of writing a long winded review, I will just point you to a few
-reviews that I think does the book justice:
+Instead of writing a long winded book review, I’ll opt for linking to a 
+few that I think do the book justice:
  [Slashdot](http://books.slashdot.org/story/10/11/03/1238213/land-of-lisp),
  [I do robots](http://idorobots.org/2011/09/25/land-of-lisp/),
  [Jorge Tavares](http://jorgetavares.com/2010/12/26/the-lisp-alien-arrived-a-land-of-lisp-reviewopinion/) and 
@@ -100,9 +100,7 @@ operator but Lisp can have any number of operands per operator.
 
 {% highlight ruby %}
 # Ruby
-if 4 > 3 && 3 > 2
-  puts "4 is greater than 3, and 3 is greater than 2"
-end
+puts "4 is greater than 3, and 3 is greater than 2" if 4 > 3 && 3 > 2
 {% endhighlight %}
 
 ### Learn more about newLISP
@@ -112,11 +110,11 @@ You should definitely take a look at the
 after you have read the 
 [newLISP User Manual](http://www.newlisp.org/downloads/newlisp_manual.html).
 
+[OSNews: A Look at newLISP](http://www.osnews.com/story/20728/A_Look_at_newLISP/)
+
 A collection of modules for a variety of things are available over at
 [GitHub](https://github.com/LifeZero/artful-newlisp) (Including the
 dependency-managing library QWERTY).
-
-[OSNews: A Look at newLISP](http://www.osnews.com/story/20728/A_Look_at_newLISP/)
 
 ## Common Lisp
 
