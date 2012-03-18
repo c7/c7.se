@@ -128,6 +128,14 @@ available, both commercial and freely redistributable.
 I’m using the very portable [CLISP](http://www.clisp.org/), also available through Homebrew, 
 just like newLISP: `brew install clisp`
 
+My friend [Joel](https://twitter.com/joelbf) told me 
+that the best thing to have happened to CL since like 
+ever is [Quicklisp](http://www.quicklisp.org/).
+
+> Quicklisp is a library manager for Common Lisp. It works with your existing 
+> Common Lisp implementation to download, install, and load any of nearly 
+> 700 libraries with a few simple commands.
+
 ### Examples
 
 You will find a lot of examples in the article 
