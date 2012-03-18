@@ -123,10 +123,10 @@ dependency-managing library QWERTY).
 
 There are a lot of Common Lisp 
 [implementations](http://en.wikipedia.org/wiki/Common_Lisp#List_of_implementations) 
-available, both commercial and freely redistributable. 
+available, both commercial and freely redistributable; I’m using the very 
+portable [GNU CLISP](http://www.clisp.org/).
 
-I’m using the very portable [CLISP](http://www.clisp.org/), also available through Homebrew, 
-just like newLISP: `brew install clisp`
+You can install it using Homebrew: `brew install clisp`
 
 ### Quicklisp
 
