@@ -19,7 +19,6 @@
 
 body { border-top: 8px solid $green; }
 h2 { color: darken($gray, 40) }
-h2 { color: darken($gray, 15) }
 a, a:visited { color: $green; }
 
 /* #Site Styles
@@ -111,11 +110,11 @@ a, a:visited { color: $green; }
 
 .article-content {
   h2 {
-    margin-top: 0.7em;
+    margin-top: 1em;
     margin-bottom: 0.3em;
   }
   h3 {
-    margin-top: 1.5em;
+    margin-top: 1em;
     font-size: 1.4em;
     color: #333;
     font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
