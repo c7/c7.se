@@ -71,27 +71,14 @@
 
 /* #Typography
 ================================================== */
-/*  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Yanone Kaffeesatz', 'kaffeesatz', sans-serif;
-  }
-*/
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
-/*
-  h1 { line-height: 50px; font-size: 46px; font-size: 4.6rem; margin-bottom: 14px; font-weight: 400; }
-  h2 { line-height: 42px; font-size: 37px; font-size: 3.7rem; margin-bottom: 14px; font-weight: 400; }
-  h3 { line-height: 35px; font-size: 26px; font-size: 2.6rem; margin-bottom: 2px;  font-weight: 300; }
-  h4 { line-height: 30px; font-size: 21px; font-size: 2.1rem; margin-bottom: 4px;  font-weight: 200}
-  h5 { line-height: 24px; font-size: 17px; font-size: 1.7rem; margin-bottom: 0px;  font-weight: 300; }
-  h6 { line-height: 21px; font-size: 14px; font-size: 1.4rem; margin-bottom: 0px;  font-weight: 300; }
-*/
 
-p  { font-size: 1em; line-height: 1.5em; margin-bottom: 1.5em; }
-h1 { font-size: 2em; line-height: 0.75em; margin-bottom: 0.1em; }
-h2 { font-size: 1.47em; line-height: 1.6875em; margin-bottom: 0.5em; font-weight: 700; }
-h3 { font-size: 1.22em; line-height: 1em; margin-bottom: 0.2em; font-weight: 400; }
-h4 { font-size: 1.38em; line-height: 1.08em; margin-top: 1em; margin-bottom: 1em; }
-h5 { font-size: 1.22em; line-height: 1.22em; }
-h6 { font-size: 1em; line-height: 1.5em; }
+  p  { font-size: 1em; line-height: 1.5em; margin-bottom: 1.5em; }
+  h1 { font-size: 2em; line-height: 0.75em; margin-bottom: 0.1em; }
+  h2 { font-size: 1.47em; line-height: 1.6875em; margin-bottom: 0.5em; font-weight: 700; }
+  h3 { font-size: 1.22em; line-height: 1em; margin-bottom: 0.2em; font-weight: 400; }
+  h4 { font-size: 1.10em; line-height: 1.08em; margin-top: 1em; margin-bottom: 1em; font-weight: 700; }
+  h5 { font-size: 1em; line-height: 1.22em; }
 
   .subheader { color: #777; }
 
