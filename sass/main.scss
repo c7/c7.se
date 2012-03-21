@@ -18,7 +18,8 @@
 body { font-family: "ff-tisa-web-pro", serif; }
 
 body { border-top: 8px solid $green; }
-h1, h2, h3, h4, h5, h6 { color: darken($gray, 40) }
+h1 { color: #222; }
+h2, h3, h4, h5, h6 { color: darken($gray, 40) }
 a, a:visited { color: $green; }
 
 /* #Site Styles
@@ -55,15 +56,22 @@ a, a:visited { color: $green; }
   font-size: 3.3em;
   line-height: 1.1em;
   color: darken($gray, 45);
+
   .greeting {
     vertical-align: top;
     color: $gray;
   }
 }
 
-#article h3 {
-  font-size: 1.3em;
-  margin-bottom: 0.8em;
+#article {
+  h1 {
+    margin-bottom: 0.4em;
+  }
+
+  h3 {
+    font-size: 1.3em;
+    margin-bottom: 0.8em;
+  }
 }
 
 .amp {
@@ -76,6 +84,7 @@ a, a:visited { color: $green; }
   min-height: 200px;
   text-indent: -6000em;
   margin: 0;
+  margin-bottom: 1.7em;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
