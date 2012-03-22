@@ -59,8 +59,8 @@ few that I think do the book justice:
 
 ## newLISP
 
-All of the examples in Land of Lisp are written in Common Lisp, but 
-I actually started out by playing with one of the younger Lisp dialects, 
+All of the examples in “Land of Lisp” are written in Common Lisp, but 
+I actually started out by playing with a younger Lisp dialect;
 [newLISP](http://www.newlisp.org/).
 
 > newLISP is a scripting Lisp for people who are fascinated by 
@@ -68,8 +68,8 @@ I actually started out by playing with one of the younger Lisp dialects,
 > stripped down to easy-to-learn essentials.
 
 If you are using **OS X** and have [Homebrew](http://mxcl.github.com/homebrew/) 
-installed then you can install newLISP by typing `brew install newlisp`
-into your terminal.
+installed, then you can install newLISP with the following command:
+`brew install newlisp`
 
 ### Examples
 
