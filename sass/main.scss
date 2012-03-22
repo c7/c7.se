@@ -52,6 +52,10 @@ a, a:visited { color: $green; }
   }
 }
 
+code {
+  white-space: nowrap;
+}
+
 #page h1, .huge {
   font-size: 3.3em;
   line-height: 1.1em;
