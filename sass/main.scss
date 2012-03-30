@@ -52,7 +52,7 @@ a, a:visited { color: $green; }
   }
 }
 
-code {
+p code {
   white-space: nowrap;
 }
 
@@ -126,7 +126,7 @@ code {
   /* All Mobile Sizes (devices and browser) */
   @media only screen and (max-width: 767px) {
     #page h1, .huge { font-size: 2.5em; margin-bottom: 0.4em; }
-    .highlight, p code, h4 code, li code { font-size: 12px; }
+    .highlight, p code, h4 code, li code { font-size: 12px; line-height: 16px; }
   }
 
   /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
@@ -145,6 +145,6 @@ code {
 
     body { font-size: 16px; }
     h4 { font-size: 1em; }
-    .highlight, p code, h4 code, li code { font-size: 11px; }
+    .highlight, p code, h4 code, li code { font-size: 11px; line-height: 15px; }
     a.follow-on-twitter, a.follow-on-twitter:visited { font-size: 1em; background-image: none; }
   }
