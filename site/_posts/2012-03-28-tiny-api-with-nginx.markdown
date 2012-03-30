@@ -43,39 +43,34 @@ http {
     real_ip_header    X-Real-IP;
     set_real_ip_from  127.0.0.1;
 
+    location /redirect_ip {
+      internal;
+      set $memc_key 'redirect';
+      memc_pass 127.0.0.1:11211;
+    }
+
     location /loadbalancer.json {
       default_type "application/json";
 
-      echo_before_body -n "{\"geoip_country_code\":\"";
-      echo_before_body -n "$geoip_country_code\", \"redirect\":\"";
-      
-      set $memc_key 'redirect';
-      memc_pass 127.0.0.1:11211;
-      
-      echo_after_body -n "\"}";
-    }
-
-    location /loadbalancer.js {
-      default_type 'application/x-javascript';
-
-      echo_location_async -n /loadbalancer.json;
+      echo -n "{\"geoip_country_code\":\"$geoip_country_code\",";
+      echo -n "\"redirect\":\"";
+      echo_location -n /redirect_ip;
       echo -n "\"}";
-      
+
       xss_get on;
       xss_callback_arg callback;
-      xss_input_types 'application/x-javascript';
+      xss_output_type 'application/x-javascript';
     }
 
     location /loadbalancer {
       if ($request_method != POST) { return 405; }
-      
+
       allow 127.0.0.1;
       deny all;
 
       set $memc_key 'redirect';
       set $memc_cmd 'set';
-      set $memc_value $arg_redirect;
-      
+      set $memc_value $arg_var;
       memc_pass 127.0.0.1:11211;
     }
   }
@@ -105,6 +100,6 @@ And if we want to use JSONP;
 
 {% highlight ruby %}
 curl -H "X-Real-IP: 213.115.122.2" \
-http://0.0.0.0:9999/loadbalancer.js?callback=foo
+http://0.0.0.0:9999/loadbalancer.json?callback=foo
 #=> foo({"geoip_country_code":"SE", "redirect":"10.0.0.5"});
 {% endhighlight %}
