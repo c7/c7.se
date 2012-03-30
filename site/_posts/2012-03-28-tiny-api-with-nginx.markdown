@@ -36,7 +36,7 @@ events {}
 http {
   access_log    off;
   error_log     off;
-  geoip_country /usr/local/Cellar/geoip/1.4.8/share/GeoIP/GeoIP.dat;
+  geoip_country /path/to/GeoIP.dat;
 
   server {
     listen            9999;
