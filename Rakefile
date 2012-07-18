@@ -4,7 +4,7 @@ require "bundler/setup"
 
 ssh_user        = "peter@c7.se"
 ssh_port        = "22"
-document_root   = "~/c7.se/"
+document_root   = "/var/www/c7.se/"
 deploy_default  = "rsync"
 
 ## -- Misc Configs -- ##
