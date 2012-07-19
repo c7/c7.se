@@ -58,7 +58,7 @@ p code {
 
 #page h1, .huge {
   font-size: 3.3em;
-  line-height: 1.1em;
+  line-height: 1.35em;
   color: darken($gray, 45);
 
   .greeting {
@@ -69,7 +69,7 @@ p code {
 
 #article {
   h1 {
-    margin-bottom: 0.4em;
+    margin-bottom: 0.6em;
   }
 
   h3 {
@@ -88,7 +88,22 @@ p code {
   min-height: 200px;
   text-indent: -6000em;
   margin: 0;
-  margin-bottom: 1em;
+  margin-bottom: 0.75em;
+}
+
+.recent-articles {
+  margin-top: 1.3em;
+  h2 {
+    margin-bottom: 0.4em;
+  }
+
+  li {
+    margin-bottom: 1.6em;
+  }
+}
+
+.vcard .huge {
+  line-height: 1.1em;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
