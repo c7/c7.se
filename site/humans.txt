@@ -1,0 +1,20 @@
+/* TEAM */
+
+  Developer:    Peter Hellberg
+  Twitter:      @peterhellberg
+  Location:     Stockholm, Sweden
+
+/* SITE */
+  
+  Source Code:  <https://github.com/c7/c7.se/>
+
+  Standards:    HTML5, CSS3
+  Microformats: hCard, Open Graph
+
+  Components:   Jekyll, Skeleton CSS, Sass, Guard, Rake
+  Software:     vim, git, rsync
+  
+  Fonts:        FF Tisa Web Pro <https://typekit.com/fonts/ff-tisa-web-pro/>
+                Yanone Kaffeesatz <http://www.yanone.de/typedesign/kaffeesatz/> 
+
+  Hosting:      GleSYS <http://glesys.com/>
