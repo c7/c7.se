@@ -31,12 +31,15 @@ I’ve been thinking about using Goliath ever since I saw the presentation
 
 ## Dependencies
 
-Goliath is a young project, and it seems like most people use it straight
-from the master branch on GitHub, and so will I. *(NOTE: My workaround 
-for MiniTest does not work with Goliath 0.9.4)*
+Goliath 1.0 has been released now and I have taken the time 
+to update this article with the relevant changes.
+One of the most notable changes are that the built in router 
+has been removed. Gone are the days when you needed to clone 
+Goliath from [GitHub](https://github.com/postrank-labs/goliath) 
+to get a sane version.
 
-I am also going to use the Ruby client library for [Redis](http://redis.io/),
-which has built in support for
+I am also going to use the Ruby client library for 
+[Redis](http://redis.io/), which has built in support for
 [EM-Synchrony](https://github.com/igrigorik/em-synchrony).
 
 ### Gemfile
@@ -44,12 +47,9 @@ which has built in support for
 {% highlight ruby %}
 source :rubygems
 
-gem "goliath",
-    :git => "https://github.com/postrank-labs/goliath.git",
-    :require => ["goliath/api", "log4r"]
-
+gem "goliath", "~> 1.0"
 gem "hiredis", "~> 0.4"
-gem "redis",   "~> 2.2",
+gem "redis",   "~> 3.0",
     :require => ["redis/connection/synchrony", "redis"]
 
 group :test do
@@ -67,22 +67,16 @@ My personal favorite among the myriad of Ruby test frameworks is
 *(The default test framework in Ruby 1.9)* and that is
 what I’m going to use in this article.
 
-I have managed to cobble together a `spec/spec_helper.rb` that makes it
-possible to test Goliath using minitest/spec.
-*(The tests for Goliath applications I’ve seen so far all use RSpec)*
-
 ### spec/spec_helper.rb
 
 {% highlight ruby %}
 require 'bundler'
-
-Bundler.setup
 Bundler.require
 
-require 'goliath/test_helper'
-require 'minitest/autorun'
-require 'minitest/pride'
 require 'minitest/spec'
+require 'minitest/pride'
+require 'minitest/autorun'
+require 'goliath/test_helper'
 require 'mock_redis'
 
 $redis = MockRedis.new
@@ -90,16 +84,6 @@ $redis = MockRedis.new
 class Goliath::Server
   def load_config(file = nil)
     config['redis'] = $redis
-  end
-end
-
-module Goliath
-  module TestHelper
-    def test_request(request_data = nil)
-      return if request_data.nil?
-      path = request_data.delete(:path) || ''
-      EM::HttpRequest.new("http://localhost:#{@test_server_port}#{path}")
-    end
   end
 end
 {% endhighlight %}
@@ -118,7 +102,7 @@ describe Api do
   include Goliath::TestHelper
 
   it "responds to heartbeat" do
-    with_api Api, { log_stdout: false } do
+    with_api Api do
       get_request path: '/' do |api|
         api.response.must_equal 'OK'
       end
@@ -126,21 +110,21 @@ describe Api do
   end
 
   it "can set and retrieve data" do
-    with_api Api, { log_stdout: false } do
-      get_request path: '/foo' do |api|
+    with_api Api do
+      get_request path: '/bar' do |api|
         api.response.must_equal ''
       end
     end
 
-    with_api Api, { log_stdout: false } do
-      put_request path: '/foo?value=bar' do |api|
+    with_api Api do
+      put_request path: '/bar?value=foo' do |api|
         api.response.must_equal 'OK'
       end
     end
 
-    with_api Api, { log_stdout: false } do
-      get_request path: '/foo' do |api|
-        api.response.must_equal 'bar'
+    with_api Api do
+      get_request path: '/bar' do |api|
+        api.response.must_equal 'foo'
       end
     end
   end
@@ -158,26 +142,21 @@ This is a _very_ simple API, it can only do three things:
 ### api.rb
 
 {% highlight ruby %}
-require 'goliath/api'
-
-class GetData < Goliath::API
-  def response(env)
-    [200, {}, redis.get('example_api:' + params[:key])]
-  end
-end
-
-class SetData < Goliath::API
-  use Goliath::Rack::Validation::RequiredParam, key: 'value'
-
-  def response(env)
-    [200, {}, redis.set('example_api:' + params[:key], params['value'])]
-  end
-end
-
 class Api < Goliath::API
+  use Goliath::Rack::Params
   use Goliath::Rack::Heartbeat, path: '/'
-  put '/:key', SetData
-  get '/:key', GetData
+
+  def response(env)
+    key = "example_api:#{env['REQUEST_PATH']}"
+    val = params['value'].to_a
+
+    res = case env['REQUEST_METHOD']
+      when 'GET' then redis.get key
+      when 'PUT' then redis.set key, val
+    end
+
+    [200, {}, res]
+  end
 end
 {% endhighlight %} 
 
@@ -200,8 +179,6 @@ end
 
 {% highlight ruby %}
 require "bundler"
-
-Bundler.setup
 Bundler.require
 
 require 'goliath/runner'
