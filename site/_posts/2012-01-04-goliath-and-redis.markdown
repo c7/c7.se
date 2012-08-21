@@ -31,12 +31,15 @@ I’ve been thinking about using Goliath ever since I saw the presentation
 
 ## Dependencies
 
-Goliath 1.0 has been released now and I have taken the time 
-to update this article with the relevant changes.
-One of the most notable changes are that the built in router 
-has been removed. Gone are the days when you needed to clone 
-Goliath from [GitHub](https://github.com/postrank-labs/goliath) 
-to get a sane version.
+Goliath, obviously.
+
+Version 1.0 has been released, and I have taken the time 
+to update this article with the relevant changes. One of the 
+more notable changes are the removal of the built in router.
+I think that was a good decision. Gone are the days when 
+you needed to clone Goliath from 
+[GitHub](https://github.com/postrank-labs/goliath) 
+just to get a sane version.
 
 I am also going to use the Ruby client library for 
 [Redis](http://redis.io/), which has built in support for
