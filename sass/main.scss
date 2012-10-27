@@ -73,11 +73,13 @@ p code {
   }
 
   ol, ul {
-    list-style: circle;
+    list-style: disc;
+    vertical-align: top;
+    list-style-position: inside;
   }
 
   li {
-    margin-bottom: 0.8em;
+    margin-bottom: 0.4em;
   }
 }
 
