@@ -10,25 +10,10 @@ once in a while.
 
 I’ve decided to spend a weekend playing with [Go](http://golang.org/).
 
-## Background
-
-Go is a compiled, garbage-collected, concurrent programming 
-language developed by [Google](https://google.com/).
-
-## Getting started
-
-> You don’t even have to install Go to start experimenting with it.
-
-The web site has a neat interactive [Tour of Go](http://tour.golang.org/) 
-and there is also the [Go Playground](http://play.golang.org/), a web 
-service that receives a Go program, compiles, links, and runs 
-the program inside a sandbox, then returns the output.
-(A little bit like [Try Ruby](http://tryruby.org/))
-
-## How is Go different from Ruby?
+## How is it different from Ruby?
 
 Go is *VERY* different from Ruby, but these are some of the
-highlights :)
+highlights:
 
  - Go is a statically typed, compiled language.
  - Go has Pascal/Modula-style syntax: name before type.
@@ -39,6 +24,22 @@ highlights :)
  - Functions in Go can return multiple values.
  - Export syntax (upper case initial letter for public method names)
  - Concurrency via [CSP](http://en.wikipedia.org/wiki/Communicating_sequential_processes)
+
+## Background
+
+Go is a compiled, garbage-collected, concurrent programming 
+language developed by Google. The initial design of Go was started in September 2007 by Robert Griesemer, Rob Pike, 
+and Ken Thompson.
+
+## Getting started
+
+> You don’t even have to install Go to start experimenting with it.
+
+The web site has a neat interactive [Tour of Go](http://tour.golang.org/) 
+and there is also the [Go Playground](http://play.golang.org/), a web 
+service that receives a Go program, compiles, links, and runs 
+the program inside a sandbox, then returns the output.
+(A little bit like [Try Ruby](http://tryruby.org/))
 
 ## Installing Go
 
@@ -71,6 +72,8 @@ I installed Go using Homebrew so my `$GOROOT` is `/usr/local/Cellar/go/1.0.3`
 
 Let’s write the canonical getting started program, Hello world!
 
+#### hello_world.go
+
 {% highlight go %}
 package main
     
@@ -97,7 +100,7 @@ $ ./hello_world
 hej världen!
 {% endhighlight %}
 
-(This requires that your code is located in its own directory)
+(This requires your code to be located in its own directory)
 
 ### A simple Web application
 
@@ -113,6 +116,7 @@ by [Blake Mizerany](https://twitter.com/bmizerany)
 
 > Pat is a Sinatra style pattern muxer for Go's net/http library.
 
+#### hello_pat.go 
 {% highlight go %}
 package main
 
@@ -137,13 +141,12 @@ func main() {
 
 ## Deploying Go on Heroku
 
-It is possible to deploy Go applications on [Heroku](http://www.heroku.com/) 
-thanks to the [Go Buildpack](https://github.com/kr/heroku-buildpack-go).
-
-I’m not going to go into details about this since 
-[Mark McGranaghan](https://twitter.com/mmcgrana) has written a 
+You can deploy Go applications on [Heroku](http://www.heroku.com/) 
+thanks to the [Go
+Buildpack](https://github.com/kr/heroku-buildpack-go), but I’m not going to go into details about this since 
+Mark McGranaghan wrote a 
 [very good blog post](http://mmcgrana.github.com/2012/09/getting-started-with-go-on-heroku.html)
-about this.
+on this very subject.
 
 ## Learn more about Go
 
@@ -151,6 +154,6 @@ about this.
  - [Go talks](http://talks.golang.org/) (Check out the one from SPLASH 2012)
  - [Go Language Community Wiki](http://code.google.com/p/go-wiki/w/list)
  - [Go by Example](https://gobyexample.com/), a hands-on 
-   introduction to Go using annotated example programs.
+   introduction using annotated example programs.
  - [A video tour of Go](http://www.youtube.com/watch?v=ytEkHepK08c)
  - [Writing, building, installing, and testing Go code](http://www.youtube.com/watch?v=XCsL89YtqCs)
