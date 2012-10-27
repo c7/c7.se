@@ -17,7 +17,7 @@ language developed by [Google](https://google.com/).
 
 ## Getting started
 
-You don’t even have to install Go to start experimenting with it.
+> You don’t even have to install Go to start experimenting with it.
 
 The web site has a neat interactive [Tour of Go](http://tour.golang.org/) 
 and there is also the [Go Playground](http://play.golang.org/), a web 
@@ -25,32 +25,53 @@ service that receives a Go program, compiles, links, and runs
 the program inside a sandbox, then returns the output.
 (A little bit like [Try Ruby](http://tryruby.org/))
 
-## Install
+## How is Go different from Ruby?
 
-Go is available from [Homebrew](http://mxcl.github.com/homebrew/) with a
-quick `brew install go`
+Go is *VERY* different from Ruby, but these are some of the
+highlights :)
 
-You can also install Go manually by downloading the package for your OS from
+ - Go is a statically typed, compiled language.
+ - Go has Pascal/Modula-style syntax: name before type.
+ - Go does not have classes or subtype inheritance.
+ - Go does not support default function arguments.
+ - Go has no try-catch control structures for exceptions.
+ - Enforced (automatic) code formatting via the gofmt tool.
+ - Functions in Go can return multiple values.
+ - Export syntax (upper case initial letter for public method names)
+ - Concurrency via [CSP](http://en.wikipedia.org/wiki/Communicating_sequential_processes)
+
+## Installing Go
+
+Go is available from [Homebrew](http://mxcl.github.com/homebrew/)
+
+{% highlight bash %}
+$ brew install go
+{% endhighlight %}
+
+You can also install Go by downloading it from 
 the [official downloads page](http://code.google.com/p/go/downloads/list).
 
 ### Vim configuration
 
-A vim syntax file is included in the Go distribution under misc/vim/
+A vim syntax file is included in the Go distribution under `misc/vim/`
 
 To use all the Vim plugins, add these lines to your vimrc:
 
-    set rtp+=$GOROOT/misc/vim
-    filetype plugin indent on
-    syntax on
+{% highlight vim %}
+set rtp+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
+{% endhighlight %}
 
 I installed Go using Homebrew so my `$GOROOT` is `/usr/local/Cellar/go/1.0.3`
 
-## Hello World
+## Examples
 
-Let’s write the canonical getting started program, Hello world, in the
-file `hello_world.go`
+### Hello World
 
-```go
+Let’s write the canonical getting started program, Hello world!
+
+{% highlight go %}
 package main
     
 import "fmt"
@@ -58,25 +79,27 @@ import "fmt"
 func main() {
     fmt.Println("hej världen!")
 }
-```
+{% endhighlight %}
 
-You can run this with `go run`:
+You use `go run` to run the program:
 
-```bash
+{% highlight bash %}
 $ go run hello_world.go
 hej världen!
-```
+{% endhighlight %}
 
-You can also run `go get` to compile the program 
-into a stand alone binary.
+You can also use `go get` to compile the 
+program into a stand alone excecutable:
 
-```bash
+{% highlight bash %}
 $ go get
 $ ./hello_world
 hej världen!
-```
+{% endhighlight %}
 
-## A simple Web application
+(This requires that your code is located in its own directory)
+
+### A simple Web application
 
 Time for something a bit more interesting. Go was originally designed
 with networking in mind, and that means that writing web applications
@@ -90,7 +113,7 @@ by [Blake Mizerany](https://twitter.com/bmizerany)
 
 > Pat is a Sinatra style pattern muxer for Go's net/http library.
 
-```go
+{% highlight go %}
 package main
 
 import (
@@ -110,9 +133,9 @@ func main() {
   http.Handle("/", m)
   http.ListenAndServe(":12345", nil)
 }
-```
+{% endhighlight %}
 
-## Go on Heroku
+## Deploying Go on Heroku
 
 It is possible to deploy Go applications on [Heroku](http://www.heroku.com/) 
 thanks to the [Go Buildpack](https://github.com/kr/heroku-buildpack-go).
@@ -129,8 +152,5 @@ about this.
  - [Go Language Community Wiki](http://code.google.com/p/go-wiki/w/list)
  - [Go by Example](https://gobyexample.com/), a hands-on 
    introduction to Go using annotated example programs.
-
-### Screencasts
- 
  - [A video tour of Go](http://www.youtube.com/watch?v=ytEkHepK08c)
  - [Writing, building, installing, and testing Go code](http://www.youtube.com/watch?v=XCsL89YtqCs)
