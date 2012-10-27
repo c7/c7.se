@@ -33,7 +33,7 @@ and Ken Thompson.
 
 ## Getting started
 
-> You don’t even have to install Go to start experimenting with it.
+*You don’t even have to install Go to start experimenting with it.*
 
 The web site has a neat interactive [Tour of Go](http://tour.golang.org/) 
 and there is also the [Go Playground](http://play.golang.org/), a web 
@@ -104,9 +104,9 @@ hej världen!
 
 ### A simple Web application
 
-Time for something a bit more interesting. Go was originally designed
-with networking in mind, and that means that writing web applications
-is fairly straight forward.
+Time for something a bit more interesting. The language 
+was originally designed with networking in mind, that 
+means it is fairly straight forward to write web applications in Go.
 
 I was looking around for something similar to 
 [Sinatra](http://www.sinatrarb.com/) and found 
