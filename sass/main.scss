@@ -71,6 +71,14 @@ p code {
   h1, h3 {
     margin-bottom: 0.6em;
   }
+
+  ol, ul {
+    list-style: circle;
+  }
+
+  li {
+    margin-bottom: 0.8em;
+  }
 }
 
 .amp {
