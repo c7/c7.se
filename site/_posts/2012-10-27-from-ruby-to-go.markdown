@@ -5,10 +5,10 @@ summary: Getting to know Go, a fun little language from Google.
 ---
 I’m not planning on leaving the lovely 
 [Ruby](http://www.ruby-lang.org/en/) ecosystem anytime soon, 
-but it is always nice to peek over the fence to other languages 
-once in a while.
+but it is always nice to peek over the fence to other 
+programming languages once in a while.
 
-I’ve decided to spend a weekend playing with [Go](http://golang.org/).
+I’ve now decided to take a closer look at [Go](http://golang.org/).
 
 ## How is it different from Ruby?
 
@@ -20,7 +20,7 @@ highlights:
  - Go does not have classes or subtype inheritance.
  - Go does not support default function arguments.
  - Go has no try-catch control structures for exceptions.
- - Enforced (automatic) code formatting via the gofmt tool.
+ - Enforced (automatic) code formatting via the [gofmt](http://golang.org/cmd/gofmt/) tool.
  - Functions in Go can return multiple values.
  - Export syntax (upper case initial letter for public method names)
  - Concurrency via [CSP](http://en.wikipedia.org/wiki/Communicating_sequential_processes)
