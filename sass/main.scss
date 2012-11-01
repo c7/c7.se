@@ -126,6 +126,15 @@ p code {
 #main {
   min-height: 300px;
   padding-bottom: 1em;
+
+  img.photo {
+    -webkit-transform-origin:0% 0%;
+    -webkit-transition: -webkit-transform 0.2s ease-out;
+  }
+
+  img.photo:hover {
+    -webkit-transform: rotate(2deg);
+  }
 }
 
 #current-projects, #articles, #presentations {
