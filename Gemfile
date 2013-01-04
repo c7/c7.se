@@ -10,6 +10,6 @@ group :development do
   gem "guard",            "~> 0.8"
   gem "guard-sass",       "~> 0.5"
   gem "guard-shell",      "~> 0.1"
-  gem "maruku",           :github => 'emerencia/maruku'
-  gem "jekyll",           :github => 'mojombo/jekyll'
+  gem "maruku"
+  gem "jekyll"
 end
