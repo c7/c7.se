@@ -13,9 +13,13 @@ author: Peter Hellberg
 source: site
 destination: .public
 
-markdown:    rdiscount
+safe:        true
 pygments:    true
 lsi:         false
+
+markdown:    rdiscount
+rdiscount:
+  extensions: [smart]
 
 permalink: /:title/
 

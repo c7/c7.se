@@ -1,15 +1,10 @@
-source "http://rubygems.org"
+source "https://rubygems.org/"
 
 group :development do
-  gem "rake",             "~> 0.9"
-  gem "rdiscount",        "~> 1.6"
-  gem "haml",             "~> 3.1.3"
-  gem "liquid",           "2.3.0"
-  gem "yajl-ruby",        "~> 1.1"
-  gem "rb-fsevent",       "~> 0.4"
-  gem "guard",            "~> 0.8"
-  gem "guard-sass",       "~> 0.5"
-  gem "guard-shell",      "~> 0.1"
-  gem "maruku"
-  gem "jekyll"
+  gem "rake",             "~> 10.0"
+  gem "sass",             "~> 3.2"
+  gem "rdiscount",        "~> 2.0"
+  gem "rb-fsevent",       "~> 0.9"
+  gem "foreman",          "~> 0.62"
+  gem "jekyll",           "~> 1.0.0.beta3"
 end
