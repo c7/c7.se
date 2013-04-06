@@ -154,6 +154,6 @@ on this very subject.
  - [Go talks](http://talks.golang.org/) (Check out the one from SPLASH 2012)
  - [Go Language Community Wiki](http://code.google.com/p/go-wiki/w/list)
  - [Go by Example](https://gobyexample.com/), a hands-on 
-   introduction using annotated example programs.
+   introduction using annotated examples.
  - [A video tour of Go](http://www.youtube.com/watch?v=ytEkHepK08c)
  - [Writing, building, installing, and testing Go code](http://www.youtube.com/watch?v=XCsL89YtqCs)

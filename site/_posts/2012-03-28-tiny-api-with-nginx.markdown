@@ -96,7 +96,7 @@ http://0.0.0.0:9999/loadbalancer.json
 #=> {"geoip_country_code":"SE", "redirect":"10.0.0.5"}
 {% endhighlight %}
 
-And if we want to use JSONP;
+#### And if we want to use JSONP:
 
 {% highlight ruby %}
 curl -H "X-Real-IP: 213.115.122.2" \
