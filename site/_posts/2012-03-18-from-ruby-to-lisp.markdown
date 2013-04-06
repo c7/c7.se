@@ -12,7 +12,7 @@ and before that my two main programming languages were [PHP](http://php.net/)
 and [Perl](http://perl.org/).
 
 Also, due to me being a web developer, I use JavaScript all the time.
-(I ❤ [CoffeeScript](http://coffeescript.org/))
+(I&nbsp;❤&nbsp;[CoffeeScript](http://coffeescript.org/))
 
 I’ve been thinking about learning a functional programming language for 
 quite some time now and I started out with [Erlang](http://www.erlang.org/) 

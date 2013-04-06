@@ -1,58 +1,70 @@
 ---
 layout: default
-title: Peter Hellberg, a Freelance Ruby Developer
+title: Peter Hellberg, a Ruby Developer in Stockholm, Sweden
 summary: These are some of my articles, projects and presentations.
 ---
 
-<div id="hcard-Peter-Hellberg" class="vcard clearfix">
-  <div class="row">
-    <div class="ten columns">
-      <h1 class="huge"><span class="greeting">Hello!</span> I'm <span class="fn n"><span class="given-name">Peter</span> <span class="family-name">Hellberg</span></span>, a Freelance <span class="role">Ruby Developer</span> in <span class="adr"><span class="region">Stockholm</span>, <span class="country-name">Sweden</span>.</span></h1>
-      <div class="hidden"><a class="org url" href="http://c7.se/">Code7 Interactive</a></div>
-
+<div id="hcard-Peter-Hellberg" class="vcard">
+  <div class="row remove-bottom">
+    <div class="four columns">
+      <div class="photo-container">
+        <img src="http://c7.se/images/peter_hellberg.png" alt="Peter Hellberg" class="photo" />
+      </div>
     </div>
-    <div class="offset-by-one five columns">
-      <img src="http://c7.se/images/peter.jpg" alt="Peter Hellberg" class="photo" />
+    <div class="twelve columns">
+      <h1 class="main-title">
+        My name is
+        <span class="fn n"><span class="given-name">Peter</span>
+        <span class="family-name">Hellberg</span></span> and I’m a
+        <span class="role">Ruby Developer</span> in
+        <span class="adr"><span class="region">Stockholm</span>, <span class="country-name">Sweden</span>.</span>
+      </h1>
+      <div class="hidden"><a class="org url" href="http://c7.se/">Code7 Interactive</a></div>
     </div>
   </div>
   <div class="row">
-    <div class="ten columns">
+    <div class="eleven columns">
       <div id="articles">
-        <h2>Latest article</h2>
+        <h2>Latest articles</h2>
 
-        {% for article in site.posts limit:1 %}
-          <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
-          <section class="article-summary">{{ article.summary }}</section>
+        {% for article in site.posts limit:3 %}
+          <div class="article add-bottom">
+            <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+            <section class="article-summary">{{ article.summary }}</section>
+          </div>
         {% endfor %}
-
       </div>
 
       <div id="current-projects">
-        <h2>Current projects</h2>
+        <h2>Open Source Projects</h2>
+
+        <blockquote>
+          Here are a few of my active open source projects.
+        </blockquote>
 
         <div class="project add-bottom">
           <h3><a href="https://github.com/peterhellberg/hashids.rb">Hashids</a></h3>
-          <span>Ruby gem that generates YouTube-like hashes from one or many numbers.</span>
+          <section class="project-summary">Ruby gem that generates YouTube-like hashes from one or many numbers.</section>
         </div>
 
         <div class="project add-bottom">
           <h3><a href="https://humans.herokuapp.com">Humans</a></h3>
-          <span>Parsing your humans.txt into JSON.</span>
+          <section class="project-summary">Parsing your humans.txt into JSON.</section>
         </div>
 
         <div class="project add-bottom">
           <h3><a href="http://c7.github.com/hazel/">Hazel</a></h3>
-          <span>Hazel is a simple Sinatra app generator, heavily based on snfn.</span>
+          <section class="project-summary">Hazel is a simple Sinatra app generator, heavily based on snfn.</section>
         </div>
 
         <div class="project add-bottom">
           <h3><a href="http://peterhellberg.github.com/pinch/">Pinch</a></h3>
-          <span>Retrieve a file from inside a zip file, over the network! Pretty sweet, eh?</span>
+          <section class="project-summary">Retrieve a file from inside a zip file, over the network! Pretty sweet, eh?</section>
         </div>
 
         <div class="project">
           <h3><a href="http://coffeescriptcookbook.com/">CoffeeScript Cookbook</a></h3>
-          <span>CoffeeScript recipes for the community by the community.</span>
+          <section class="project-summary">CoffeeScript recipes for the community by the community.</section>
         </div>
       </div>
 
@@ -61,12 +73,12 @@ summary: These are some of my articles, projects and presentations.
 
         <div class="presentation add-bottom">
           <h3><a href="http://speakerdeck.com/u/peterhellberg/p/pinch-some-crazy-http-zip-magic">Pinch - Some crazy HTTP ZIP Magic</a></h3>
-          <span>The inner workings of Pinch</span>
+          <section class="presentation-summary">The inner workings of Pinch</section>
         </div>
 
         <div class="presentation">
           <h3><a href="http://speakerdeck.com/u/peterhellberg/p/rubygems-a-quick-intro">RubyGems - A quick intro</a></h3>
-          <span>A quick introduction to making your own RubyGems.</span>
+          <section class="presentation-summary">A quick introduction to making your own RubyGems.</section>
         </div>
       </div>
 
@@ -74,11 +86,22 @@ summary: These are some of my articles, projects and presentations.
         <h2>Rates</h2>
         <p>My rates start at 900 SEK per hour + Swedish tax (25%)</p>
       </div>
-    </div>
-    <div class="offset-by-one five columns">
-      <h2>Contact information</h2>
 
-      <h3>Email <span class="amp">&amp;</span> Jabber</h3>
+      <div id="address">
+        <h2>Street Address</h2>
+        <div class="adr">
+          <span class="street-address">Mosstenabacken 1</span>,
+          <div>
+            <span class="postal-code">124 32</span>
+            <span class="locality">Bandhagen</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="off-by-one four columns">
+      <h2>Contact info</h2>
+
+      <h3>Email &amp; Jabber</h3>
       <p>
         <a class="email jabber" href="mailto:peter@c7.se">peter@c7.se</a>
       </p>
@@ -86,7 +109,6 @@ summary: These are some of my articles, projects and presentations.
       <h3>Twitter</h3>
       <p>
         <a rel="me" class="url twitter" href="http://twitter.com/peterhellberg">@peterhellberg</a>
-
       </p>
 
       <h3>GitHub</h3>
@@ -94,14 +116,6 @@ summary: These are some of my articles, projects and presentations.
         <a rel="me" class="url github" href="https://github.com/peterhellberg">@peterhellberg</a>
       </p>
 
-      <h3>Address</h3>
-      <div class="adr">
-        <span class="street-address">Mosstenabacken 1</span>,
-        <div>
-          <span class="postal-code">124 32</span>
-          <span class="locality">Bandhagen</span>
-        </div>
-      </div>
     </div>
   </div>
 </div>
