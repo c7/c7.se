@@ -150,6 +150,13 @@ p code {
     .highlight, p code, h4 code, li code {
       font-size: 12px;
     }
+
+    #article {
+      ol, ul {
+        list-style-position: inside;
+      }
+    }
+
   }
 
   /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
@@ -159,11 +166,5 @@ p code {
 
   /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
   @media only screen and (max-width: 479px) {
-    #article {
-      ol, ul {
-        list-style-position: inside;
-      }
-    }
-
     a.follow-on-twitter, a.follow-on-twitter:visited { font-size: 0.9em; background-image: none; }
   }
