@@ -51,20 +51,19 @@
 /* #Basic Styles
 ================================================== */
 
-  html { font-size: 62.5%; }
 
   body {
     background: #fff;
-    color: #333;
-    line-height: 26px;
-    line-height: 2.6rem;
+    color: #333332;
+    line-height: 28px;
     font-weight:400;
-    font-size: 17px;
-    font-size: 1.7rem;
+    font-size: 20px;
     font-size-adjust:none;
 
     text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-font-smoothing: antialiased;
+
+    text-rendering: optimizeLegibility;
     -webkit-text-size-adjust: 100%;
   }
 
@@ -73,16 +72,21 @@
 ================================================== */
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 
-  p  { font-size: 1em; line-height: 1.5em; margin-bottom: 1.5em; }
-  h1 { font-size: 2em; line-height: 0.75em; margin-bottom: 0.1em; }
-  h2 { font-size: 1.47em; line-height: 1.6875em; margin-bottom: 0.5em; font-weight: 700; }
-  h3 { font-size: 1.22em; line-height: 1em; margin-bottom: 0.2em; font-weight: 400; }
-  h4 { font-size: 1.10em; line-height: 1.08em; margin-top: 1em; margin-bottom: 1em; font-weight: 700; }
-  h5 { font-size: 1em; line-height: 1.22em; }
+  h1, h2, h3, h4 {
+    font-weight: 700;
+    color: #333332;
+  }
+
+  h1 { font-size: 50px; line-height: 1.1; margin-bottom: 17px; letter-spacing: -1px; }
+  h2 { font-size: 24px; line-height: 1.6; margin-bottom: 18px; margin-top: 33px; }
+  h3 { font-size: 20px; margin-bottom: 2px; }
+  h4 { margin-top: 20px; }
+  h5 { font-size: 17px; }
+
+  p  { margin-bottom: 27px; }
 
   .subheader { color: #777; }
 
-  /*p { margin: 0 0 1.5rem 0; } */
   p img { margin: 0; }
   p.lead { font-size: 21px; line-height: 27px; color: #777;  }
 
@@ -91,14 +95,11 @@
   small { font-size: 80%; }
 
 /*  Blockquotes  */
-  blockquote, blockquote p { font-size: 17px; line-height: 24px; color: #777; font-style: italic; }
-  blockquote { margin: 0 0 20px; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
-  blockquote cite { display: block; font-size: 12px; color: #555; }
-  blockquote cite:before { content: "\2014 \0020"; }
-  blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }
+  blockquote, blockquote p { font-style: italic; }
+  blockquote { margin: 0 0 27px -25px; padding-left: 25px; border-left: 5px solid $green; }
 
+/* Horizontal line */
   hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
-
 
 /* #Links
 ================================================== */
