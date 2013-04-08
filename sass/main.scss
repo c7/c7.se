@@ -95,6 +95,11 @@ p code {
 
   .vcard {
     margin-top: 2em;
+
+    h2 {
+      font-size: 28px;
+      margin-top: 35px;
+    }
   }
 }
 
@@ -150,6 +155,16 @@ p code {
 
   /* Tablet Portrait size to standard 960 (devices and browsers) */
   @media only screen and (min-width: 768px) and (max-width: 959px) {
+    blockquote {
+      margin-left: -10px;
+      padding-left: 12px;
+    }
+
+    #article .vcard h2 {
+      font-size: 22px;
+      padding: 0;
+      margin-top: 26px;
+    }
   }
 
   /* All Mobile Sizes (devices and browser) */
@@ -164,6 +179,12 @@ p code {
       ol, ul {
         list-style-position: inside;
       }
+
+      .vcard h2 {
+        font-size: 23px;
+        line-height: 1.4;
+        margin-top: 0;
+      }
     }
 
   }
@@ -176,6 +197,6 @@ p code {
   /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
   @media only screen and (max-width: 479px) {
     .main-title { font-size: 37px; margin-bottom: 10px; margin-top: 0; }
-    .photo-container img { height: 120px; }
+    .photo-container img { height: 200px; }
     a.follow-on-twitter, a.follow-on-twitter:visited { font-size: 0.9em; background-image: none; }
   }
