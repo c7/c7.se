@@ -53,10 +53,9 @@ a, a:visited { color: $green; }
 .hidden { display: none; }
 
 .highlight, p code, h4 code, li code {
-  font-weight: bold;
   font-family: Monaco, Monospace;
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.3;
 
   pre {
     overflow: auto;
@@ -167,7 +166,7 @@ p code {
     }
 
     .highlight {
-      font-size: 13px;
+      font-size: 14px;
     }
   }
 
@@ -175,9 +174,7 @@ p code {
   @media only screen and (max-width: 767px) {
     #logo { margin-bottom: 0; }
 
-    .highlight {
-      font-size: 14px;
-    }
+    .highlight { font-size: 15px; }
 
     #article {
       ol, ul {
@@ -196,7 +193,6 @@ p code {
   /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
   @media only screen and (min-width: 480px) and (max-width: 767px) {
     body { font-size: 18px; }
-    .highlight { font-size: 13px; }
   }
 
   /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
@@ -204,5 +200,4 @@ p code {
     .main-title { font-size: 37px; margin-bottom: 10px; margin-top: 0; }
     .photo-container img { height: 200px; }
     a.follow-on-twitter, a.follow-on-twitter:visited { font-size: 0.9em; background-image: none; }
-    .highlight { font-size: 12px; }
   }
