@@ -22,9 +22,10 @@ body {
 }
 
 h4 {
-  font-family: 'Myriad Pro', 'Lucida Grande',
+  font-family: 'Avenir-Black', 'Lucida Grande',
                'Lucida Sans Unicode', 'Lucida Sans',
                Geneva, Verdana, sans-serif;
+  font-weight: 700;
 }
 
 a, a:visited { color: $green; }
@@ -53,22 +54,29 @@ a, a:visited { color: $green; }
 .hidden { display: none; }
 
 .highlight, p code, h4 code, li code {
-  margin-top: 0.6em;
-  margin-bottom: 2em;
+  font-weight: bold;
   font-family: Monaco, Monospace;
   font-size: 15px;
   line-height: 1.6;
-  padding: 0.4em;
-  border: 1px solid #eee;
-  background: #fefefe;
-
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
 
   pre {
     overflow: auto;
   }
+}
+
+p code, h4 code, li code {
+  font-size: 14px;
+  line-height: 1;
+  background: #eee;
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.highlight {
+  padding: 0.3em 0.5em;
+  margin-top: 0.6em;
+  margin-bottom: 2em;
 }
 
 p code {
@@ -145,9 +153,7 @@ p code {
   @media only screen and (max-width: 767px) {
     #logo { margin-bottom: 0; }
 
-    .vcard .photo { margin-top: 1em; }
-
-    .highlight, p code, h4 code, li code {
+    .highlight {
       font-size: 12px;
     }
 
@@ -166,5 +172,7 @@ p code {
 
   /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
   @media only screen and (max-width: 479px) {
+    .main-title { font-size: 37px; margin-bottom: 10px; margin-top: 0; }
+    .photo-container img { height: 120px; }
     a.follow-on-twitter, a.follow-on-twitter:visited { font-size: 0.9em; background-image: none; }
   }
