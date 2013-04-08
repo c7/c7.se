@@ -3,7 +3,6 @@ layout: default
 title: Peter Hellberg, a Ruby Developer in Stockholm, Sweden
 summary: These are some of my articles, projects and presentations.
 ---
-
 <div id="hcard-Peter-Hellberg" class="vcard">
   <div class="row remove-bottom">
     <div class="four columns">
@@ -23,11 +22,10 @@ summary: These are some of my articles, projects and presentations.
     </div>
   </div>
   <div class="row">
-    <div class="eleven columns">
+    <div class="twelve columns">
       <div id="articles">
-        <h2>Latest articles</h2>
-
-        {% for article in site.posts limit:3 %}
+        <h2>Articles</h2>
+        {% for article in site.posts limit:10 %}
           <div class="article add-bottom">
             <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
             <section class="article-summary">{{ article.summary }}</section>
@@ -84,11 +82,19 @@ summary: These are some of my articles, projects and presentations.
 
       <div id="rates">
         <h2>Rates</h2>
-        <p>My rates start at 900 SEK per hour + Swedish tax (25%)</p>
+        <p>My rates start at <strong>900 SEK</strong> per hour + Swedish tax (25%)</p>
       </div>
-
+    </div>
+    <div class="four columns">
+      <h2>Contact info</h2>
+      <h3>Email &amp; Jabber</h3>
+      <p><a class="email jabber" href="mailto:peter@c7.se">peter@c7.se</a></p>
+      <h3>Twitter</h3>
+      <p><a rel="me" class="url twitter" href="http://twitter.com/peterhellberg">@peterhellberg</a></p>
+      <h3>GitHub</h3>
+      <p><a rel="me" class="url github" href="https://github.com/peterhellberg">@peterhellberg</a></p>
       <div id="address">
-        <h2>Street Address</h2>
+        <h3>Street Address</h3>
         <div class="adr">
           <span class="street-address">Mosstenabacken 1</span>,
           <div>
@@ -97,25 +103,6 @@ summary: These are some of my articles, projects and presentations.
           </div>
         </div>
       </div>
-    </div>
-    <div class="off-by-one four columns">
-      <h2>Contact info</h2>
-
-      <h3>Email &amp; Jabber</h3>
-      <p>
-        <a class="email jabber" href="mailto:peter@c7.se">peter@c7.se</a>
-      </p>
-
-      <h3>Twitter</h3>
-      <p>
-        <a rel="me" class="url twitter" href="http://twitter.com/peterhellberg">@peterhellberg</a>
-      </p>
-
-      <h3>GitHub</h3>
-      <p>
-        <a rel="me" class="url github" href="https://github.com/peterhellberg">@peterhellberg</a>
-      </p>
-
     </div>
   </div>
 </div>
