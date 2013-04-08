@@ -43,7 +43,7 @@ the program inside a sandbox, then returns the output.
 
 ## Installing Go
 
-Go is available from [Homebrew](http://mxcl.github.com/homebrew/)
+Go is available from [Homebrew](http://mxcl.github.io/homebrew/)
 
 {% highlight bash %}
 $ brew install go
