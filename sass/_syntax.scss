@@ -1,6 +1,6 @@
 .highlight .hll { background-color: #ffffcc }
 .highlight  { background: #151515; color: #E6E1DC; background-color: #151515; border-radius: 5px; }
-.highlight .c { color: #BC9357; font-style: italic; background-color: #151515 } /* Comment */
+.highlight .c { color: #BC9357; background-color: #151515 } /* Comment */
 .highlight .err { color: #E6E1DC; background-color: #151515 } /* Error */
 .highlight .g { color: #E6E1DC; background-color: #151515 } /* Generic */
 .highlight .k { color: #457898; background-color: #151515 } /* Keyword */
@@ -9,10 +9,10 @@
 .highlight .o { color: #E6E1DC; background-color: #151515 } /* Operator */
 .highlight .x { color: #E6E1DC; background-color: #151515 } /* Other */
 .highlight .p { color: #E6E1DC; background-color: #151515 } /* Punctuation */
-.highlight .cm { color: #BC9357; font-style: italic; background-color: #151515 } /* Comment.Multiline */
-.highlight .cp { color: #BC9357; font-style: italic; background-color: #151515 } /* Comment.Preproc */
-.highlight .c1 { color: #BC9357; font-style: italic; background-color: #151515 } /* Comment.Single */
-.highlight .cs { color: #BC9357; font-style: italic; background-color: #151515 } /* Comment.Special */
+.highlight .cm { color: #BC9357; background-color: #151515 } /* Comment.Multiline */
+.highlight .cp { color: #BC9357; background-color: #151515 } /* Comment.Preproc */
+.highlight .c1 { color: #BC9357; background-color: #151515 } /* Comment.Single */
+.highlight .cs { color: #BC9357; background-color: #151515 } /* Comment.Special */
 .highlight .gd { color: #E6E1DC; font-weight: bold; background-color: #008080 } /* Generic.Deleted */
 .highlight .ge { color: #E6E1DC; background-color: #151515 } /* Generic.Emph */
 .highlight .gr { color: #FFFFFF; background-color: #990000 } /* Generic.Error */
