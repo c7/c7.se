@@ -195,10 +195,24 @@ p code {
   @media only screen and (min-width: 480px) and (max-width: 767px) {
     body { font-size: 18px; }
     .highlight { font-size: 13px; }
+
+    h2 { margin-bottom: 10px; }
   }
 
   /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
   @media only screen and (max-width: 479px) {
+    body { font-size: 16px; }
+
+    h1 { font-size: 38px; line-height: 1.1; }
+    h2 { font-size: 22px; line-height: 1.3; margin-top: 30px; margin-bottom: 9px; }
+    h3 { font-size: 18px; line-height: 1.2; }
+    h4 { font-size: 16px; line-height: 1.2; }
+
+    blockquote {
+      margin-left: -10px;
+      padding-left: 12px;
+    }
+
     p { word-wrap: break-word; }
 
     .highlight { font-size: 12px; }
