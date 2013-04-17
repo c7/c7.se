@@ -33,7 +33,7 @@ and Ken Thompson.
 
 ## Getting started
 
-*You don’t even have to install Go to start experimenting with it.*
+> You don’t even have to install Go to start experimenting with it.
 
 The web site has a neat interactive [Tour of Go](http://tour.golang.org/) 
 and there is also the [Go Playground](http://play.golang.org/), a web 
