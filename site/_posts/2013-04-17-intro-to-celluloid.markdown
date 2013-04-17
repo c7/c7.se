@@ -8,7 +8,7 @@ I’ve been using the wonderful [Sidekiq](http://sidekiq.org/) project for
 a while now, and I thought it would be a good time to take a closer look at
 [Celluloid](http://celluloid.io/).
 
-## But what is Celluloid you say?
+## What is it?
 
 > Celluloid is a concurrent object oriented programming framework for Ruby 
 > which lets you build multithreaded programs out of concurrent objects 
@@ -19,7 +19,7 @@ to do its magic. The *(not so)* secret sauce, if you will.
 
 ## Installation
 
-We just need the install the gem:
+We just need to install the gem:
 
 {% highlight bash %}
 $ gem install celluloid
