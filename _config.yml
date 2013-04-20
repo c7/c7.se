@@ -5,6 +5,9 @@
 url: http://c7.se
 title: Code7 Interactive
 author: Peter Hellberg
+description: Articles about technology,
+             mostly centered around the
+             Ruby programming language.
 
 # ----------------------- #
 #    Jekyll               #
