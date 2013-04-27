@@ -5,19 +5,21 @@ summary: I’ve decided to use Vundle the Vim package manager.
 ---
 
 I’ve been using [Vim](http://www.vim.org/) on and off for close to 
-10 years now but it became my primary editor more recently. Along 
-with a lot of other people in the Ruby community I moved from 
-[TextMate](http://macromates.com/) to 
-[MacVim](https://code.google.com/p/macvim/) a few years ago.
+10 years now. It became my primary editor more recently.
+(Along with a lot of other people in the Ruby community
+I moved from [TextMate](http://macromates.com/) to 
+[MacVim](https://code.google.com/p/macvim/) a few years ago)
 
 I started using the [Janus](https://github.com/carlhuda/janus) 
-distribution and never had any major issues with it. There has been 
-a few minor performance issues, issues that mostly stem from the 
-large amount of plugins and customizations that Janus bring to the table.
+distribution and never had any major issues with it. 
 
-I have now decided to start over, this time being slightly 
+There have been a few **minor** performance issues though, issues 
+that mostly stem from the large number of plugins and 
+customizations that Janus brings to the table.
+
+I have decided to start over, this time being slightly 
 more restrictive with my configuration. I’ve also decided to use
-[Vundle](https://github.com/gmarik/vundle) for plugin management.
+[Vundle](https://github.com/gmarik/vundle) for plugin management…
 
 > Vundle is short for *Vim bundle* and is a Vim plugin manager.
 
@@ -25,7 +27,7 @@ more restrictive with my configuration. I’ve also decided to use
 
 There is no point in making any changes until you have figured 
 out what the current state is. You can see what Vim does when 
-it starts by calling the **startuptime** flag.
+it starts up by calling the **startuptime** flag.
 
 In my case that would be:
 
@@ -36,8 +38,9 @@ mvim -v --startuptime /dev/stdout +qall
 Which prints **171** lines of log output for Vi-mode and **189** 
 for the GUI-mode.
 
-There is a small guide on [Improving Vim’s Startup Time](http://usevim.com/2012/04/18/startuptime/)
-over at Usevim that you might want to take a look at.
+> You might want to take a look at 
+> [Improving Vim’s Startup Time](http://usevim.com/2012/04/18/startuptime/)
+> over at Usevim.
 
 ### Extra plugins
 
@@ -71,23 +74,21 @@ call janus#disable_plugin('buffergator')
 
 ## A clean slate
 
-Now we are ready to start slimming down Vim.
-
 My dotfiles live in a Git repo so it is quite trivial to 
 create a new branch where I can make the required changes:
 
 {% highlight bash %}
-$ git checkout -b slimvim 
+$ git checkout -b switching-to-vundle 
 {% endhighlight %}
 
 I just need to remove all traces of Janus by unlinking 
-all the symlinks and removing other related files.
+all the symlinks and removing all other related files.
 
 The resulting **startuptime** log is **41** lines long, *quite an improvement*.
 
-It is quite possible to use Vim on its own like this, but I’ve come to
-love a few plugins and I’m happy to let the i7 in my Air work a bit more 
-in order to let me use them.
+It is quite possible to use Vim on its own like this. I’ve come to
+love a few plugins and I’m happy to let the i7 in my Air work a 
+bit in order to let me use them.
 
 ## [Vundle](https://github.com/gmarik/vundle)
 
@@ -98,9 +99,9 @@ $ mkdir ~/.vim/bundle
 $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 {% endhighlight %}
 
-Vundle makes it _very_ easy to manage Vim plugins. You just need 
+Vundle makes it **very** easy to manage Vim plugins. You just need 
 to specify a few rows along the lines of `Bundle "user/plugin"` 
-in your .vimrc and then issue `:BundleInstall` to start the installation.
+in your `.vimrc` and then issue `:BundleInstall` to start the installation.
 
 You can also run `:BundleUpdate` and `:BundleClean`
 
