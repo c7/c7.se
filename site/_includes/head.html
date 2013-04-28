@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{page.title}} - {{site.title}}</title>
+    <title>{{page.title}} - {{site.title}}</title>{% if page.summary %}
+    <meta name="description" content="{{page.summary}}">{% endif %}
     <meta name="author" content="{{site.author}}">{% if page.keywords %}
     <meta name="keywords" content="{{page.keywords }}">{% endif %}{% capture header %}{% if page.title %}
     <meta property="og:type" content="article" />
