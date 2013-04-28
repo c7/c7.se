@@ -69,6 +69,7 @@ p code, h4 code, li code {
   padding: 0.3em 0.5em;
   margin-top: 0.6em;
   margin-bottom: 2em;
+  word-wrap: break-word;
 }
 
 p code {
@@ -145,9 +146,6 @@ p code {
       margin-top: 16px;
     }
 
-    .highlight {
-      word-wrap: break-word;
-    }
   }
 
   /* Tablet Portrait size to standard 960 (devices and browsers) */
