@@ -4,11 +4,11 @@ title: Switching to Vundle
 summary: I’ve decided to use Vundle the Vim package manager. 
 ---
 
-I’ve been using [Vim](http://www.vim.org/) on and off for close to 
-10 years now. It became my primary editor more recently.
-(Along with a lot of other people in the Ruby community
-I moved from [TextMate](http://macromates.com/) to 
-[MacVim](https://code.google.com/p/macvim/) a few years ago)
+I’ve been using [Vim](http://www.vim.org/) on and off for close 
+to 10 years now and It became my primary editor when I switched from 
+[TextMate](http://macromates.com/) to 
+[MacVim](https://code.google.com/p/macvim/) a few years ago.
+*(Along with a lot of other people in the Ruby community)*
 
 I started using the [Janus](https://github.com/carlhuda/janus) 
 distribution and never had any major issues with it. 
@@ -111,7 +111,6 @@ Both `NERDTree` and `Syntastic` are quite slow.
 I could probably manage without them but what would be the fun in that?
 
 {% highlight vim %}
-" Vundle setup """"""""""""""""""""""""
 set nocompatible
 filetype off
 
@@ -138,8 +137,6 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'slim-template/vim-slim'
 
 filetype plugin indent on
-
-" My own config """""""""""""""""""""""
 
 let mapleader=","
 
@@ -210,12 +207,10 @@ if bufwinnr(1)
   nmap ä <C-W>+<C-W>+
 endif
 
-" Plugins """""""""""""""""""""""""""""
-
 " NERDTree
 nmap <leader>n :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
-let NERDTreeIgnore = ['tmp', '.yardoc', 'tags', 'resources', 'pkg']
+let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
 
 " Syntastic
 let g:syntastic_mode_map = { 'mode': 'passive' }
@@ -251,16 +246,17 @@ if has("gui_macvim")
 
   " resize current buffer by +/- 5
   nnoremap <M-Right> :vertical resize +5<CR>
-  nnoremap <M-Left> :vertical resize -5<CR>
-  nnoremap <M-Up> :resize -5<CR>
-  nnoremap <M-Down> :resize +5<CR>
+  nnoremap <M-Left>  :vertical resize -5<CR>
+  nnoremap <M-Up>    :resize -5<CR>
+  nnoremap <M-Down>  :resize +5<CR>
 
   " Command+Option+Right for next
   map <D-M-Right> :tabn<CR>
   " Command+Option+Left for previous
   map <D-M-Left> :tabp<CR>
 
-  " Automatically resize splits when resizing MacVim window
+  " Automatically resize splits
+  " when resizing MacVim window
   autocmd VimResized * wincmd =
 endif
 {% endhighlight %}
