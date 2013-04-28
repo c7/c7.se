@@ -173,7 +173,7 @@ EM::Synchrony::ConnectionPool and a Goliath::Runner that takes care of running t
 ### config.rb
 
 {% highlight ruby %}
-config['redis'] = EM::Synchrony::ConnectionPool.new(size: 2) do
+config['redis'] = EM::Synchrony::ConnectionPool.new size: 2 do
   Redis.new
 end
 {% endhighlight %} 
