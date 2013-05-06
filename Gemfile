@@ -6,5 +6,5 @@ group :development do
   gem "rdiscount",        "~> 2.0"
   gem "rb-fsevent",       "~> 0.9"
   gem "foreman",          "~> 0.63"
-  gem "jekyll",           "~> 1.0.0.rc1"
+  gem "jekyll",           "~> 1.0"
 end
