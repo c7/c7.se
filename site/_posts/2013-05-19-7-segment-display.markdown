@@ -17,7 +17,7 @@ You’ll need a few things in order to follow along with this article:
  * 1 x 7-Segment Display (**SSD**)
  * 9 x Short wires
 
-(I’m using an [Arduino UNO R3](http://arduino.cc/en/Main/arduinoBoardUno) and the
+(I’ve got an [Arduino UNO R3](http://arduino.cc/en/Main/arduinoBoardUno) and the
 [Counting Knob MiniKit](http://fritzing.myshopify.com/products/fritzing-minikit-counting-knob)
 from [Fritzing](http://fritzing.org/))
 
@@ -25,7 +25,7 @@ from [Fritzing](http://fritzing.org/))
 
 A fairly new version of Ruby (**2.0.0** or **1.9.3** should be fine).
 
-You’ll also need a recent version of the
+You will also need a recent version of the
 [Arduino Software](http://arduino.cc/en/Main/Software)
 installed.
 
