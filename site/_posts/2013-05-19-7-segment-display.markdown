@@ -66,7 +66,7 @@ You can also skip the bottom wire (**Pin 2**) if you don’t want to use the dec
 
 ## Code
 
-### sevent_segment_display.rb
+### seven_segment_display.rb
 {% highlight ruby %}
 require 'dino'
 
