@@ -25,12 +25,12 @@ a { color: $green; }
 .font-normal { font-weight: 400; }
 .font-book   { font-weight: 300; }
 
-.article-title {
+.entry-title {
   outline: 0;
   word-wrap: break-word;
 }
 
-.article-summary, .article-content {
+.entry-summary, .entry-content {
   line-height: 1.5;
 }
 
@@ -84,6 +84,12 @@ p code {
 }
 
 #article {
+  .entry-summary {
+    margin-top: -0.8em;
+    margin-bottom: 1.6em;
+    font-weight: normal;
+  }
+
   ol, ul {
     list-style: disc;
     vertical-align: top;
