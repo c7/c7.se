@@ -19,7 +19,7 @@ body {
   border-top: 8px solid $green;
 }
 
-a, a:visited { color: $green; }
+a { color: $green; }
 
 .font-bold   { font-weight: 700; }
 .font-normal { font-weight: 400; }
@@ -201,6 +201,36 @@ p code {
       }
     }
 
+    .recent-articles {
+      h2 {
+        font-size: 28px;
+        line-height: 40px;
+        margin-bottom: 15px;
+      }
+      ul {
+        margin-bottom: 0;
+
+        li {
+          margin-bottom: 15px;
+        }
+
+        h3 {
+          font-size: 22px;
+        }
+
+        a {
+          display: block;
+          background: #fefefe;
+          height: 30px;
+          padding: 2px 0 0 10px;
+          border-left: 5px solid #fff;
+          margin-left: -10px;
+          &:hover {
+            border-color: $green;
+          }
+        }
+      }
+    }
   }
 
   /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
