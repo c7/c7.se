@@ -15,7 +15,6 @@
 ================================================== */
 
 body {
-
   font-family: "ff-tisa-web-pro",Georgia,Cambria,serif;
   border-top: 8px solid $green;
 }
@@ -124,7 +123,7 @@ p code {
 
     #logo {
       background: transparent url("/images/logo_square_2x.png") no-repeat top center;
-      background-size: 196px 196px;
+      background-size: 192px 192px;
     }
   }
 
@@ -137,10 +136,19 @@ p code {
 
   /* Smaller than standard 960 (devices and browsers) */
   @media only screen and (max-width: 959px) {
-    h1 {
-      font-size: 42px;
-      margin-bottom: 20px;
+
+    body {
+      border-top: 4px solid $green;
     }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 18px;
+   }
+
+   .main-title {
+    font-size: 44px;
+   }
 
     .photo-container {
       text-align: center;
@@ -149,11 +157,6 @@ p code {
         max-height: 220px;
       }
     }
-
-    .main-title {
-      margin-top: 16px;
-    }
-
   }
 
   /* Tablet Portrait size to standard 960 (devices and browsers) */
@@ -176,7 +179,12 @@ p code {
 
   /* All Mobile Sizes (devices and browser) */
   @media only screen and (max-width: 767px) {
-    #logo { margin-bottom: 0; }
+    #logo {
+      margin-bottom: 0;
+      margin-top: 1px;
+      background-size: 192px 192px;
+      min-height: 200px;
+    }
 
     .highlight { font-size: 15px; }
 
@@ -186,8 +194,9 @@ p code {
       }
 
       .vcard h2 {
-        font-size: 23px;
-        line-height: 1.4;
+        font-size: 37px;
+        line-height: 1.3;
+        letter-spacing: -1px;
         margin-top: 0;
       }
     }
@@ -200,13 +209,18 @@ p code {
     .highlight { font-size: 13px; }
 
     h2 { margin-bottom: 10px; }
+
+    #article .vcard h2 {
+      font-size: 34px;
+      line-height: 1.3;
+    }
   }
 
   /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
   @media only screen and (max-width: 479px) {
     body { font-size: 16px; }
 
-    h1 { font-size: 38px; line-height: 1.1; }
+    h1 { font-size: 33px; line-height: 1.2; }
     h2 { font-size: 22px; line-height: 1.3; margin-top: 30px; margin-bottom: 9px; }
     h3 { font-size: 18px; line-height: 1.2; }
     h4 { font-size: 16px; line-height: 1.2; }
@@ -220,6 +234,6 @@ p code {
 
     .highlight { font-size: 12px; }
     .main-title { font-size: 37px; margin-bottom: 10px; margin-top: 0; }
-    .photo-container img { height: 200px; }
+    .photo-container img { height: 168px; margin-bottom: 10px; }
     a.follow-on-twitter, a.follow-on-twitter:visited { font-size: 0.9em; background-image: none; }
   }
