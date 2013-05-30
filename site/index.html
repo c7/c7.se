@@ -26,9 +26,9 @@ summary: These are some of my articles, projects and presentations.
       <div id="articles">
         <h2>Articles</h2>
         {% for article in site.posts limit:10 %}
-          <div class="article add-bottom">
-            <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
-            <section class="article-summary">{{ article.summary }}</section>
+          <div class="hentry add-bottom">
+            <h3><a href="{{ article.url }}" class="url"><span class="entry-title">{{ article.title }}</span></a></h3>
+            <section class="entry-summary">{{ article.summary }}</section>
           </div>
         {% endfor %}
       </div>
