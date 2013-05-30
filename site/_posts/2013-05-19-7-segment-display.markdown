@@ -58,8 +58,8 @@ $ open du/du.ino
 Follow the wiring instructions for the SSD in this
 [YouTube video](http://www.youtube.com/watch?v=2Q74raAI8i8)
 (**01:10**-**04:15**)
+*Just ignore the knob and blue wires and you should be good to go…*
 
-Just ignore the knob and blue wires and you should be good to go…
 You can also skip the bottom wire (**Pin 2**) if you don’t want to use the decimal point.
 
 ![Wired 7-Segment Display](/assets/7-segment-display/arduino_with_seven_segment_display.jpg)
