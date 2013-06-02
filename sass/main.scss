@@ -135,10 +135,13 @@ p code {
 
   /* Larger than standard 960 (devices and browsers) */
   @media only screen and (min-width: 960px) {
-    body { font-size: 22px; }
-    h1   { font-size: 52px; }
-    h2   { font-size: 27px; }
-    h3   { font-size: 24px; }
+    #article {
+      font-size: 22px;
+
+      h1   { font-size: 52px; }
+      h2   { font-size: 27px; }
+      h3   { font-size: 24px; }
+    }
 
     .main-title { margin-top: 25px; }
     .highlight  { font-size: 19px; line-height: 1.45; }
