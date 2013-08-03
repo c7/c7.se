@@ -45,10 +45,9 @@ A lot of things differ between the two languages, here are a few of them:
 
 **NOTE:**
 <br>
-MRI supports Tail Call Optimizatioin if you change `:tailcall_optimization` to **true** 
+MRI supports Tail Call Optimizatioin if you change :tailcall_optimization to **true** 
 in `RubyVM::InstructionSequence.compile_option`
-
-This is unfortunately not part of the Ruby spec.
+This is unfortunately not in the Ruby spec.
 
 ## Installing Lua
 
@@ -76,7 +75,7 @@ and it seems pretty neat.
 
 ## Syntax
 
-As it is customary, let’s start with a
+As is customary, let’s start with a
 [Hello World program](http://en.wikipedia.org/wiki/Hello_world_program):
 
 {% highlight lua %}
