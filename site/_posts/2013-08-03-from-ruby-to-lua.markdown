@@ -11,25 +11,6 @@ also considered to be **fast**, **portable**, **embeddable**, **powerful**
 
 _Sounds good to me._
 
-## Installation
-
-If you are using **OS X** and have [Homebrew](http://mxcl.github.io/homebrew/) 
-installed, then you can install Lua like this:
-
-{% highlight bash %}
-$ brew install lua
-{% endhighlight %}
-
-Ubuntu users should install the 
-[lua5.1](http://packages.ubuntu.com/raring/lua5.1) package.
-
-Stuck on Windows? Then you’ll probably want to install
-[Lua for Windows](https://code.google.com/p/luaforwindows/).
-
-### Package manager
-
-The package manager for Lua is called [Luarocks](http://luarocks.org/).
-
 ## Similarities with Ruby
 
 Let’s start off by listing some of the 
@@ -50,27 +31,83 @@ A lot of things differ between the two languages, here are a few of them:
    but you are welcome to [write one](http://lua-users.org/wiki/SimpleLuaClasses)
  - Comments begin with `--` instead of `#` (Like in Ada, Eiffel, Haskell and SQL)
  - Concatenation is done with `..` instead of `+`
- - Functions may return multiple results
- - Function calls require parentheses `()`
+ - Functions may return multiple return values
+   (Like in [Go](http://golang.org/doc/effective_go.html#multiple-returns))
+ - Function calls require parentheses `()` (Like in JavaScript)
  - There is a length operator `#`
  - No interpolation of variables inside strings…
-   but you are welcome to [fix that](http://lua-users.org/wiki/StringInterpolation)
+ - The existing string libraries assume single-byte characters :(
+   but you can [fix that](http://lua-users.org/wiki/StringInterpolation), sort of
  - Variables are global by default, unless they are declared as `local`
  - Lua array indices [count from one](http://lua-users.org/wiki/CountingFromOne)
+ - [Proper Tail Calls](http://www.lua.org/pil/6.3.html) are supported.
  - No implicit returns :(
+
+**NOTE:**
+<br>
+MRI supports Tail Call Optimizatioin if you change `:tailcall_optimization` to **true** 
+in `RubyVM::InstructionSequence.compile_option`
+
+This is unfortunately not part of the Ruby spec.
+
+## Installing Lua
+
+If you are using **OS X** and have [Homebrew](http://brew.sh/) 
+installed, then you can install Lua like this:
+
+{% highlight bash %}
+$ brew install lua
+{% endhighlight %}
+
+Ubuntu users should install the 
+[lua5.1](http://packages.ubuntu.com/raring/lua5.1) package.
+<br>
+_(5.2 is the latest version, but it seems like there
+are compatibility issues with it and LuaRocks, YMMV)_
+
+Stuck on Windows? Then you’ll probably want to install
+[Lua for Windows](https://code.google.com/p/luaforwindows/).
+
+### Package manager
+
+In Ruby land we have the wonderful [RubyGems](http://rubygems.org/).
+The Lua counterpart is called [LuaRocks](http://luarocks.org/) 
+and it seems pretty neat.
 
 ## Syntax
 
 As it is customary, let’s start with a
-[Hello World program](http://en.wikipedia.org/wiki/Hello_world_program).
+[Hello World program](http://en.wikipedia.org/wiki/Hello_world_program):
 
 {% highlight lua %}
-print("hello world")
+print("Hello World")
 {% endhighlight %}
 
-Ok, how about some examples of Lua syntax?
+Nothing too surprising really. _(You don’t strictly need the 
+parentheses in this contrived example)_
+
+### Variables and Blocks
+
+Variables in Lua are global by default, but you can make them local to the current scope by prepending `local` like this:
+
+{% highlight lua %}
+do
+  local answer = 42
+  print("The answer to everything is: " .. answer)
+end
+
+print(type(answer)) -- nil
+{% endhighlight %}
+
+> Unlike global variables, [local variables](http://www.lua.org/pil/4.2.html) 
+have their scope limited to the block where they are declared.
+
+A block in Lua creates a new scope.
 
 ### Function definition
+
+Defining a function in Lua is pretty straight forward,
+just as long as you remember to write `function` instead of `def` :)
 
 {% highlight lua %}
 function f(para1, para2)
@@ -80,17 +117,95 @@ end
 
 ### Anonymous function
 
+Unfortunately, anonymous functions in Lua is a bit unwieldy.
+I’d really like something similar to the lambda literal 
+([stabby lambda](http://railspikes.com/2008/9/8/lambda-in-ruby-1-9)) in Ruby.
+
 {% highlight lua %}
 var = function(param)
   -- code
 end
 {% endhighlight %}
 
-### The type function gives the datatype name of a given value
+### Conditional expressions
+
+C-style conditional expressions are not supported, but you can 
+use `and/or` to emulate this.
 
 {% highlight lua %}
-print(type("dragonfruit")) -- returns "string"
-print(type(3.5))           -- returns "number"
+function example(check)
+  print(check and 'foo' or 'bar')
+end
+
+example(true) -- "foo" since check is truthy
+example()     -- "bar" since check is nil
+{% endhighlight %}
+
+### Built in functions
+
+Lua has some built in functions that are available from the top level scope, a few of them are:
+
+#### The type function gives the datatype name of a given value
+
+{% highlight lua %}
+print(type("dragonfruit")) -- "string"
+print(type(3.5))           -- "number"
+{% endhighlight %}
+
+#### \# gives you the size of a string, list, etc.
+
+{% highlight lua %}
+print(#{1,2,3}) -- 3
+print(#"a str") -- 5
+{% endhighlight %}
+
+### The loadstring function allows you to evaluate a string
+I’m not sure if you ever want to do this.
+
+{% highlight lua %}
+loadstring('print("result: " .. 1+1)')() -- "result: 2"
+{% endhighlight %}
+
+## Let’s write a small script using the [Penlight Lua Libraries](https://github.com/stevedonovan/Penlight)
+
+First we need to install Penlight:
+
+{% highlight bash %}
+$ luarocks install penlight
+{% endhighlight %}
+
+Now we are ready to write our little example script.
+<br>
+_(Based on the uFAQ section [2.2 How to Parse command-Line arguments?](http://www.luafaq.org/#T2.2))_
+
+**scale.lua**
+{% highlight lua %}
+#!/usr/bin/env lua
+
+require 'luarocks.loader'
+
+-- require is now aware of LuaRocks
+require 'pl'
+
+-- configure the Lapp Framework options parser
+local args = lapp [[
+Does some calculations
+  -o,--offset (default 0.0)  Offset to add to scaled number
+  -s,--scale  (number)  Scaling factor
+   <number> (number )  Number to be scaled
+]]
+
+print(args.offset + args.scale * args.number)
+{% endhighlight %}
+
+The script requires the LuaRocks loader, loads the Penlight rock,
+configures the [Lapp](http://lua-users.org/wiki/LappFramework) 
+options parser, and finally it prints the result of the 
+calculation `offset + scale * number`
+
+{% highlight bash %}
+$ lua scale.lua -o 5 --scale=10 20
+205
 {% endhighlight %}
 
 ## A few projects based on Lua
@@ -100,6 +215,15 @@ print(type(3.5))           -- returns "number"
 A dynamic scripting language that compiles into Lua. 
 It gives you the power of one of the fastest scripting 
 languages combined with a rich set of features.
+
+### [LuaJIT](http://luajit.org/luajit.html)
+
+LuaJIT is a Just-In-Time Compiler (**JIT**) for the Lua programming language.
+
+### [Busted](http://olivinelabs.com/busted/)
+
+Busted is a unit testing framework with a focus on being easy to use.
+Busted works with **Lua** >= 5.1, **MoonScript**, and **LuaJIT** >= 2.0.0
 
 ### [Codea](http://twolivesleft.com/Codea/)
 
@@ -111,6 +235,12 @@ Yes, that is right… you can [EVAL](http://redis.io/commands/eval)
 Lua code in Redis since version 2.6.0.
 You might want to read the article [Lua: A Guide for Redis Users](http://www.redisgreen.net/blog/2013/03/18/intro-to-lua-for-redis-programmers/)
 
+### [Try Lua](http://trylua.org/)
+
+An online [REPL](http://en.wikipedia.org/wiki/REPL) for Lua.
+
+### Games
+
 There is also a lot of games using Lua for 
 [scripting](http://en.wikipedia.org/wiki/Category:Lua-scripted_video_games)
 
@@ -119,3 +249,5 @@ There is also a lot of games using Lua for
  - [Lua Unofficial FAQ (uFAQ)](http://www.luafaq.org/)
  - [Lua-Users Wiki](http://lua-users.org/wiki/)
  - [Lua Programming](http://en.wikibooks.org/wiki/Category:Lua_Programming)
+ - [Lua 5.1 Reference Manual](http://www.lua.org/manual/5.1/manual.html)
+ - [Syntax across languages per language: Lua](http://rigaux.org/language-study/syntax-across-languages-per-language/Lua.html)
