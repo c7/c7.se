@@ -67,7 +67,7 @@ I actually started out by playing with a younger Lisp dialect;
 > Lisp's beauty and power of expression, but who need it 
 > stripped down to easy-to-learn essentials.
 
-If you are using **OS X** and have [Homebrew](http://mxcl.github.io/homebrew/) 
+If you are using **OS X** and have [Homebrew](http://brew.sh/) 
 installed, then you can install newLISP with the following command:
 `brew install newlisp`
 
