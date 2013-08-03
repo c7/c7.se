@@ -45,10 +45,9 @@ a { color: $green; }
 .hidden { display: none; }
 
 .highlight, p code, h4 code, li code {
+  word-wrap: break-word;
   font-family: Monaco, Monospace;
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 1.4;
+  font-weight: 700;
 
   pre {
     overflow: auto;
@@ -56,19 +55,20 @@ a { color: $green; }
 }
 
 p code, h4 code, li code {
-  font-size: 14px;
+  font-size: 0.8em;
   line-height: 1;
-  background: #eee;
+  background: #F7F7F7;
   padding: 0.1em 0.3em;
-  border-radius: 4px;
-  border: 1px solid #ddd;
+  border-radius: 0.2em;
+  border: 1px solid #EBEBEB;
 }
 
 .highlight {
+  line-height: 1.4;
+  font-weight: bold;
   padding: 0.3em 0.5em;
   margin-top: 0.6em;
   margin-bottom: 2em;
-  word-wrap: break-word;
 }
 
 p code {
@@ -92,13 +92,9 @@ p code {
   }
 
   ol, ul {
-    list-style: disc;
+    list-style: circle;
     vertical-align: top;
     list-style-position: outside;
-  }
-
-  li {
-    margin-bottom: 0.4em;
   }
 
   .vcard {
@@ -135,14 +131,16 @@ p code {
 
   /* Larger than standard 960 (devices and browsers) */
   @media only screen and (min-width: 960px) {
+    #article { li { margin-bottom: 0.3em; } }
+
     #article, #page {
       font-size: 22px;
       margin-bottom: 20px;
 
       h1   { font-size: 53px; }
       h2   { font-size: 28px; }
-      h3   { font-size: 24px; }
-      h4   { font-size: 23px; }
+      h3   { font-size: 25px; }
+      h4   { font-size: 22px; }
 
       article {
         margin-top: 20px;
@@ -166,14 +164,16 @@ p code {
 
   /* Smaller than standard 960 (devices and browsers) */
   @media only screen and (max-width: 959px) {
+    #article { li { margin-bottom: 0.4em; } }
+
     h1 {
       font-size: 40px;
       margin-bottom: 18px;
-   }
+    }
 
-   .main-title {
-    font-size: 44px;
-   }
+    .main-title {
+      font-size: 44px;
+    }
 
     .photo-container {
       text-align: center;
@@ -197,7 +197,7 @@ p code {
       margin-top: 26px;
     }
 
-    .highlight {
+    .highlight, p code, h4 code, li code {
       font-size: 14px;
     }
   }
@@ -211,7 +211,7 @@ p code {
       min-height: 200px;
     }
 
-    .highlight { font-size: 15px; }
+    .highlight, p code, h4 code, li code { font-size: 15px; }
 
     #article {
       ol, ul {
@@ -261,7 +261,8 @@ p code {
   /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
   @media only screen and (min-width: 480px) and (max-width: 767px) {
     body { font-size: 18px; }
-    .highlight { font-size: 13px; }
+
+    .highlight, p code, h4 code, li code { font-size: 13px; }
 
     h2 { margin-bottom: 10px; }
 
@@ -287,7 +288,7 @@ p code {
 
     p { word-wrap: break-word; }
 
-    .highlight { font-size: 12px; }
+    .highlight, p code, h4 code, li code { font-size: 12px; }
     .main-title { font-size: 37px; margin-bottom: 10px; margin-top: 0; }
     .photo-container img { height: 168px; margin-bottom: 10px; }
     a.follow-on-twitter, a.follow-on-twitter:visited { font-size: 0.9em; background-image: none; }
