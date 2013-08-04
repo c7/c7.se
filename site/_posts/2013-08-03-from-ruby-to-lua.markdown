@@ -5,9 +5,9 @@ summary: Getting to know Lua, a powerful, fast, lightweight, scripting language.
 --- 
 
 I’ve been meaning to take a closer look at [Lua](http://lua.org/) for quite
-some time now. It is described as a proven, robust programming language that is
-also considered to be **fast**, **portable**, **embeddable**, **powerful**
-(but simple), **small** and **free**.
+some time now. It has been described as a proven, robust programming language 
+that is considered to be **fast**, **portable**, **embeddable**, 
+**powerful** (but simple), **small** and **free**.
 
 _Sounds good to me._
 
@@ -46,8 +46,8 @@ A lot of things differ between the two languages, here are a few of them:
 **NOTE:**
 <br>
 MRI supports Tail Call Optimizatioin if you change :tailcall_optimization to **true** 
-in `RubyVM::InstructionSequence.compile_option`
-This is unfortunately not in the Ruby spec.
+in the compile options for **RubyVM::InstructionSequence**.
+This is unfortunately not part of the Ruby spec.
 
 ## Installing Lua
 
@@ -114,9 +114,9 @@ function f(para1, para2)
 end
 {% endhighlight %}
 
-### Anonymous function
+### Anonymous functions
 
-Unfortunately, anonymous functions in Lua is a bit unwieldy.
+Unfortunately, anonymous functions in Lua is a bit unwieldy,
 I’d really like something similar to the lambda literal 
 ([stabby lambda](http://railspikes.com/2008/9/8/lambda-in-ruby-1-9)) in Ruby.
 
