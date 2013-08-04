@@ -250,3 +250,4 @@ There is also a lot of games using Lua for
  - [Lua Programming](http://en.wikibooks.org/wiki/Category:Lua_Programming)
  - [Lua 5.1 Reference Manual](http://www.lua.org/manual/5.1/manual.html)
  - [Syntax across languages per language: Lua](http://rigaux.org/language-study/syntax-across-languages-per-language/Lua.html)
+ - [Learn Lua in 15 Minutes](http://tylerneylon.com/a/learn-lua/) (more or less)
