@@ -45,7 +45,7 @@ A lot of things differ between the two languages, here are a few of them:
 
 **NOTE:**
 <br>
-MRI supports Tail Call Optimizatioin if you change :tailcall_optimization to **true** 
+MRI supports Tail Call Optimizatioin if you change **:tailcall_optimization** to **true** 
 in the compile options for **RubyVM::InstructionSequence**.
 This is unfortunately not part of the Ruby spec.
 
@@ -243,7 +243,7 @@ An online [REPL](http://en.wikipedia.org/wiki/REPL) for Lua.
 There is also a lot of games using Lua for 
 [scripting](http://en.wikipedia.org/wiki/Category:Lua-scripted_video_games)
 
-## Learn more
+## Learn more about Lua
 
  - [Lua Unofficial FAQ (uFAQ)](http://www.luafaq.org/)
  - [Lua-Users Wiki](http://lua-users.org/wiki/)
