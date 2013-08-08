@@ -45,7 +45,7 @@ A lot of things differ between the two languages, here are a few of them:
 
 **NOTE:**
 <br>
-MRI supports Tail Call Optimizatioin if you change **:tailcall_optimization** to **true** 
+MRI supports Tail Call Optimization if you change **:tailcall_optimization** to **true** 
 in the compile options for **RubyVM::InstructionSequence**.
 This is unfortunately not part of the Ruby spec.
 
