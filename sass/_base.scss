@@ -53,12 +53,12 @@
 
 
   body {
-    background: #fff;
-    color: #333332;
-    line-height: 28px;
-    font-weight:400;
-    font-size: 20px;
-    font-size-adjust:none;
+    background:       #fff;
+    color:            #333332;
+    line-height:      1.428;
+    font-weight:      400;
+    font-size:        20px;
+    font-size-adjust: none;
 
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -78,7 +78,7 @@
   }
 
   h1 { font-size: 50px; line-height: 1.1; margin-bottom: 17px; letter-spacing: -1px; }
-  h2 { font-size: 24px; line-height: 1.6; margin-bottom: 12px; margin-top: 33px; }
+  h2 { font-size: 24px; line-height: 1.6; margin-bottom: 12px; margin-top: 25px; }
   h3 { font-size: 20px; margin-bottom: 2px; }
   h4 { font-size: 18px; margin-top: 20px; }
   h5 { font-size: 17px; }
@@ -113,14 +113,11 @@
   ul, ol { margin-bottom: 20px; }
   ul { list-style: none outside; }
   ol { list-style: decimal; }
-  ul.square { list-style: square outside; }
-  ul.circle { list-style: circle outside; }
-  ul.disc { list-style: disc outside; }
   ul ul, ul ol,
   ol ol, ol ul { margin: 4px 0 5px 30px; font-size: 90%;  }
   ul ul li, ul ol li,
   ol ol li, ol ul li { margin-bottom: 6px; }
-  li { line-height: 25px; margin-bottom: 25px; }
+  li { margin-bottom: 0.2em; }
   ul.large li { line-height: 21px; }
   li p { line-height: 21px; }
 
