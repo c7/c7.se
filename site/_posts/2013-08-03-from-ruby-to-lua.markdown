@@ -33,7 +33,7 @@ A lot of things differ between the two languages, here are a few of them:
  - Concatenation is done with `..` instead of `+`
  - Functions may return multiple return values
    (Like in [Go](http://golang.org/doc/effective_go.html#multiple-returns))
- - Function calls require parentheses `()` (Like in JavaScript)
+ - Function calls require parentheses `()` unless the function takes a single argument that is either a string or a table.
  - There is a length operator `#`
  - No interpolation of variables inside strings…
  - The existing string libraries assume single-byte characters :(
