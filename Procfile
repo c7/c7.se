@@ -1,2 +1,2 @@
 sass: sass -t compressed --watch sass:site
-jekyll: jekyll build --watch
+jekyll: jekyll serve --watch
