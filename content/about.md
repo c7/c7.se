@@ -1,7 +1,8 @@
-+++
-date = "2014-11-18T21:42:08+01:00"
-title = "about"
-+++
+---
+date: 2014-11-18
+url: /about/
+title: About
+---
 
 # About me and the company
 

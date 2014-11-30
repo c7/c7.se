@@ -1,7 +1,7 @@
 ---
 type: article
 date: 2013-08-03
-url: /from-ruby-to-lua
+url: /from-ruby-to-lua/
 title: From Ruby to Lua
 summary: Getting to know Lua, a powerful, fast, lightweight, scripting language.
 ---

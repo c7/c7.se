@@ -1,7 +1,7 @@
 ---
 type: article
 date: 2012-03-28
-url: /tiny-api-with-nginx
+url: /tiny-api-with-nginx/
 title: Tiny API with Nginx
 summary: How to build a tiny REST API using Nginx, Memcached and GeoIP.
 ---

@@ -1,7 +1,7 @@
 ---
 type: article
 date: 2013-04-27
-url: /switching-to-vundle
+url: /switching-to-vundle/
 title: Switching to Vundle
 summary: I’ve decided to use Vundle the Vim package manager.
 ---

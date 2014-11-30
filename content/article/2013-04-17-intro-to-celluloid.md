@@ -1,7 +1,7 @@
 ---
 type: article
 date: 2013-04-17
-url: /intro-to-celluloid
+url: /intro-to-celluloid/
 title: Intro to Celluloid
 summary: A framework used for concurrent object oriented programming in Ruby.
 ---

@@ -1,7 +1,7 @@
 ---
 type: article
 date: 2012-10-27
-url: /from-ruby-to-go
+url: /from-ruby-to-go/
 title: From Ruby to Go
 summary: Getting to know Go, a fun little language from Google.
 ---

@@ -1,7 +1,7 @@
 ---
 type: article
 date: 2012-03-18
-url: /from-ruby-to-lisp
+url: /from-ruby-to-lisp/
 title: From Ruby to Lisp
 summary: My first steps as a Ruby developer towards learning Lisp.
 ---

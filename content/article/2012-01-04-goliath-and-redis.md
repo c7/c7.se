@@ -1,7 +1,7 @@
 ---
 type: article
 date: 2012-01-04
-url: /goliath-and-redis
+url: /goliath-and-redis/
 title: Goliath and Redis
 summary: Getting started with the non-blocking Ruby web server framework
          Goliath in combination with the advanced key-value store Redis.

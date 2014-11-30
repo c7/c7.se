@@ -1,7 +1,7 @@
 ---
 type: article
 date: 2013-04-08
-url: /elasticsearch-in-ruby
+url: /elasticsearch-in-ruby/
 title: Elasticsearch in Ruby
 summary: A tiny project using the search engine elasticsearch in Ruby.
 ---

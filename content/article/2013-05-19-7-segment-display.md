@@ -1,7 +1,7 @@
 ---
 type: article
 date: 2013-05-19
-url: /7-segment-display
+url: /7-segment-display/
 title: 7-Segment Display
 summary: How to use Ruby to control a 7-Segment Display (via an Arduino).
 ---
