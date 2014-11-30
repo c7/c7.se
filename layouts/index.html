@@ -30,57 +30,16 @@
     <div class="twelve columns">
       <div id="articles">
         <h2>Articles</h2>
-
-          <div class="hentry add-bottom">
-            <h3><a href="/from-ruby-to-lua/" class="url"><span class="entry-title">From Ruby to Lua</span></a></h3>
-            <section class="entry-summary">Getting to know Lua, a powerful, fast, lightweight, scripting language.</section>
+        {{ range where .Site.Recent "Type" "article" }}
+          <div class="hentry article add-bottom">
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <section class="article-summary">{{ .Params.summary }}</section>
           </div>
-
-          <div class="hentry add-bottom">
-            <h3><a href="/7-segment-display/" class="url"><span class="entry-title">7-Segment Display</span></a></h3>
-            <section class="entry-summary">How to use Ruby to control a 7-Segment Display (via an Arduino).</section>
-          </div>
-
-          <div class="hentry add-bottom">
-            <h3><a href="/switching-to-vundle/" class="url"><span class="entry-title">Switching to Vundle</span></a></h3>
-            <section class="entry-summary">I’ve decided to use Vundle the Vim package manager.</section>
-          </div>
-
-          <div class="hentry add-bottom">
-            <h3><a href="/intro-to-celluloid/" class="url"><span class="entry-title">Intro to Celluloid</span></a></h3>
-            <section class="entry-summary">A framework used for concurrent object oriented programming in Ruby.</section>
-          </div>
-
-          <div class="hentry add-bottom">
-            <h3><a href="/elasticsearch-in-ruby/" class="url"><span class="entry-title">Elasticsearch in Ruby</span></a></h3>
-            <section class="entry-summary">A tiny project using the search engine elasticsearch in Ruby.</section>
-          </div>
-
-          <div class="hentry add-bottom">
-            <h3><a href="/from-ruby-to-go/" class="url"><span class="entry-title">From Ruby to Go</span></a></h3>
-            <section class="entry-summary">Getting to know Go, a fun little language from Google.</section>
-          </div>
-
-          <div class="hentry add-bottom">
-            <h3><a href="/tiny-api-with-nginx/" class="url"><span class="entry-title">Tiny API with Nginx</span></a></h3>
-            <section class="entry-summary">How to build a tiny REST API using Nginx, Memcached and GeoIP.</section>
-          </div>
-
-          <div class="hentry add-bottom">
-            <h3><a href="/from-ruby-to-lisp/" class="url"><span class="entry-title">From Ruby to Lisp</span></a></h3>
-            <section class="entry-summary">My first steps as a Ruby developer towards learning Lisp.</section>
-          </div>
-
-          <div class="hentry add-bottom">
-            <h3><a href="/goliath-and-redis/" class="url"><span class="entry-title">Goliath and Redis</span></a></h3>
-            <section class="entry-summary">Getting started with the non-blocking Ruby web server framework Goliath in combination with the advanced key-value store Redis.</section>
-          </div>
-
+        {{ end }}
       </div>
 
       <div id="current-projects">
         <h2>Open Source Projects</h2>
-
         <p>
           <em>
             This is just a few of my open source projects,
