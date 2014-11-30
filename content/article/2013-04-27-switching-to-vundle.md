@@ -1,23 +1,25 @@
 ---
-layout: article
+type: article
+date: 2013-04-27
+url: /switching-to-vundle
 title: Switching to Vundle
-summary: I’ve decided to use Vundle the Vim package manager. 
+summary: I’ve decided to use Vundle the Vim package manager.
 ---
 
-I’ve been using [Vim](http://www.vim.org/) on and off for close 
-to 10 years now and It became my primary editor when I switched from 
-[TextMate](http://macromates.com/) to 
+I’ve been using [Vim](http://www.vim.org/) on and off for close
+to 10 years now and It became my primary editor when I switched from
+[TextMate](http://macromates.com/) to
 [MacVim](https://code.google.com/p/macvim/) a few years ago.
 *(Along with a lot of other people in the Ruby community)*
 
-I started using the [Janus](https://github.com/carlhuda/janus) 
-distribution and never had any major issues with it. 
+I started using the [Janus](https://github.com/carlhuda/janus)
+distribution and never had any major issues with it.
 
-There have been a few **minor** performance issues though, issues 
-that mostly stem from the large number of plugins and 
+There have been a few **minor** performance issues though, issues
+that mostly stem from the large number of plugins and
 customizations that Janus brings to the table.
 
-I have decided to start over, this time being slightly 
+I have decided to start over, this time being slightly
 more restrictive with my configuration. I’ve also decided to use
 [Vundle](https://github.com/gmarik/vundle) for plugin management…
 
@@ -25,20 +27,20 @@ more restrictive with my configuration. I’ve also decided to use
 
 ## Starting position
 
-There is no point in making any changes until you have figured 
-out what the current state is. You can see what Vim does when 
+There is no point in making any changes until you have figured
+out what the current state is. You can see what Vim does when
 it starts up by calling the **startuptime** flag.
 
 In my case that would be:
 
-{% highlight bash %}
+```bash
 mvim -v --startuptime /dev/stdout +qall
-{% endhighlight %}
+```
 
-Which prints **171** lines of log output for Vi-mode and **189** 
+Which prints **171** lines of log output for Vi-mode and **189**
 for the GUI-mode.
 
-> You might want to take a look at 
+> You might want to take a look at
 > [Improving Vim’s Startup Time](http://usevim.com/2012/04/18/startuptime/)
 > over at Usevim.
 
@@ -47,7 +49,7 @@ for the GUI-mode.
 I’ve also installed a few extra plugins that doesn't come with the Janus distribution.
 I have the following directories under `.janus`:
 
-{% highlight bash %}
+```bash
 BusyBee/
 vim-arduino/
 vim-markdown-preview/
@@ -57,50 +59,50 @@ vim-ruby-xmpfilter/
 vim-slim/
 vim-textobj-rubyblock/
 vim-textobj-user/
-{% endhighlight %}
+```
 
 ### Disabled plugins
 
 I had disabled a few plugins that came with Janus:
 
-{% highlight bash %}
+```bash
 call janus#disable_plugin('tagbar')
 call janus#disable_plugin('narrowregion')
 call janus#disable_plugin('easymotion')
 call janus#disable_plugin('vimwiki')
 call janus#disable_plugin('vroom')
 call janus#disable_plugin('buffergator')
-{% endhighlight %}
+```
 
 ## A clean slate
 
-My dotfiles live in a Git repo so it is quite trivial to 
+My dotfiles live in a Git repo so it is quite trivial to
 create a new branch where I can make the required changes:
 
-{% highlight bash %}
-$ git checkout -b switching-to-vundle 
-{% endhighlight %}
+```bash
+$ git checkout -b switching-to-vundle
+```
 
-I just need to remove all traces of Janus by unlinking 
+I just need to remove all traces of Janus by unlinking
 all the symlinks and removing all other related files.
 
 The resulting **startuptime** log is **41** lines long, *quite an improvement*.
 
 It is quite possible to use Vim on its own like this. I’ve come to
-love a few plugins and I’m happy to let the i7 in my Air work a 
+love a few plugins and I’m happy to let the i7 in my Air work a
 bit in order to let me use them.
 
 ## [Vundle](https://github.com/gmarik/vundle)
 
 I’m going to use Vundle for my plugins from now on, so I’ll need to install it:
 
-{% highlight bash %}
+```bash
 $ mkdir ~/.vim/bundle
 $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-{% endhighlight %}
+```
 
-Vundle makes it **very** easy to manage Vim plugins. You just need 
-to specify a few rows along the lines of `Bundle "user/plugin"` 
+Vundle makes it **very** easy to manage Vim plugins. You just need
+to specify a few rows along the lines of `Bundle "user/plugin"`
 in your `.vimrc` and then issue `:BundleInstall` to start the installation.
 
 You can also run `:BundleUpdate` and `:BundleClean`
@@ -110,7 +112,7 @@ You can also run `:BundleUpdate` and `:BundleClean`
 Both `NERDTree` and `Syntastic` are quite slow.
 I could probably manage without them but what would be the fun in that?
 
-{% highlight vim %}
+```vim
 set nocompatible
 filetype off
 
@@ -228,15 +230,15 @@ set rtp+=/usr/local/Cellar/go/1.0.3/misc/vim
 
 " Quit with :Q
 command -nargs=0 Quit :qa!
-{% endhighlight %}
+```
 
 ### And a small .gvimrc
 
-I like to keep the main part of the config 
-in `.vimrc` in order to have as few differences 
+I like to keep the main part of the config
+in `.vimrc` in order to have as few differences
 between the GUI and CLI versions of MacVim.
 
-{% highlight vim %}
+```vim
 " MacVim GUI mode
 if has("gui_macvim")
   set guifont=Monaco:h13
@@ -259,4 +261,4 @@ if has("gui_macvim")
   " when resizing MacVim window
   autocmd VimResized * wincmd =
 endif
-{% endhighlight %}
+```

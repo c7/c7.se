@@ -1,7 +1,7 @@
----
-layout: page
-title: About
----
++++
+date = "2014-11-18T21:42:08+01:00"
+title = "about"
++++
 
 # About me and the company
 
@@ -18,7 +18,7 @@ Code7 Interactive was established in late 2001 and is now a side business to my 
 What this means is that I only pick projects that are **interesting** and don't have a strict **time frame** for completion.
 
 ### Hosting
-c7.se is hosted in Stockholm by [GleSYS](http://glesys.se). They offer a variety of hosting options, 
+c7.se is hosted in Stockholm by [GleSYS](http://glesys.se). They offer a variety of hosting options,
 including virtual private servers. I can absolutely recommend them.
 
 ### Logotypes
