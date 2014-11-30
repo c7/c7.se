@@ -1,6 +1,10 @@
-baseurl: "http://c7.se/"
 languageCode: "en-us"
 canonifyurls: false
+
 title: "Code7 Interactive"
+baseurl: "http://c7.se/"
+
 author:
   name: "Peter Hellberg"
+
+copyright: "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
