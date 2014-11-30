@@ -1,5 +1,7 @@
 ---
-layout: article
+type: article
+date: 2012-03-28
+url: /tiny-api-with-nginx
 title: Tiny API with Nginx
 summary: How to build a tiny REST API using Nginx, Memcached and GeoIP.
 ---
@@ -10,7 +12,7 @@ As it turns out, [Nginx](http://nginx.com/) can be configured to act like a full
 
 ## Background
 
-We had the need for a tiny API and we figured that the problem 
+We had the need for a tiny API and we figured that the problem
 was simple enough to be implemented inside of Nginx. The three requirements for the API was;
 
  1. Responses in JSON (and JSONP)
@@ -19,7 +21,7 @@ was simple enough to be implemented inside of Nginx. The three requirements for 
 
 I recommend that you use the [OpenResty](http://openresty.org/)
 (aka. ngx_openresty) bundle if you want to install Nginx, it
-contains a few really good third party modules. I’m using five 
+contains a few really good third party modules. I’m using five
 Nginx modules in this project;
   [Echo](http://wiki.nginx.org/HttpEchoModule),
   [GeoIP](http://wiki.nginx.org/HttpGeoIPModule),
@@ -29,7 +31,7 @@ Nginx modules in this project;
 
 ## The complete nginx.conf
 
-{% highlight nginx %}
+```nginx
 worker_processes 4;
 events {}
 
@@ -75,7 +77,7 @@ http {
     }
   }
 }
-{% endhighlight %}
+```
 
 ## Using the API
 
@@ -83,23 +85,23 @@ I like to use [cURL](http://curl.haxx.se/) when manually testing API's:
 
 ### Updating the “redirect” value in Memcached via the API
 
-{% highlight ruby %}
-curl -X POST http://0.0.0.0:9999/loadbalancer?var=10.0.0.5 
+```ruby
+curl -X POST http://0.0.0.0:9999/loadbalancer?var=10.0.0.5
 #=> STORED
-{% endhighlight %}
+```
 
 ### Retrieve the JSON
 
-{% highlight ruby %}
+```ruby
 curl -H "X-Real-IP: 213.115.122.2" \
 http://0.0.0.0:9999/loadbalancer.json
 #=> {"geoip_country_code":"SE", "redirect":"10.0.0.5"}
-{% endhighlight %}
+```
 
 #### And if we want to use JSONP:
 
-{% highlight ruby %}
+```ruby
 curl -H "X-Real-IP: 213.115.122.2" \
 http://0.0.0.0:9999/loadbalancer.json?callback=foo
 #=> foo({"geoip_country_code":"SE", "redirect":"10.0.0.5"});
-{% endhighlight %}
+```

@@ -1,5 +1,7 @@
 ---
-layout: article
+type: article
+date: 2012-01-04
+url: /goliath-and-redis
 title: Goliath and Redis
 summary: Getting started with the non-blocking Ruby web server framework
          Goliath in combination with the advanced key-value store Redis.
@@ -33,21 +35,21 @@ I’ve been thinking about using Goliath ever since I saw the presentation
 
 Goliath, obviously.
 
-Version 1.0 has been released, and I have taken the time 
-to update this article with the relevant changes. One of the 
+Version 1.0 has been released, and I have taken the time
+to update this article with the relevant changes. One of the
 more notable changes are the removal of the built in router.
-I think that was a good decision. Gone are the days when 
-you needed to clone Goliath from 
-[GitHub](https://github.com/postrank-labs/goliath) 
+I think that was a good decision. Gone are the days when
+you needed to clone Goliath from
+[GitHub](https://github.com/postrank-labs/goliath)
 just to get a sane version.
 
-I am also going to use the Ruby client library for 
+I am also going to use the Ruby client library for
 [Redis](http://redis.io/), which has built in support for
 [EM-Synchrony](https://github.com/igrigorik/em-synchrony).
 
 ### Gemfile
 
-{% highlight ruby %}
+```ruby
 source :rubygems
 
 gem "goliath", "~> 1.0"
@@ -59,7 +61,7 @@ group :test do
   gem "em-http-request", "~> 1.0"
   gem "mock_redis", "~> 0.4"
 end
-{% endhighlight %}
+```
 
 ## Testing
 
@@ -72,7 +74,7 @@ what I’m going to use in this article.
 
 ### spec/spec_helper.rb
 
-{% highlight ruby %}
+```ruby
 require 'bundler'
 Bundler.require
 
@@ -89,7 +91,7 @@ class Goliath::Server
     config['redis'] = $redis
   end
 end
-{% endhighlight %}
+```
 
 ### spec/api_spec.rb
 
@@ -97,7 +99,7 @@ I hope that writing specs for Goliath will become less verbose in the
 future, currently it seems like I need to wrap each request in a
 `with_api` block.
 
-{% highlight ruby %}
+```ruby
 require_relative 'spec_helper'
 require_relative '../api'
 
@@ -132,7 +134,7 @@ describe Api do
     end
   end
 end
-{% endhighlight %}
+```
 
 ## The application
 
@@ -144,7 +146,7 @@ This is a _very_ simple API, it can only do three things:
 
 ### api.rb
 
-{% highlight ruby %}
+```ruby
 class Api < Goliath::API
   use Goliath::Rack::Params
   use Goliath::Rack::Heartbeat, path: '/'
@@ -161,7 +163,7 @@ class Api < Goliath::API
     [200, {}, res]
   end
 end
-{% endhighlight %} 
+```
 
 ## Starting the application
 
@@ -172,15 +174,15 @@ EM::Synchrony::ConnectionPool and a Goliath::Runner that takes care of running t
 
 ### config.rb
 
-{% highlight ruby %}
+```ruby
 config['redis'] = EM::Synchrony::ConnectionPool.new size: 2 do
   Redis.new
 end
-{% endhighlight %} 
+```
 
 ### runner.rb
 
-{% highlight ruby %}
+```ruby
 require "bundler"
 Bundler.require
 
@@ -191,8 +193,7 @@ runner = Goliath::Runner.new(ARGV, nil)
 runner.api = Api.new
 runner.app = Goliath::Rack::Builder.build(Api, runner.api)
 runner.run
-{% endhighlight %}
-
+```
 
 Run `ruby runner.rb -s -e prod -c config.rb` and a server should spin up in production mode on port 9000.
 
@@ -202,12 +203,12 @@ I like to use [cURL](http://curl.haxx.se/) when manually testing API's:
 
 ### Adding a new key/value pair
 
-{% highlight ruby %}
+```ruby
 curl -X PUT http://0.0.0.0:9000/foo -d "value=bar"
-{% endhighlight %}
+```
 
 ### Retrieve a stored value
 
-{% highlight ruby %}
+```ruby
 curl -X GET http://0.0.0.0:9000/foo
-{% endhighlight %}
+```

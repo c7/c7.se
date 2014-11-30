@@ -1,6 +1,8 @@
 ---
-layout: article
-title:  7-Segment Display
+type: article
+date: 2013-05-19
+url: /7-segment-display
+title: 7-Segment Display
 summary: How to use Ruby to control a 7-Segment Display (via an Arduino).
 ---
 
@@ -34,22 +36,22 @@ of the Dino gem to communicate with the Arduino from Ruby *(at least until 0.12 
 
 ### Just clone the repo, build and install the gem:
 
-{% highlight bash %}
+```bash
 $ cd /tmp
 $ git clone git@github.com:austinbv/dino.git -b 0.12.0-wip
 $ cd dino
 $ gem build dino.gemspec
 $ gem install dino-0.11.2.gem
-{% endhighlight %}
+```
 
 Dino comes with a binary that lets you generate a sketch
 that you should upload to the Arduino:
 
-{% highlight bash %}
+```bash
 $ dino generate-sketch serial
 $ open du/du.ino
 # Press the upload button in the Arduino Editor
-{% endhighlight %}
+```
 
 ![Arduino Editor](/assets/7-segment-display/du.ino.png)
 
@@ -67,7 +69,7 @@ You can also skip the bottom wire (**Pin 2**) if you don’t want to use the dec
 ## Code
 
 ### seven_segment_display.rb
-{% highlight ruby %}
+```ruby
 require 'dino'
 
 class SevenSegmentDisplay <
@@ -176,13 +178,13 @@ class SevenSegmentDisplay <
       state == 1 ? 0 : 1
   end
 end
-{% endhighlight %}
+```
 
 The `CHARACTERS` hash is based on the Wikipedia article
 [Seven-segment display character representations](http://en.wikipedia.org/wiki/Seven-segment_display_character_representations)
 
 ### example.rb
-{% highlight ruby %}
+```ruby
 require './seven_segment_display'
 
 include Dino
@@ -219,7 +221,7 @@ loop do
     ssd.display str
   end
 end
-{% endhighlight %}
+```
 
 ## Decimal point
 
@@ -228,9 +230,9 @@ point in this example. I’ll just leave it up to you if you want
 to add support for toggling it.
 
 ### Turning off the decimal point
-{% highlight ruby %}
+```ruby
 ssd.send :digital_write, 2, 255
-{% endhighlight %}
+```
 
 ## Note
 
