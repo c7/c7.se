@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    {{ if eq .Title .Site.Title }}
+    <title>{{.Site.Title}}</title>
+    {{ else }}
     <title>{{.Title}} - {{.Site.Title}}</title>
+    {{ end }}
     {{ if isset .Params "summary" }}<meta name="description" content="{{.Params.summary}}">{{ end }}
     <meta name="author" content="Peter Hellberg">
     <meta name="keywords" content="{{.Params.metakeywords}}">
