@@ -60,7 +60,7 @@ A vim syntax file is included in the Go distribution under `misc/vim/`
 
 To use all the Vim plugins, add these lines to your vimrc:
 
-{% highlight vim %}
+```vim
 set rtp+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on

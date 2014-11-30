@@ -83,27 +83,27 @@ operator but Lisp can have any number of operands per operator.
 
 #### Compute the sum of 4,2,1
 
-{% highlight cl %}
+```lisp
 ; newLISP
 (+ 4 2 1)
-{% endhighlight %}
+```
 
-{% highlight ruby %}
+```ruby
 # Ruby
 [4,2,1].inject(:+)
-{% endhighlight %}
+```
 
 #### Check if 4 is greater than 3, and 3 is greater than 2
 
-{% highlight cl %}
+```lisp
 ; newLISP
 (if (> 4 3 2) (println "4 is greater than 3, and 3 is greater than 2"))
-{% endhighlight %}
+```
 
-{% highlight ruby %}
+```ruby
 # Ruby
 puts "4 is greater than 3, and 3 is greater than 2" if 4 > 3 && 3 > 2
-{% endhighlight %}
+```
 
 ### Learn more about newLISP
 
@@ -147,39 +147,39 @@ You will find a lot of examples in the article
 
 #### Rational numbers
 
-{% highlight cl %}
+```lisp
 ; CLISP
 (/ 1 2)
 ; => 1/2
-{% endhighlight %}
+```
 
-{% highlight ruby %}
+```ruby
 # Ruby
 (1.0/2).to_r
 # => (1/2)
-{% endhighlight %}
+```
 
 #### Multiple return values
 
-{% highlight cl %}
+```lisp
 ; CLISP
 (floor pi)
 ; 3 ;
 ; 0.14159265358979323851L0
-{% endhighlight %}
+```
 
 Conveniently, functions that return multiple values are treated,
 by default, as though only the first value was returned:
 
-{% highlight cl %}
+```lisp
 ; CLISP
 (+ (floor pi) 2)
 ; => 5
-{% endhighlight %}
+```
 
 To achieve something similar in Ruby (slightly contrived example):
 
-{% highlight ruby %}
+```ruby
 # Ruby
 class MultiValue < BasicObject
   attr_reader :secondary
@@ -204,11 +204,11 @@ class Numeric
     [floor, remainder(floor)].to_mv
   end
 end
-{% endhighlight %}
+```
 
 This allows us to do the following:
 
-{% highlight ruby %}
+```ruby
 # Ruby
 Math::PI.floor_with_remainder + 2
 # => 5
@@ -216,7 +216,7 @@ Math::PI.floor_with_remainder + 2
 mv = Math::PI.floor_with_remainder
 mv.secondary.inject(mv, :+)
 # => 3.141592653589793
-{% endhighlight %}
+```
 
 If you want to learn more about writing Lispy Ruby, then
 you should take a look at Chapter 8 in the book
