@@ -9,13 +9,14 @@ document_root   = "/var/www/c7.se/"
 ## -- Misc Configs -- ##
 
 public_dir      = ".public"
+development_dir = ".development"
 
 #####################
 # Development       #
 #####################
 
 task :default do
-  exec("hugo server --watch")
+  exec("hugo server --watch -d #{development_dir}")
 end
 
 task :css do
