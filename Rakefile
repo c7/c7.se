@@ -18,6 +18,10 @@ task :default do
   exec("hugo server --watch")
 end
 
+task :css do
+  exec("scss -t compressed sass/main.scss static/css/main.css")
+end
+
 #####################
 # Deployment        #
 #####################
