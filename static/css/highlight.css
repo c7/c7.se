@@ -25,6 +25,7 @@
 
 /*foreground color*/
 .hljs,
+.hljs-inheritance,
 .hljs-setting .hljs-value,
 .hljs-expression .hljs-variable,
 .hljs-expression .hljs-begin-block,
@@ -37,6 +38,8 @@
 
 /*color: fg_yellow*/
 .hljs-title,
+.hljs-constant,
+.hljs-inheritance .hljs-parent,
 .hljs-function .hljs-title,
 .hljs-class .hljs-title,
 .hljs-decorator,
@@ -64,7 +67,6 @@
 
 /*color: fg_red*/
 .hljs-number,
-.hljs-symbol,
 .hljs-literal,
 .hljs-deletion,
 .hljs-link_url,
@@ -74,6 +76,10 @@
 .hljs-input .hljs-prompt,
 .hljs-char {
  color: #CE694E;
+}
+
+.hljs-symbol {
+  color: #8787D7;
 }
 
 /*color: fg_green*/
@@ -90,17 +96,21 @@
 }
 
 /*color: fg_purple*/
-.hljs-variable,
 .hljs-property,
 .hljs-envar,
 .hljs-code,
 .hljs-expression,
 .hljs-localvars,
 .hljs-id,
-.hljs-variable .hljs-filter,
-.hljs-variable .hljs-filter .hljs-keyword,
 .hljs-template_tag .hljs-filter .hljs-keyword {
  color: #b294bb;
+}
+
+.hljs-variable .hljs-filter,
+.hljs-variable .hljs-filter .hljs-keyword,
+.hljs-variable .hljs-filter .hljs-argument,
+.hljs-variable {
+  color: #D8AEF8;
 }
 
 /*color: fg_blue*/
@@ -133,8 +143,6 @@
 .hljs-preprocessor .hljs-keyword,
 .hljs-typedef,
 .hljs-template_tag,
-.hljs-variable,
-.hljs-variable .hljs-filter .hljs-argument,
 .hljs-at_rule,
 .hljs-at_rule .hljs-string,
 .hljs-at_rule .hljs-keyword {
@@ -144,8 +152,6 @@
 
 /*color: fg_orange*/
 .hljs-typename ,
-.hljs-inheritance .hljs-parent,
-.hljs-constant,
 .hljs-built_in,
 .hljs-setting,
 .hljs-structure,
@@ -155,7 +161,6 @@
 .hljs-quoted,
 .hljs-class,
 .hljs-header {
-  color: #de935f;
   color: #90C0DB;
 }
 
