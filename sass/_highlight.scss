@@ -1,0 +1,173 @@
+/*background color*/
+.hljs {
+  font-family: Monaco,monospace;
+  font-size: 0.8em;
+  line-height: 1.5;
+  display: block;
+  padding: 0.3em 0.5em;
+  background: #151515;
+  margin-top: 0.6em;
+  margin-bottom: 2em;
+  word-wrap: break-word;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+/*selection color*/
+.hljs::selection,
+.hljs span::selection {
+  background: #373b41;
+}
+.hljs::-moz-selection,
+.hljs span::-moz-selection {
+  background: #373b41;
+}
+
+/*foreground color*/
+.hljs,
+.hljs-inheritance,
+.hljs-setting .hljs-value,
+.hljs-expression .hljs-variable,
+.hljs-expression .hljs-begin-block,
+.hljs-expression .hljs-end-block,
+.hljs-class .hljs-params,
+.hljs-function .hljs-params,
+.hljs-at_rule .hljs-preprocessor {
+  color: #E6E1DC;
+}
+
+/*color: fg_yellow*/
+.hljs-title,
+.hljs-constant,
+.hljs-inheritance .hljs-parent,
+.hljs-function .hljs-title,
+.hljs-class .hljs-title,
+.hljs-decorator,
+.hljs-tag .hljs-title,
+.hljs-header,
+.hljs-sub,
+.hljs-function {
+  color: #f0c674;
+}
+
+.hljs-keyword .hljs-common {
+  color: #627FC4;
+}
+
+/*color: fg_comment*/
+.hljs-comment,
+.hljs-javadoc,
+.hljs-output .hljs-value,
+.hljs-pi,
+.hljs-shebang,
+.hljs-template_comment,
+.hljs-doctype {
+  color: #707880;
+}
+
+/*color: fg_red*/
+.hljs-number,
+.hljs-literal,
+.hljs-deletion,
+.hljs-link_url,
+.hljs-symbol .hljs-string,
+.hljs-argument,
+.hljs-hexcolor,
+.hljs-input .hljs-prompt,
+.hljs-char {
+ color: #CE694E;
+}
+
+.hljs-symbol {
+  color: #8787D7;
+}
+
+/*color: fg_green*/
+.hljs-string,
+.hljs-special,
+.hljs-javadoctag,
+.hljs-addition,
+.hljs-important,
+.hljs-tag .hljs-value,
+.hljs-at.rule .hljs-keyword,
+.hljs-regexp,
+.hljs-attr_selector {
+  color: #99AD6A;
+}
+
+/*color: fg_purple*/
+.hljs-property,
+.hljs-envar,
+.hljs-code,
+.hljs-expression,
+.hljs-localvars,
+.hljs-id,
+.hljs-template_tag .hljs-filter .hljs-keyword {
+ color: #b294bb;
+}
+
+.hljs-variable .hljs-filter,
+.hljs-variable .hljs-filter .hljs-keyword,
+.hljs-variable .hljs-filter .hljs-argument,
+.hljs-variable {
+  color: #D8AEF8;
+}
+
+/*color: fg_blue*/
+.hljs-statement,
+.hljs-label,
+.hljs-keyword,
+.hljs-xmlDocTag,
+.hljs-function .hljs-keyword,
+.hljs-chunk,
+.hljs-cdata,
+.hljs-link_label,
+.hljs-bullet,
+.hljs-class .hljs-keyword,
+.hljs-smartquote,
+.hljs-method,
+.hljs-list .hljs-title,
+.hljs-tag {
+ color: #81a2be;
+}
+
+/*color: fg_aqua*/
+.hljs-pseudo,
+.hljs-exception,
+.hljs-annotation,
+.hljs-subst,
+.hljs-change,
+.hljs-cbracket,
+.hljs-operator,
+.hljs-horizontal_rule,
+.hljs-preprocessor .hljs-keyword,
+.hljs-typedef,
+.hljs-template_tag,
+.hljs-at_rule,
+.hljs-at_rule .hljs-string,
+.hljs-at_rule .hljs-keyword {
+  color: #8abeb7;
+}
+
+
+/*color: fg_orange*/
+.hljs-typename ,
+.hljs-built_in,
+.hljs-setting,
+.hljs-structure,
+.hljs-link_reference,
+.hljs-attribute,
+.hljs-blockquote,
+.hljs-quoted,
+.hljs-class,
+.hljs-header {
+  color: #90C0DB;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
