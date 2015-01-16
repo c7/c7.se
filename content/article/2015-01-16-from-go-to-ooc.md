@@ -87,7 +87,13 @@ To get syntax highlighting in Vim using [Vundle](https://github.com/gmarik/Vundl
 A simple wget like tool written in ooc
 
 ```bash
+# First you need to install curl
+brew install curl
+brew link curl --force
+
+# Then clone the ooc bindings using sam
 sam clone curl
+
 cd $OOC_LIBS
 mkdir wget
 cd wget
@@ -107,15 +113,13 @@ writecb: func(buffer: Pointer, size: SizeT, nmemb: SizeT, fw: FileWriter) {
 
 main: func(args: ArrayList<String>) {
     if(args size <= 1) {
-        "Usage: %s URL\n" printfln(args[0])
+        "Usage: %s URL output.html\n" printfln(args[0])
         exit(0)
     }
 
     url := args get(1)
 
-    fName := "tmp.html"
-
-    fw := FileWriter new(fName)
+    fw := FileWriter new(args[2])
 
     handle := Curl new()
     handle setOpt(CurlOpt url, url toCString())
