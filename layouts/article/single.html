@@ -40,7 +40,7 @@
           <aside class="recent-articles">
             <h2>Articles</h2>
             {{ $currentTitle := .Title }}
-            {{ range first 10 (where .Site.Recent "Type" "article") }}
+            {{ range first 10 (where .Site.Pages "Type" "article") }}
               {{ if ne $currentTitle .Title }}
                 <div class="article add-bottom">
                   <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
