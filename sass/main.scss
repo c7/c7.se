@@ -120,11 +120,6 @@ p code {
 ================================================== */
 
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-    a.follow-on-twitter, a.follow-on-twitter:visited {
-      background-image: url("/images/small_twitter_bird_2x.png");
-      background-size: 30px 25px;
-    }
-
     #logo {
       background: transparent url("/images/logo_square_2x.png") no-repeat top center;
     }
@@ -289,5 +284,4 @@ p code {
     .highlight, p code, h4 code, li code { font-size: 12px; }
     .main-title { font-size: 37px; margin-bottom: 10px; margin-top: 0; }
     .photo-container img { height: 168px; margin-bottom: 10px; }
-    a.follow-on-twitter, a.follow-on-twitter:visited { font-size: 0.9em; background-image: none; }
   }
