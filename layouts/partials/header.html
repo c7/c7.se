@@ -3,23 +3,23 @@
   <head>
     <meta charset="utf-8">
     {{ if eq .Title .Site.Title }}
-    <title>{{.Site.Title}}</title>
-    {{ else }}
-    <title>{{.Title}} - {{.Site.Title}}</title>
-    {{ end }}
+    <title>{{.Site.Title}}</title>{{ else }}
+    <title>{{.Title}} - {{.Site.Title}}</title>{{ end }}
     {{ if isset .Params "summary" }}<meta name="description" content="{{.Params.summary}}">{{ end }}
-    <meta name="author" content="Peter Hellberg">
-    <meta name="keywords" content="{{.Params.metakeywords}}">
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="{{ .Title }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="{{ .Site.Title }}" />
-    <meta property="og:url" content="{{.Permalink}}" />
-    <meta property="og:image" content="http://c7.se/images/logo_square.png" />
-    {{ if isset .Params "summary" }}<meta property="og:description" content="{{.Params.summary}}" />{{ end }}
-    <meta property="article:published_time" content="{{.Date}}" />
+    <meta property="og:title" content="{{ .Title }}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{.Permalink}}">
+    <meta property="og:image" content="http://c7.se/images/logo_square.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="{{ .Site.Title }}">{{ if isset .Params "summary" }}
+    <meta property="og:description" content="{{.Params.summary}}">{{ end }}
+    <meta property="article:published_time" content="{{.Date}}">
+    <meta property="article:publisher" content="http://c7.se/">
+    <meta property="article:section" content="Technology">
+    <meta property="article:author" content="peterhellberg">
     <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="author" type="text/plain" href="http://c7.se/humans.txt" />
+    <link rel="author" type="text/plain" href="http://c7.se/humans.txt">
     <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
