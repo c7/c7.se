@@ -97,3 +97,8 @@ end
 puts Sum.add(15,27) #=> 42
 ```
 
+## Wait, what about memory management?
+
+There is a section on [memory management](https://github.com/ffi/ffi/wiki/Core-Concepts#memory-management) in the FFI wiki.
+
+You probably also want to read [C? Go? Cgo!](https://blog.golang.org/c-go-cgo)
