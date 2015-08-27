@@ -21,6 +21,27 @@ body {
 
 a { color: $green; }
 
+pre {
+  -moz-tab-size: 2;
+  -o-tab-size:   2;
+  tab-size:      2;
+}
+
+pre code:not(.hljs) {
+  font-family: Monaco, Monospace;
+  font-size: 0.8em;
+  line-height: 1.5;
+
+  color: #E6E1DC;
+  background: #151515;
+  display: block;
+  margin-top: 0.6em;
+  margin-bottom: 2em;
+  padding: 0.3em 0.5em;
+  border-radius: 5px;
+  overflow: auto;
+}
+
 .font-bold   { font-weight: 700; }
 .font-normal { font-weight: 400; }
 .font-book   { font-weight: 300; }
