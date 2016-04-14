@@ -40,7 +40,6 @@ characteristics shared between Go and Pony:
   - No `null` (but it has a `None` type)
   - No deadlocks (since there are no locks at all)
   - No global variables (Go has package global variables)
-  - No implicit interfaces (You need to be explicit)
   - Not possible to have data-races (ensured by the compiler)
   - User defined primitive types (like a class, but has no fields and there is only one instance)
   - Statements _are_ expressions
