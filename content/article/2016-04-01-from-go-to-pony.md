@@ -24,6 +24,7 @@ characteristics shared between Go and Pony:
   - Open Source
   - Statically typed
   - Structurally typed interfaces
+  - Mostly insignificant whitespace
 
 ## How is it different from Go?
 
@@ -43,7 +44,6 @@ characteristics shared between Go and Pony:
   - Not possible to have data-races (ensured by the compiler)
   - User defined primitive types (like a class, but has no fields and there is only one instance)
   - Statements _are_ expressions
-  - Syntactically significant indentation
   - Three kinds of type expressions: tuples, unions, and intersections
   - Trait system (similar to Java 8 interfaces that can have default implementations)
   - Type annotations to indicate capabilities (Rcaps)
