@@ -27,11 +27,11 @@ end
 # Deployment        #
 #####################
 
-desc "Deploy website to http://c7.se"
+desc "Deploy website to https://c7.se"
 task :deploy do
   puts "## Building Hugo site"
   system("rm -rf #{public_dir}")
-  system("hugo -b 'http://c7.se/' -d #{public_dir}")
+  system("hugo -b 'https://c7.se/' -d #{public_dir}")
 
   puts "## Deploying website via Rsync"
   ok_failed system("rsync -avze 'ssh -p #{ssh_port}' --delete #{public_dir}/ #{ssh_user}:#{document_root}")

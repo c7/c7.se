@@ -2,7 +2,7 @@ languageCode: "en-us"
 canonifyurls: false
 
 title: "Code7 Interactive"
-baseurl: "http://c7.se/"
+baseurl: "https://c7.se/"
 
 author:
   name: "Peter Hellberg"

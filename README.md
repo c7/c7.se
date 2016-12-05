@@ -1,4 +1,4 @@
-[![Code7 Logo](http://c7.se/images/logo_square_small.png)](http://c7.se/)
+[![Code7 Logo](https://c7.se/images/logo_square_small.png)](http://c7.se/)
 
 ## Description
 
