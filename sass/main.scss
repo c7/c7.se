@@ -146,6 +146,13 @@ p code {
     }
   }
 
+  @media only screen and (min-resolution: 2dppx) {
+    #logo {
+      background: transparent url("/images/logo_square_2x.png") no-repeat top center;
+      background-size: 192px 192px;
+    }
+  }
+
   /* Larger than standard 960 (devices and browsers) */
   @media only screen and (min-width: 960px) {
     #article, #page {
