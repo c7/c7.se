@@ -20,7 +20,7 @@ task :default do
 end
 
 task :css do
-  exec("scss -t compressed sass/main.scss static/css/main.css")
+  exec("sassc -t compressed sass/main.scss static/css/main.css")
 end
 
 #####################
