@@ -143,6 +143,7 @@ p code {
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     #logo {
       background: transparent url("/images/logo_square_2x.png") no-repeat top center;
+      background-size: 192px 192px;
     }
   }
 
