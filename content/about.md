@@ -8,7 +8,7 @@ title: About
 
 ## Me
 
-I have used many different languages and technologies over the years as a web developer, but lately the [Go](https://golang.org/) programming language has been my tool of choice.
+I have used many different languages and technologies over the years, but lately the [Go](https://golang.org/) programming language has been my tool of choice.
 
 I live in Stockholm, Sweden.
 
