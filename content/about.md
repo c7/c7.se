@@ -1,5 +1,5 @@
 ---
-date: 2014-11-18
+date: 2017-04-13
 url: /about/
 title: About
 ---
@@ -8,7 +8,7 @@ title: About
 
 ## Me
 
-I have used many different languages and technologies over the years as a web developer, but lately the [Ruby](http://www.ruby-lang.org/en/) programming language and the framework [Sinatra](http://sinatrarb.com/) have been my tools of choice, often combined with the wonderful [jQuery](http://jquery.com/) JavaScript library.
+I have used many different languages and technologies over the years as a web developer, but lately the [Go](https://golang.org/) programming language has been my tool of choice.
 
 I live in Stockholm, Sweden.
 
