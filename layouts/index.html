@@ -30,7 +30,7 @@
     <div class="twelve columns">
       <div id="articles">
         <h2>Articles</h2>
-        {{ range where .Site.Pages "Type" "article" }}
+        {{ range where .Site.RegularPages "Type" "article" }}
           <div class="hentry article add-bottom">
             <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
             <section class="article-summary">{{ .Params.summary }}</section>
