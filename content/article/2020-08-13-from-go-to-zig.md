@@ -30,6 +30,8 @@ Let’s start off by listing some of the characteristics shared between Go and Z
   - WebAssembly as a compile target
   - Multiline string literals
   - There is no operator overloading
+  - `defer`
+  - Source code is encoded in UTF-8
 
 ## How is it different from Go?
 
@@ -51,6 +53,21 @@ I still have a lot to learn before I feel confident in using the language.
   - Arbitrary bit-width integers (`i7` for example)
   - Undefined values
   - Thread Local Variables
+
+## [Zen](https://ziglang.org/documentation/master/#Zen) of Zig
+
+  - Communicate intent precisely.
+  - Edge cases matter.
+  - Favor reading code over writing code.
+  - Only one obvious way to do things.
+  - Runtime crashes are better than bugs.
+  - Compile errors are better than runtime crashes.
+  - Incremental improvements.
+  - Avoid local maximums.
+  - Reduce the amount one must remember.
+  - Minimize energy spent on coding style.
+  - Resource deallocation must succeed.
+  - Together we serve end users.
 
 ## Installing Zig
 
