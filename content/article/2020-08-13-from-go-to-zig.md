@@ -35,7 +35,7 @@ Let’s start off by listing some of the characteristics shared between Go and Z
 
 ## How is it different from Go?
 
-> These are just a few of the things I’ve picked up when reading about Zig.
+> **Note:** These are just a few of the things I’ve picked up when reading about Zig.
 I still have a lot to learn before I feel confident in using the language.
 
   - Build modes on scope level
@@ -52,7 +52,7 @@ I still have a lot to learn before I feel confident in using the language.
   - Enforcing the handling of returned errors
   - Arbitrary bit-width integers (`i7` for example)
   - Undefined values
-  - Thread Local Variables
+  - Thread local variables
   - No multiline comments
 
 ## [Zen](https://ziglang.org/documentation/master/#Zen) of Zig
