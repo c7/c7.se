@@ -53,6 +53,7 @@ I still have a lot to learn before I feel confident in using the language.
   - Arbitrary bit-width integers (`i7` for example)
   - Undefined values
   - Thread Local Variables
+  - No multiline comments
 
 ## [Zen](https://ziglang.org/documentation/master/#Zen) of Zig
 
