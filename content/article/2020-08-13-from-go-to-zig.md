@@ -80,7 +80,9 @@ pub fn main() !void {
 }
 ```
 
-This can be compiled with `zig build-exe zighello.zig --release-small --strip --single-threaded` and results in a `~10KB` static executable.
+This can be compiled with `zig build-exe zighello.zig --release-small --strip --single-threaded` and results in a `~10 KB` static executable.
+
+(Not strictly true that you get a static executable under macOS, it is linked to `libSystem.B.dylib`)
 
 And as you probably know, the Go entry point is the `main` func.
 
@@ -95,7 +97,7 @@ func main() {
 }
 ```
 
-This can be compiled with `go build -ldflags "-s -w" -trimpath main.go` and results in a `~1.7MB` executable (when using Go version `1.14.7` under macOS)
+This can be compiled with `go build -ldflags "-s -w" -trimpath main.go` and results in a `~1.7 MB` executable (when using Go version `1.14.7` under macOS)
 
 > **Note:** The size of your binaries doesn’t matter in most cases, but sometimes it matters a lot, for example when compiling to [WebAssembly](https://webassembly.org/)
 
