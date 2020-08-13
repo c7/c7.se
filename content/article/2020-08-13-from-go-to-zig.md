@@ -55,7 +55,7 @@ I still have a lot to learn before I feel confident in using the language.
   - Thread local variables
   - No multiline comments
 
-## [Zen](https://ziglang.org/documentation/master/#Zen) of Zig
+## The [Zen](https://ziglang.org/documentation/master/#Zen) of Zig
 
   - Communicate intent precisely.
   - Edge cases matter.
@@ -147,4 +147,6 @@ pub fn main() void {
 
 Then you can compile this by calling `zig -isystem . --library ./libsum.so build-exe zigsum.zig`
 
-> Captain: Take off every 'ZIG'!!
+--------------------------------------
+
+> **Captain:** Take off every 'ZIG'!!
