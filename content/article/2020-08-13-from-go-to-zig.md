@@ -95,6 +95,10 @@ func main() {
 }
 ```
 
+This can be compiled with `go build -ldflags "-s -w" -trimpath main.go` and results in a `~1.7MB` executable (when using Go version `1.14.7` under macOS)
+
+> **Note:** The size of your binaries doesn’t matter in most cases, but sometimes it matters a lot, for example when compiling to [WebAssembly](https://webassembly.org/)
+
 ## Learn more about Zig
 
   - [The Zig Programming Language](https://ziglang.org/)
