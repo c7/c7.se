@@ -7,7 +7,7 @@ summary: Getting to know Zig, a general-purpose programming language and toolcha
 ---
 
 My friend [Christine](https://christine.website/) has spoken well of
-[Zig](https://ziglang.org/) for a while now, and my interest was peaked when I read
+[Zig](https://ziglang.org/) for a while now, and my interest was piqued when I read
 that it can [integrate with C libraries](https://ziglang.org/documentation/master/#cImport)
 without the use of FFI/bindings.
 In this article I will try to contrast Zig against my favorite language, [Go](https://golang.org/).
