@@ -29,7 +29,6 @@ Let’s start off by listing some of the characteristics shared between Go and Z
   - Errors are values
   - WebAssembly as a compile target
   - Multiline string literals
-  - There is no operator overloading
   - `defer`
   - Source code is encoded in UTF-8
 
