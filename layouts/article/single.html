@@ -1,65 +1,65 @@
-{{ partial "header.html" . }}
-  <div class="container">
-    <div class="row">
-      <header class="sixteen columns" id="main_header">
-        <a class="logo_link" href="/">
-          <h1 id="logo">code7 <span class="font-normal">interactive</span></h1>
-        </a>
-      </header>
-    </div>
-    <div class="row">
-      <div class="sixteen columns hentry" id="article">
-        <article>
-          <h1 class='entry-title'>{{.Title}}</h1>
-          <h2><div class='entry-summary'>{{.Params.summary}}</div></h2>
-          <section class='article-content entry-content'>
-            {{ .Content }}
-          </section>
-        </article>
-
-        <div id="hcard-Peter-Hellberg" class="vcard byline row remove-bottom">
-          <div class="three columns alpha">
-            <div class="photo-container">
-              <a href="/"><img src="//c7.se/images/peter_hellberg.jpg" alt="Peter Hellberg" class="photo" /></a>
-            </div>
-          </div>
-          <div class="ten columns omega">
-            <h2>
-              My name is
-              <em><span class="fn n"><span class="given-name">Peter</span>
-              <span class="family-name">Hellberg</span></span></em> and I’m a
-              <span class="role">Systems Developer</span> in
-              <span class="adr"><span class="region">Stockholm</span>, <span class="country-name">Sweden</span>.</span>
-            </h2>
-            <div class="hidden"><a class="org url" href="https://c7.se/">Code7 Interactive</a></div>
-          </div>
-        </div>
+{{
+  partial "header.html" .
+}}    <div class="container">
+      <div class="row">
+        <header class="sixteen columns" id="main_header">
+          <a class="logo_link" href="/">
+            <h1 id="logo">code7 <span class="font-normal">interactive</span></h1>
+          </a>
+        </header>
       </div>
       <div class="row">
-        <div class="sixteen columns">
-          <aside class="recent-articles">
-            <h2>Articles</h2>
-            {{ $currentTitle := .Title }}
-            {{ range first 10 (where .Site.Pages "Type" "article") }}
-              {{ if ne $currentTitle .Title }}
-                <div class="article add-bottom">
-                  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-                  <section class="article-summary">{{ .Params.summary }}</section>
-                </div>
+        <div class="sixteen columns hentry" id="article">
+          <article>
+            <h1 class='entry-title'>{{.Title}}</h1>
+            <h2><div class='entry-summary'>{{.Params.summary}}</div></h2>
+            <section class='article-content entry-content'>
+{{ .Content }}
+            </section>
+          </article>
+          <div id="hcard-Peter-Hellberg" class="vcard byline row remove-bottom">
+            <div class="three columns alpha">
+              <div class="photo-container">
+                <a href="/"><img src="//c7.se/images/peter_hellberg.jpg" alt="Peter Hellberg" class="photo" /></a>
+              </div>
+            </div>
+            <div class="ten columns omega">
+              <h2>
+                My name is
+                <em><span class="fn n"><span class="given-name">Peter</span>
+                <span class="family-name">Hellberg</span></span></em> and I’m a
+                <span class="role">Systems Developer</span> in
+                <span class="adr"><span class="region">Stockholm</span>, <span class="country-name">Sweden</span>.</span>
+              </h2>
+              <div class="hidden"><a class="org url" href="https://c7.se/">Code7 Interactive</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="sixteen columns">
+            <aside class="recent-articles">
+              <h2>Articles</h2>
+              {{ $currentTitle := .Title }}
+              {{ range first 10 (where .Site.Pages "Type" "article") }}
+                {{ if ne $currentTitle .Title }}
+                  <div class="article add-bottom">
+                    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                    <section class="article-summary">{{ .Params.summary }}</section>
+                  </div>
+                {{ end }}
               {{ end }}
-            {{ end }}
-          </aside>
+            </aside>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <script type="text/javascript" src="/js/highlight.pack.js"></script>
-  <script type="text/javascript">
-    // Replace tabs with spaces in Chrome
-    if(navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
-      hljs.configure({ tabReplace: '  ' });
-    }
+    <script type="text/javascript" src="/js/highlight.pack.js"></script>
+    <script type="text/javascript">
+      // Replace tabs with spaces in Chrome
+      if(navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
+        hljs.configure({ tabReplace: '  ' });
+      }
 
-    hljs.initHighlightingOnLoad();
-  </script>
+      hljs.initHighlightingOnLoad();
+    </script>
 {{ partial "footer.html" . }}

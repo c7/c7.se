@@ -1,5 +1,6 @@
-{{ partial "header.html" . }}
-    <div>
+{{
+  partial "header.html" .
+}}    <div>
       <div class="container">
         <div class="row">
           <header class="sixteen columns" id="main_header">
@@ -9,128 +10,111 @@
           </header>
         </div>
         <div id="hcard-Peter-Hellberg" class="vcard">
-  <div class="row remove-bottom">
-    <div class="four columns">
-      <div class="photo-container">
-        <img src="//c7.se/images/peter_hellberg.jpg" alt="Peter Hellberg" class="photo" />
-      </div>
-    </div>
-    <div class="twelve columns">
-      <h1 class="main-title p-note">
-        My name is
-        <em><span class="fn n"><span class="given-name">Peter</span>
-        <span class="family-name">Hellberg</span></span></em> and I’m a
-        <span class="role">Systems Developer</span> in
-        <span class="adr"><span class="region">Stockholm</span>, <span class="country-name">Sweden</span>.</span>
-      </h1>
-      <div class="hidden"><a class="org url" href="https://c7.se/">Code7 Interactive</a></div>
-    </div>
-  </div>
-  <div class="row remove-bottom">
-    <div class="twelve columns">
-      <div id="articles">
-        <h2>Articles</h2>
-        {{ range where .Site.RegularPages "Type" "article" }}
-          <div class="hentry article add-bottom">
-            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-            <section class="article-summary">{{ .Params.summary }}</section>
+          <div class="row remove-bottom">
+            <div class="four columns">
+              <div class="photo-container">
+                <img src="//c7.se/images/peter_hellberg.jpg" alt="Peter Hellberg" class="photo" />
+              </div>
+            </div>
+            <div class="twelve columns">
+              <h1 class="main-title p-note">
+                My name is
+                <em><span class="fn n"><span class="given-name">Peter</span>
+                <span class="family-name">Hellberg</span></span></em> and I’m a
+                <span class="role">Systems Developer</span> in
+                <span class="adr"><span class="region">Stockholm</span>, <span class="country-name">Sweden</span>.</span>
+              </h1>
+              <div class="hidden"><a class="org url" href="https://c7.se/">Code7 Interactive</a></div>
+            </div>
           </div>
-        {{ end }}
-      </div>
-
-      <div id="current-projects">
-        <h2>Open Source Projects</h2>
-        <p>
-          <em>
-            This is just a few of my projects, you can find more on
-            <a href="https://github.com/peterhellberg">my GitHub profile</a>.
-          </em>
-        <p>
-
-        <div class="project add-bottom">
-          <h3><a href="https://github.com/peterhellberg/gfx">Gfx</a></h3>
-          <section class="project-summary">Convenience package for dealing with graphics in my pixel drawing experiments.</section>
-        </div>
-
-        <div class="project add-bottom">
-          <h3><a href="https://github.com/peterhellberg/acr122u">ACR122U</a></h3>
-          <section class="project-summary">A Go package for the ACR122U USB NFC Reader.</section>
-        </div>
-
-        <div class="project add-bottom">
-          <h3><a href="https://github.com/peterhellberg/duration">Duration</a></h3>
-          <section class="project-summary">Parse a <a href="https://www.ietf.org/rfc/rfc3339.txt">RFC 3339 duration</a> string into <a href="https://golang.org/pkg/time/#Duration">time.Duration</a>.</section>
-        </div>
-
-        <div class="project add-bottom">
-          <h3><a href="https://github.com/peterhellberg/hiro">Hiro</a></h3>
-          <section class="project-summary">Generates HTML from API Blueprints using <a href="https://github.com/apiaryio/drafter">Drafter</a> and <a href="https://github.com/subosito/iglo">Iglo</a>.</section>
-        </div>
-
-        <div class="project add-bottom">
-          <h3><a href="https://github.com/peterhellberg/hashids.rb">Hashids</a></h3>
-          <section class="project-summary">Ruby gem that generates YouTube-like hashes from one or many numbers.</section>
-        </div>
-
-        <div class="project add-bottom">
-          <h3><a href="http://peterhellberg.github.io/pinch/">Pinch</a></h3>
-          <section class="project-summary">Retrieve a file from inside a zip file, over the network! Pretty sweet, eh?</section>
-        </div>
-      </div>
-
-      <div id="presentations">
-        <h2>Presentations</h2>
-
-        <div class="presentation add-bottom">
-          <h3><a href="https://speakerdeck.com/peterhellberg/graphics-in-go">Graphics in Go</a></h3>
-          <section class="presentation-summary">Presentation containing a <em>(small)</em> selection of my graphics experiments.</section>
-        </div>
-
-        <div class="presentation add-bottom">
-          <h3><a href="https://speakerdeck.com/peterhellberg/introduction-to-the-go-programming-language">Introduction to The Go Programming Language</a></h3>
-          <section class="presentation-summary">A quick look at Go and what makes it special.</section>
-        </div>
-
-        <div class="presentation add-bottom">
-          <h3><a href="https://speakerdeck.com/peterhellberg/introduction-to-digital-photography">Introduction to Digital Photography</a></h3>
-          <section class="presentation-summary">A few pointers on how to take better photos.</section>
-        </div>
-
-        <div class="presentation add-bottom">
-          <h3><a href="http://speakerdeck.com/u/peterhellberg/p/pinch-some-crazy-http-zip-magic">Pinch - Some crazy HTTP ZIP Magic</a></h3>
-          <section class="presentation-summary">The inner workings of Pinch.</section>
-        </div>
-      </div>
-
-      <div id="rates">
-        <h2>Rates</h2>
-        <p>My rates start at <strong>1000 SEK</strong> per hour + Swedish taxes</p>
-      </div>
-    </div>
-    <div class="four columns">
-      <h2>Contact me</h2>
-
-      <ul class="social">
-        <li><a rel="me" class="email" href="mailto:peter@c7.se">Email</a></li>
-        <li><a rel="me" class="url github" href="https://github.com/peterhellberg">GitHub</a></li>
-        <li><a rel="me" class="url twitter" href="https://twitter.com/peterhellberg">Twitter</a></li>
-      </ul>
-
-      <div id="address">
-        <h3>Street Address</h3>
-        <div class="adr">
-          <span class="street-address">Mosstenabacken 1</span>,
-          <div>
-            <span class="postal-code">124 32</span>
-            <span class="locality">Bandhagen</span>
+          <div class="row remove-bottom">
+            <div class="twelve columns">
+              <div id="articles">
+                <h2>Articles</h2>
+                {{- range where .Site.RegularPages "Type" "article" }}
+                <div class="hentry article add-bottom">
+                  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                  <section class="article-summary">{{ .Params.summary }}</section>
+                </div>
+                {{- end }}
+              </div>
+              <div id="current-projects">
+                <h2>Open Source Projects</h2>
+                <p>
+                  <em>
+                    This is just a few of my projects, you can find more on
+                    <a href="https://github.com/peterhellberg">my GitHub profile</a>.
+                  </em>
+                <p>
+                <div class="project add-bottom">
+                  <h3><a href="https://github.com/peterhellberg/gfx">Gfx</a></h3>
+                  <section class="project-summary">Convenience package for dealing with graphics in my pixel drawing experiments.</section>
+                </div>
+                <div class="project add-bottom">
+                  <h3><a href="https://github.com/peterhellberg/acr122u">ACR122U</a></h3>
+                  <section class="project-summary">A Go package for the ACR122U USB NFC Reader.</section>
+                </div>
+                <div class="project add-bottom">
+                  <h3><a href="https://github.com/peterhellberg/duration">Duration</a></h3>
+                  <section class="project-summary">Parse a <a href="https://www.ietf.org/rfc/rfc3339.txt">RFC 3339 duration</a> string into <a href="https://golang.org/pkg/time/#Duration">time.Duration</a>.</section>
+                </div>
+                <div class="project add-bottom">
+                  <h3><a href="https://github.com/peterhellberg/hiro">Hiro</a></h3>
+                  <section class="project-summary">Generates HTML from API Blueprints using <a href="https://github.com/apiaryio/drafter">Drafter</a> and <a href="https://github.com/subosito/iglo">Iglo</a>.</section>
+                </div>
+                <div class="project add-bottom">
+                  <h3><a href="https://github.com/peterhellberg/hashids.rb">Hashids</a></h3>
+                  <section class="project-summary">Ruby gem that generates YouTube-like hashes from one or many numbers.</section>
+                </div>
+                <div class="project add-bottom">
+                  <h3><a href="http://peterhellberg.github.io/pinch/">Pinch</a></h3>
+                  <section class="project-summary">Retrieve a file from inside a zip file, over the network! Pretty sweet, eh?</section>
+                </div>
+              </div>
+              <div id="presentations">
+                <h2>Presentations</h2>
+                <div class="presentation add-bottom">
+                  <h3><a href="https://speakerdeck.com/peterhellberg/graphics-in-go">Graphics in Go</a></h3>
+                  <section class="presentation-summary">Presentation containing a <em>(small)</em> selection of my graphics experiments.</section>
+                </div>
+                <div class="presentation add-bottom">
+                  <h3><a href="https://speakerdeck.com/peterhellberg/introduction-to-the-go-programming-language">Introduction to The Go Programming Language</a></h3>
+                  <section class="presentation-summary">A quick look at Go and what makes it special.</section>
+                </div>
+                <div class="presentation add-bottom">
+                  <h3><a href="https://speakerdeck.com/peterhellberg/introduction-to-digital-photography">Introduction to Digital Photography</a></h3>
+                  <section class="presentation-summary">A few pointers on how to take better photos.</section>
+                </div>
+                <div class="presentation add-bottom">
+                  <h3><a href="http://speakerdeck.com/u/peterhellberg/p/pinch-some-crazy-http-zip-magic">Pinch - Some crazy HTTP ZIP Magic</a></h3>
+                  <section class="presentation-summary">The inner workings of Pinch.</section>
+                </div>
+              </div>
+              <div id="rates">
+                <h2>Rates</h2>
+                <p>My rates start at <strong>1000 SEK</strong> per hour + Swedish taxes</p>
+              </div>
+            </div>
+            <div class="four columns">
+              <h2>Contact me</h2>
+              <ul class="social">
+                <li><a rel="me" class="email" href="mailto:peter@c7.se">Email</a></li>
+                <li><a rel="me" class="url github" href="https://github.com/peterhellberg">GitHub</a></li>
+                <li><a rel="me" class="url twitter" href="https://twitter.com/peterhellberg">Twitter</a></li>
+              </ul>
+              <div id="address">
+                <h3>Street Address</h3>
+                <div class="adr">
+                  <span class="street-address">Mosstenabacken 1</span>,
+                  <div>
+                    <span class="postal-code">124 32</span>
+                    <span class="locality">Bandhagen</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-      </div>
-    </div>
-
 {{ partial "footer.html" }}

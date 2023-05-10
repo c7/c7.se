@@ -2,10 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    {{ if eq .Title .Site.Title }}
+    {{- if eq .Title .Site.Title }}
     <title>{{.Site.Title}}</title>{{ else }}
     <title>{{.Title}} - {{.Site.Title}}</title>{{ end }}
-    {{ if isset .Params "summary" }}<meta name="description" content="{{.Params.summary}}">{{ end }}
+    {{- if isset .Params "summary" }}
+    <meta name="description" content="{{.Params.summary}}">
+    {{- end }}
     <meta property="og:title" content="{{ .Title }}">
     <meta property="og:type" content="article">
     <meta property="og:url" content="{{.Permalink}}">
@@ -31,4 +33,4 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <link rel="stylesheet" href="/css/main.css">
   </head>
-<body lang="en">
+  <body lang="en">
