@@ -11,16 +11,16 @@
       <div class="row">
         <div class="sixteen columns hentry" id="article">
           <article>
-            <h1 class='entry-title'>{{.Title}}</h1>
-            <h2><div class='entry-summary'>{{.Params.summary}}</div></h2>
-            <section class='article-content entry-content'>
+            <h1 class="entry-title">{{.Title}}</h1>
+            <h2><span class="entry-summary">{{.Params.summary}}</span></h2>
+            <div class="article-content entry-content">
 {{ .Content }}
-            </section>
+            </div>
           </article>
           <div id="hcard-Peter-Hellberg" class="vcard byline row remove-bottom">
             <div class="three columns alpha">
               <div class="photo-container">
-                <a href="/"><img src="//c7.se/images/peter_hellberg.jpg" alt="Peter Hellberg" class="photo" /></a>
+                <a href="/"><img src="//c7.se/images/peter_hellberg.jpg" alt="Peter Hellberg" class="photo"></a>
               </div>
             </div>
             <div class="ten columns omega">
@@ -44,7 +44,7 @@
                 {{ if ne $currentTitle .Title }}
                   <div class="article add-bottom">
                     <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-                    <section class="article-summary">{{ .Params.summary }}</section>
+                    <div class="article-summary">{{ .Params.summary }}</div>
                   </div>
                 {{ end }}
               {{ end }}
