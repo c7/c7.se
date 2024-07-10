@@ -78,7 +78,7 @@ installed, then you can install Zig like this:
 $ brew install zig
 ```
 
-The current version of `zig` as of this writing is **0.6.0**.
+The current version of `zig` as of this writing is **0.13.0**.
 
 Make sure you also get [zig.vim](https://github.com/ziglang/zig.vim).
 
@@ -92,12 +92,12 @@ The binary is named after the `.zig` file.
 const std = @import("std");
 
 pub fn main() !void {
-    const stdout = std.io.getStdOut().outStream();
-    try stdout.print("Hello, {}!\n", .{"world"});
+    const stdout = std.io.getStdOut().writer();
+    try stdout.print("Hello, {s}!\n", .{"world"});
 }
 ```
 
-This can be compiled with `zig build-exe zighello.zig --release-small --strip --single-threaded` and results in a `~10 KB` static executable.
+This can be compiled with `zig build-exe zighello.zig -O ReleaseSmall -fstrip -fsingle-threaded` and results in a `~10 KB` static executable.
 
 (Not strictly true that you get a static executable under macOS, it is linked to `libSystem.B.dylib`)
 
