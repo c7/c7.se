@@ -1,0 +1,92 @@
+/* #Media Queries
+================================================== */
+
+@media (max-width: 550px) {
+  :root {
+    --font-size-base: var(--font-size-xl);
+  }
+
+  #logo {
+    background-size: 128px 128px;
+    min-height: 128px;
+    margin-bottom: -1.2em;
+  }
+
+  #main_header {
+    margin-bottom: calc(var(--font-size-base) * 2.8);
+  }
+
+  #article, .recent-articles, #hcard-Peter-Hellberg > div {
+    padding-left: 0.38em;
+    padding-right: 0.38em;
+  }
+
+  .main-title {
+    font-size: calc(var(--font-size-base) * 1.7);
+  }
+
+  .vcard .photo {
+    max-width: 45%;
+    margin-left: auto;
+    margin-bottom: -20%;
+    display: block;
+  }
+
+  .hljs {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 650px) {
+  #logo {
+    background-size: 128px 128px;
+    min-height: 128px;
+  }
+
+  .vcard .photo {
+    max-width: 35%;
+    margin-left: auto;
+    margin-bottom: -10%;
+    display: block;
+  }
+}
+
+@media (min-width: 650px) {
+  :root {
+    --font-size-base: var(--font-size-s);
+  }
+
+  #logo {
+    background-size: 128px 128px;
+    min-height: 128px;
+  }
+}
+
+@media (min-width: 750px) {
+  :root {
+    --font-size-base: var(--font-size-m);
+  }
+
+  #logo {
+    background-size: 164px 164px;
+    min-height: 164px;
+  }
+
+}
+
+@media (min-width: 1000px) {
+  :root {
+    --font-size-base: var(--font-size-l);
+  }
+
+  #logo {
+    background-size: 192px 192px;
+    min-height: 192px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --font-size-base: var(--font-size-xl);
+  }
+}

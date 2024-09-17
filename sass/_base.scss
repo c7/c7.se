@@ -1,87 +1,39 @@
-/*
-* Skeleton V1.1
-* Copyright 2011, Dave Gamache
-* www.getskeleton.com
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 8/17/2011
-*/
-
-/* Table of Content
-==================================================
-  #Reset & Basics
-  #Basic Styles
-  #Site Styles
-  #Typography
-  #Links
-  #Lists
-  #Images
-  #Buttons
-  #Tabs
-  #Forms
-  #Misc */
-
-
-/* #Reset & Basics (Inspired by E. Meyers)
-================================================== */
-  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline; }
-  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block; }
-  body {
-    line-height: 1; }
-  ol, ul {
-    list-style: none; }
-  blockquote, q {
-    quotes: none; }
-  blockquote:before, blockquote:after,
-  q:before, q:after {
-    content: '';
-    content: none; }
-  table {
-    border-collapse: collapse;
-    border-spacing: 0; }
-
-
 /* #Basic Styles
 ================================================== */
 
+body {
+  line-height:      1.428;
+  font-weight:      400;
+  font-size:        var(--font-size-base);
+  font-size-adjust: none;
 
-  body {
-    background:       #FFFFFB;
-    color:            #333332;
-    line-height:      1.428;
-    font-weight:      400;
-    font-size:        20px;
-    font-size-adjust: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-
-    text-rendering: optimizeLegibility;
-    -webkit-text-size-adjust: 100%;
-  }
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
 
 
 /* #Typography
 ================================================== */
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 
-  h1, h2, h3, h4 {
-    font-weight: 700;
+  h1 {
+    font-weight: 900;
     color: #333332;
   }
 
-  h1 { font-size: 50px; line-height: 1.1; margin-bottom: 17px; letter-spacing: -1px; }
-  h2 { font-size: 24px; line-height: 1.6; margin-bottom: 12px; margin-top: 25px; }
-  h3 { font-size: 20px; margin-bottom: 2px; }
-  h4 { font-size: 18px; margin-top: 20px; }
-  h5 { font-size: 17px; }
+  h2, h3, h4 {
+    font-weight: 600;
+    color: #333332;
+  }
+
+  h1 { font-size: calc(var(--font-size-base) * 2.0); line-height: 1.1; margin-bottom: 17px; letter-spacing: -1px; }
+  h2 { font-size: calc(var(--font-size-base) * 1.4); line-height: 1.4; margin-bottom: 14px; margin-top: 5px; }
+  h3 { font-size: calc(var(--font-size-base) * 1.17); margin-bottom: 4px; }
+  h4 { font-size: calc(var(--font-size-base) * 1.0); margin-top: 20px; }
+  h5 { font-size: calc(var(--font-size-base) * 0.83); }
 
   p  { margin-bottom: 27px; }
 
@@ -95,8 +47,8 @@
   small { font-size: 80%; }
 
 /*  Blockquotes  */
-  blockquote, blockquote p { font-style: italic; }
-  blockquote { margin: 0 0 27px -25px; padding-left: 25px; border-left: 5px solid $green; }
+  blockquote, blockquote p { font-style: italic; margin-bottom: 0; }
+  blockquote { margin: 0 -0.6em 1em -0.6em; padding: 0.4em 0.5em; border: 0.2em solid $green; border-radius: 0.7em;}
 
 /* Horizontal line */
   hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
