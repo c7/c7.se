@@ -16,7 +16,7 @@ development_dir = ".development"
 #####################
 
 task :default do
-  exec("hugo server --disableFastRender --watch -d #{development_dir}")
+  exec("hugo server --bind=0.0.0.0 --disableFastRender --watch -d #{development_dir}")
 end
 
 task :css do
