@@ -154,6 +154,7 @@ pre {
   ol, ul {
     list-style: disclosure-closed;
     list-style-position: outside;
+    margin-left: 1.1em;
     ::marker {
       color: $green;
     }
