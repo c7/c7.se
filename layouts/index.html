@@ -3,7 +3,7 @@
 }}    <div>
       <div class="container">
         <div class="row">
-          <header class="sixteen columns" id="main_header">
+          <header class="twelve columns" id="main_header">
             <a class="logo_link" href="/">
               <h2 id="logo">code7 <span class="font-normal">interactive</span></h2>
             </a>
@@ -11,12 +11,7 @@
         </div>
         <div id="hcard-Peter-Hellberg" class="vcard">
           <div class="row remove-bottom">
-            <div class="four columns">
-              <div class="photo-container">
-                <img src="//c7.se/images/peter_hellberg.jpg" alt="Peter Hellberg" class="photo">
-              </div>
-            </div>
-            <div class="twelve columns">
+            <div class="eight columns">
               <h1 class="main-title p-note">
                 My name is
                 <em><span class="fn n"><span class="given-name">Peter</span>
@@ -25,6 +20,11 @@
                 <span class="adr"><span class="region">Stockholm</span>, <span class="country-name">Sweden</span>.</span>
               </h1>
               <div class="hidden"><a class="org url" href="https://c7.se/">Code7 Interactive</a></div>
+            </div>
+            <div class="four columns">
+              <div class="photo-container">
+                <img src="//c7.se/images/peter_hellberg.jpg" alt="Peter Hellberg" class="photo">
+              </div>
             </div>
           </div>
           <div class="row remove-bottom">
@@ -38,14 +38,26 @@
                 </div>
                 {{- end }}
               </div>
-              <div id="current-projects">
+            </div>
+          </div>
+          <div class="row remove-bottom">
+            <div class="seven columns">
+              <div id="projects">
                 <h2>Open Source Projects</h2>
-                <p>
+                <blockquote>
                   <em>
-                    This is just a few of my projects, you can find more on
-                    <a href="https://github.com/peterhellberg">my GitHub profile</a>.
+                    This is just a few projects, you can find more on my
+                    <a href="https://github.com/peterhellberg">GitHub profile</a>.
                   </em>
-                <p>
+                </blockquote>
+                <div class="project add-bottom">
+                  <h3><a href="https://github.com/peterhellberg/typ">Typ</a></h3>
+                  <div class="project-summary">A small Zig module, as a convenience for me when writing WebAssembly plugins for <a href="https://typst.app/">Typst</a>.</div>
+                </div>
+                <div class="project add-bottom">
+                  <h3><a href="https://github.com/peterhellberg/w4-init">w4-init ✨</a></h3>
+                  <div class="project-summary">Initialize a Zig <a href="https://wasm4.org/">WASM-4</a> cart project</div>
+                </div>
                 <div class="project add-bottom">
                   <h3><a href="https://github.com/peterhellberg/gfx">Gfx</a></h3>
                   <div class="project-summary">Convenience package for dealing with graphics in my pixel drawing experiments.</div>
@@ -59,10 +71,6 @@
                   <div class="project-summary">Parse a <a href="https://www.ietf.org/rfc/rfc3339.txt">RFC 3339 duration</a> string into <a href="https://golang.org/pkg/time/#Duration">time.Duration</a>.</div>
                 </div>
                 <div class="project add-bottom">
-                  <h3><a href="https://github.com/peterhellberg/hiro">Hiro</a></h3>
-                  <div class="project-summary">Generates HTML from API Blueprints using <a href="https://github.com/apiaryio/drafter">Drafter</a> and <a href="https://github.com/subosito/iglo">Iglo</a>.</div>
-                </div>
-                <div class="project add-bottom">
                   <h3><a href="https://github.com/peterhellberg/hashids.rb">Hashids</a></h3>
                   <div class="project-summary">Ruby gem that generates YouTube-like hashes from one or many numbers.</div>
                 </div>
@@ -71,6 +79,8 @@
                   <div class="project-summary">Retrieve a file from inside a zip file, over the network! Pretty sweet, eh?</div>
                 </div>
               </div>
+            </div>
+            <div class="five columns">
               <div id="presentations">
                 <h2>Presentations</h2>
                 <div class="presentation add-bottom">
@@ -90,18 +100,24 @@
                   <div class="presentation-summary">The inner workings of Pinch.</div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="row remove-bottom">
+            <div class="five columns">
               <div id="rates">
-                <h2>Rates</h2>
-                <p>My rates start at <strong>1000 SEK</strong> per hour + Swedish taxes</p>
+                <h3>Rates</h3>
+                <p>My rates start at <strong>1250 SEK</strong> per hour + Swedish taxes</p>
               </div>
             </div>
-            <div class="four columns">
-              <h2>Contact me</h2>
+            <div class="three columns">
+              <h3>Contact me</h3>
               <ul class="social">
                 <li><a rel="me" class="email" href="mailto:peter@c7.se">Email</a></li>
                 <li><a rel="me" class="url github" href="https://github.com/peterhellberg">GitHub</a></li>
                 <li><a rel="me" class="url twitter" href="https://twitter.com/peterhellberg">Twitter</a></li>
               </ul>
+            </div>
+            <div class="four columns">
               <div id="address">
                 <h3>Street Address</h3>
                 <div class="adr">
