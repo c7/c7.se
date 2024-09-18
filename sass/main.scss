@@ -3,6 +3,7 @@
 
 $white: #FFFFFB;
 $green: #7CAF3C;
+$lightgreen: #cbd9ba7d;
 $gray:  #E5E5E2;
 $light: #B3B3B3;
 $dark:  #424242;
@@ -95,6 +96,10 @@ $black: #333332;
 
 .hidden { display: none; }
 
+.main-title {
+  font-size: 3em;
+}
+
 /* #Imports
 ================================================== */
 @import "media_queries";
@@ -171,6 +176,10 @@ pre {
     background: $gray;
     border-radius: 0.3em;
     padding: 0.1em 0.2em;
+  }
+
+  blockquote p code {
+    background: $lightgreen;
   }
 }
 

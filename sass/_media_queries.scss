@@ -83,6 +83,11 @@
     background-size: 192px 192px;
     min-height: 192px;
   }
+
+  #article, .recent-articles, #hcard-Peter-Hellberg > div {
+    padding-left: calc(var(--font-size-base) * 2.5);
+    padding-right: calc(var(--font-size-base) * 2.5);
+  }
 }
 
 @media (min-width: 1200px) {
