@@ -6,7 +6,6 @@ $green: #7CAF3C;
 $lightgreen: #cbd9ba7d;
 $gray:  #E5E5E2;
 $light: #B3B3B3;
-$dark:  #424242;
 $black: #333332;
 
 // https://colordesigner.io/color-palette-builder
@@ -116,7 +115,6 @@ html {
 
 a { color: $green; text-decoration: underline; }
 
-
 .container {
   font-family: "ff-tisa-web-pro",Georgia,Cambria,serif;
   font-weight: 400;
@@ -142,7 +140,6 @@ pre code {
 }
 
 pre {
-  border: 0.2em solid $dark;
   border-radius: 0.7em;
   margin: 0 -0.6em 1em -0.6em;
 
