@@ -30,10 +30,11 @@ $black: #333332;
 ================================================== */
 
 #logo {
-  background: transparent url("/images/logo_square_2x.png") no-repeat top center;
+  background: transparent url("/images/logo_square.svg") no-repeat top center;
   background-size: 192px 192px;
-  min-height: 192px;
+  min-height: 175px;
   text-indent: -6000em;
+  margin-top: -0.5em;
 }
 
 #article, .recent-articles, #hcard-Peter-Hellberg > div {
@@ -127,7 +128,6 @@ a { color: $green; text-decoration: underline; }
   color:      $black;
 }
 
-
 code {
   font-family: "Source Code Pro", monospace;
   font-weight: 500;
@@ -177,4 +177,8 @@ pre {
   blockquote p code {
     background: $lightgreen;
   }
+}
+
+#page-not-found {
+  padding-bottom: 5em;
 }

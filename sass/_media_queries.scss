@@ -9,6 +9,7 @@
   #logo {
     background-size: 128px 128px;
     min-height: 128px;
+    margin-top: -0em;
     margin-bottom: -1.2em;
   }
 
@@ -40,7 +41,7 @@
 @media (max-width: 650px) {
   #logo {
     background-size: 128px 128px;
-    min-height: 128px;
+    min-height: 118px;
   }
 
   .vcard .photo {
@@ -62,7 +63,7 @@
 
   #logo {
     background-size: 128px 128px;
-    min-height: 128px;
+    min-height: 118px;
   }
 }
 
@@ -72,8 +73,8 @@
   }
 
   #logo {
-    background-size: 164px 164px;
-    min-height: 164px;
+    background-size: 180px 180px;
+    min-height: 165px;
   }
 
 }
@@ -84,8 +85,8 @@
   }
 
   #logo {
-    background-size: 192px 192px;
-    min-height: 192px;
+    background-size: 220px 220px;
+    min-height: 200px;
   }
 
   #article, .recent-articles, #hcard-Peter-Hellberg > div {
