@@ -12,3 +12,7 @@ copyright: "This work is licensed under a Creative Commons Attribution-ShareAlik
 disableKinds:
   - section
   - taxonomy
+
+markup:
+  highlight:
+    codeFences: false
