@@ -1,0 +1,15 @@
+.{
+    .name = "webassembly-plugins-for-typst-in-zig",
+    .version = "0.0.0",
+    .dependencies = .{
+        .typ = .{
+            .url = "git+https://github.com/peterhellberg/typ?ref=main#aa0449f845596f059bc3c70b7861234f6455783c",
+            .hash = "1220fe63d37441757e3b597d9f5de728239a264646f3499a5b7c954485641b16f343",
+        },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+    },
+}
