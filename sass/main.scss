@@ -84,7 +84,7 @@ $black: #333332;
 }
 
 .hljs {
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 .social li {
@@ -131,8 +131,9 @@ a { color: $green; text-decoration: underline; }
 
 
 code {
-  font-weight: 500;
   font-family: "Source Code Pro", monospace;
+  font-weight: 500;
+  font-size: 0.8em;
 }
 
 pre code {
@@ -180,4 +181,3 @@ pre {
     background: $lightgreen;
   }
 }
-
