@@ -41,7 +41,7 @@ func add(a, b int) int {
 func main() {}
 ```
 
-> *Note:* The only callable symbols will be those functions exported using a cgo `//export` comment.
+> **Note:** The only callable symbols will be those functions exported using a cgo `//export` comment.
 > Non-main packages are ignored.
 
 ## Building the shared library
@@ -56,7 +56,7 @@ go build -buildmode=c-shared -o libsum.so libsum.go
 
 So what is this Ruby-FFI thing you keep talking about?
 
-> Ruby-FFI is a ruby extension for programmatically loading dynamic libraries, binding functions within them, and calling those functions from Ruby code.
+> **Info:** Ruby-FFI is a ruby extension for programmatically loading dynamic libraries, binding functions within them, and calling those functions from Ruby code.
 
 Ok, cool.
 
