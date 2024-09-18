@@ -60,10 +60,5 @@
     <script src="/js/highlight.min.js"></script>
     <script src="/js/zig.min.js"></script>
     <script src="/js/typ.min.js"></script>
-    <script>
-      if(navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
-        hljs.configure({ tabReplace: '  ' });
-      }
-      hljs.highlightAll();
-    </script>
+    <script>hljs.highlightAll();</script>
 {{ partial "footer.html" . }}
