@@ -88,7 +88,7 @@ The entry point of a Zig binary is the `main` fn.
 The binary is named after the `.zig` file.
 
 **zighello/zighello.zig**
-```c
+```zig
 const std = @import("std");
 
 pub fn main() !void {
@@ -130,7 +130,7 @@ This can be compiled with `go build -ldflags "-s -w" -trimpath main.go` and resu
 
 An example of importing a shared library from Zig, using the `@cInclude` feature:
 
-```c
+```zig
 const std = @import("std");
 
 const c = @cImport({
