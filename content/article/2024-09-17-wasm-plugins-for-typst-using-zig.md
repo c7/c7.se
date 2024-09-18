@@ -67,13 +67,6 @@ pub fn build(b: *std.Build) void {
 
 We are now ready to write a little [Typst](https://typst.app/) plugin in [Zig](https://ziglang.org/).
 
-Two functions are exported from this plugin;
- - The `hello` function, which does not take any arguments and it can not fail.
- - The `echo` function on the other hand takes a single
-    _(Typst [`bytes`](https://typst.app/docs/reference/foundations/bytes/) value)_
-    argument as input and echoes it back to the host,
-    this function can fail on allocation _(unlikely to happen for this example)_
-
 ## 3. Plugin
 
 Now we should be able to use the `typ` module to write a plugin.
@@ -98,6 +91,13 @@ export fn echo(n: usize) i32 {
     return typ.ok(data);
 }
 ```
+
+Two functions are exported from this plugin;
+ - The `hello` function, which does not take any arguments and it can not fail.
+ - The `echo` function on the other hand takes a single
+    _(Typst [`bytes`](https://typst.app/docs/reference/foundations/bytes/) value)_
+    argument as input and echoes it back to the host,
+    this function can fail on allocation _(unlikely to happen for this example)_
 
 Build the `zig-out/bin/hello.wasm` by calling `zig build` and
 then we can proceed with writing a `hello.typ` using
