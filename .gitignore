@@ -2,5 +2,6 @@
 .sass-cache
 .development
 .public
+.zig-cache
 public
 tmp
