@@ -47,7 +47,7 @@ pub fn build(b: *std.Build) void {
         .os_tag = .freestanding,
     });
 
-    const hello = b.addExecutable(.{
+    const exe = b.addExecutable(.{
         .name = "hello",
         .root_source_file = b.path("hello.zig"),
         .strip = true,
@@ -57,11 +57,11 @@ pub fn build(b: *std.Build) void {
 
     const typ = b.dependency("typ", .{}).module("typ");
 
-    hello.root_module.addImport("typ", typ);
-    hello.entry = .disabled;
-    hello.rdynamic = true;
+    exe.root_module.addImport("typ", typ);
+    exe.entry = .disabled;
+    exe.rdynamic = true;
 
-    b.installArtifact(hello);
+    b.installArtifact(exe);
 }
 ```
 
