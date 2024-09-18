@@ -68,10 +68,11 @@ pub fn build(b: *std.Build) void {
 We are now ready to write a little [Typst](https://typst.app/) plugin in [Zig](https://ziglang.org/).
 
 Two functions are exported from this plugin;
- - The `hello` function whichdoes not take any arguments, and it can not fail.
+ - The `hello` function, which does not take any arguments and it can not fail.
  - The `echo` function on the other hand takes a single
     _(Typst [`bytes`](https://typst.app/docs/reference/foundations/bytes/) value)_
-    argument as input and echoes it back to the host, this function can fail on allocation _(unlikely to happen for this example)_
+    argument as input and echoes it back to the host,
+    this function can fail on allocation _(unlikely to happen for this example)_
 
 ## 3. Plugin
 
