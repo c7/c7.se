@@ -1,12 +1,20 @@
-{{ partial "header.html" . }}
-  <div id="page">
-    <div class="container">
+{{
+  partial "header.html" .
+}}    <div class="container">
       <div class="row">
-        <header class="sixteen columns" id="main_header">
-          <a class="logo_link" href="/"><h1 id="logo">code7 <span class="font-normal">interactive</span></h1></a>
+        <header class="twelve columns" id="main_header">
+          <a class="logo_link" href="/">
+            <h2 id="logo">code7 <span class="font-normal">interactive</span></h2>
+          </a>
         </header>
       </div>
-      {{ .Content }}
+      <div class="row">
+        <div class="twelve columns" id="article">
+          <article id="{{.Page.Path}}">
+            {{ .Content }}
+          </article>
+        </div>
+      </div>
     </div>
   </div>
 {{ partial "footer.html" . }}

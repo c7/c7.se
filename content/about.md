@@ -1,5 +1,5 @@
 ---
-date: 2017-04-13
+date: 2024-09-18
 url: /about/
 title: About
 ---
@@ -9,6 +9,8 @@ title: About
 ## Me
 
 I have used many different languages and technologies over the years, but lately the [Go](https://golang.org/) programming language has been my tool of choice.
+
+I also keep a keen eye on the development of [Zig](https://ziglang.org/) ⚡
 
 I live in Stockholm, Sweden.
 
