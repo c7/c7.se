@@ -3,12 +3,12 @@
 
 @media (max-width: 550px) {
   :root {
-    --font-size-base: var(--font-size-xl);
+    --font-size-base: var(--font-size-l);
   }
 
   #logo {
-    background-size: 128px 128px;
-    min-height: 128px;
+    background-size: 164px 164px;
+    min-height: 164px;
     margin-top: -0em;
     margin-bottom: -1.2em;
   }
@@ -22,16 +22,29 @@
     padding-right: 0.38em;
   }
 
-  .main-title {
-    font-size: calc(var(--font-size-base) * 1.7);
+  .container {
+    padding: 0;
   }
 
-  .vcard .photo {
-    max-width: 45%;
-    margin-left: auto;
-    margin-bottom: -20%;
-    display: block;
+  .main-title {
+    font-size: calc(var(--font-size-base) * 1.8);
   }
+
+  #byline {
+    .photo {
+      margin-bottom: 0;
+      max-height: 192px;
+      max-width: 192px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+
+    h2 {
+      padding: 0 1em;
+    }
+  }
+
 
   .hljs {
     font-size: 0.7em;
@@ -44,10 +57,16 @@
     min-height: 118px;
   }
 
-  .vcard .photo {
-    max-width: 35%;
+  .container {
+    padding: 0;
+  }
+
+  #hcard-Peter-Hellberg .photo {
+    max-width: 45%;
+    margin-bottom: 0;
+    max-height: 256px;
     margin-left: auto;
-    margin-bottom: -10%;
+    margin-right: auto;
     display: block;
   }
 
@@ -89,9 +108,14 @@
     min-height: 200px;
   }
 
-  #article, .recent-articles, #hcard-Peter-Hellberg > div {
+  #article, #hcard-Peter-Hellberg > div {
     padding-left: calc(var(--font-size-base) * 2.5);
     padding-right: calc(var(--font-size-base) * 2.5);
+  }
+
+  .recent-articles {
+    padding-left: calc(var(--font-size-base) * 2.5);
+    padding-right: calc(var(--font-size-base) * 0.5);
   }
 }
 

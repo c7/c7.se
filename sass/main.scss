@@ -42,6 +42,10 @@ $black: #333332;
   padding-right: calc(var(--font-size-base) * 1.1);
 }
 
+.recent-articles {
+  margin-top: 2em;
+}
+
 #articles .article-summary,
 #projects .project-summary,
 #presentations .presentation-summary {
@@ -100,7 +104,6 @@ $black: #333332;
 
 /* #Imports
 ================================================== */
-@import "media_queries";
 @import "normalize";
 @import "skeleton";
 @import "highlight";
@@ -115,18 +118,6 @@ html {
 }
 
 a { color: $green; text-decoration: underline; }
-
-.container {
-  font-family: "ff-tisa-web-pro",Georgia,Cambria,serif;
-  font-weight: 400;
-  margin-top: calc(var(--font-size-base) * 0.5);
-  margin-bottom: var(--font-size-base);
-  border: 1px solid $light;
-  border-radius: var(--font-size-base);
-  outline: 1em solid $gray;
-  background: $white;
-  color:      $black;
-}
 
 code {
   font-family: "Source Code Pro", monospace;
@@ -151,6 +142,18 @@ pre {
   code {
     padding: 0.4em 0.5em;
   }
+}
+
+.container {
+  font-family: "ff-tisa-web-pro",Georgia,Cambria,serif;
+  font-weight: 400;
+  margin-top: calc(var(--font-size-base) * 0.5);
+  margin-bottom: var(--font-size-base);
+  border: 1px solid $light;
+  border-radius: var(--font-size-base);
+  outline: 1em solid $gray;
+  background: $white;
+  color:      $black;
 }
 
 #article {
@@ -187,3 +190,5 @@ pre {
 #page-not-found {
   padding-bottom: 5em;
 }
+
+@import "media_queries";
