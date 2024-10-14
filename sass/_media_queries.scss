@@ -71,7 +71,7 @@
   }
 
   .hljs {
-    font-size: 0.9em;
+    font-size: 0.7em;
   }
 
   iframe {
@@ -82,6 +82,10 @@
 @media (min-width: 650px) {
   :root {
     --font-size-base: var(--font-size-s);
+  }
+
+  .hljs {
+    font-size: 0.85em;
   }
 
   #logo {
@@ -107,6 +111,10 @@
     --font-size-base: var(--font-size-l);
   }
 
+  .hljs {
+    font-size: 0.9em;
+  }
+
   #logo {
     background-size: 220px 220px;
     min-height: 200px;
@@ -129,6 +137,6 @@
   }
 
   .hljs {
-    font-size: 0.95em;
+    font-size: 0.9em;
   }
 }

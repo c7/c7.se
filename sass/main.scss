@@ -1,11 +1,11 @@
 /* #Variables
 ================================================== */
 
-$white: #FFFFFB;
+$white: #fdfefd;
 $green: #7CAF3C;
 $lightgreen: #cbd9ba7d;
-$gray:  #E5E5E2;
-$light: #B3B3B3;
+$gray:  #f7f7f6;
+$light: #e8e8e8;
 $black: #333332;
 
 // https://colordesigner.io/color-palette-builder
@@ -136,10 +136,10 @@ iframe {
 }
 
 pre {
-  border-radius: 0.7em;
+  border-radius: 0.5em;
 
   code {
-    padding: 0.4em 0.5em;
+    padding: 0.2em 0.5em 0.5em 0.5em;
   }
 }
 

@@ -50,10 +50,13 @@ body {
   blockquote, blockquote p { font-style: italic; margin-bottom: 0; }
   blockquote {
     margin: 0 0 1em 0;
-    padding: 0.4em 0.5em;
-    border: 0.2em solid $green;
-    border-radius: 0.7em;
+    padding: 0.2em 0.5em 0.5em 0.5em;
+    border: 0.12em solid $green;
+    border-radius: 0.5em;
     background: #e6eedd;
+    p {
+      padding-top: 0;
+    }
   }
 
 /* Horizontal line */
