@@ -102,6 +102,14 @@ $black: #333332;
   font-size: 3em;
 }
 
+.footnotes ol li p {
+  line-height: 1.2em;
+}
+
+.footnotes .footnote-backref {
+  font-size: 0.7em;
+}
+
 /* #Imports
 ================================================== */
 @import "normalize";
