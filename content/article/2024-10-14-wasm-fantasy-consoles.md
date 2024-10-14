@@ -76,7 +76,7 @@ However, I have found its web runtime to be less convenient for development.
 - **Resolution:** 320x240
 - **Colors:** 256
 - **Memory:** 256KB (4 WebAssembly memory pages)
-- **Input:** (D-Pad + 4 Buttons)
+- **Input:** 1 gamepad with D-Pad + 4 Buttons
 - **Audio:** 4 channels with individual volume control. _(rect, saw, tri, noise wave forms selectable per channel. 32 bytes of sound registers_)
 
 #### Links
