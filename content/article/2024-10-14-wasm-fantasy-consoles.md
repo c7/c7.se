@@ -67,7 +67,7 @@ WASM-4 [^wasm4] is currently my favorite fantasy console, it is severely limited
 ### MicroW8
 
 MicroW8 [^microw8] is less limited than WASM-4.
-However, I have found its web runtime to be less convenient for development.
+However, I have found its web runtime not to be as convenient for development.
 
 > The initial motivation behind MicroW8 was to explore whether there was a way to make WebAssembly viable for size-coding. [^sizecoding]
 
