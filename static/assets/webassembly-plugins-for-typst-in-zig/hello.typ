@@ -19,4 +19,4 @@
 
 #let imgdata = read("wave.png", encoding: none)
 
-#image.decode(wasm.echo(imgdata), width: 100pt)
+#image(wasm.echo(imgdata), width: 100pt)

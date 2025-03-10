@@ -1,6 +1,7 @@
 .{
-    .name = "webassembly-plugins-for-typst-in-zig",
+    .name = .wasm_plugins_for_typst,
     .version = "0.0.0",
+    .fingerprint = 0x780d339621a71f92,
     .dependencies = .{
         .typ = .{
             .url = "git+https://github.com/peterhellberg/typ?ref=main#aa0449f845596f059bc3c70b7861234f6455783c",
