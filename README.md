@@ -1,14 +1,14 @@
-[![Code7 Logo](https://c7.se/images/logo_square_small.png)](http://c7.se/)
+[![Code7 Logo](https://c7.se/images/logo_square_small.png)](https://c7.se/)
 
 ## Description
 
-I’m using the static site generator [Hugo](http://gohugo.io/)
-and deployment is handled by good old trusted [rsync](http://en.wikipedia.org/wiki/Rsync).
+I’m using the static site generator [Hugo](https://gohugo.io/)
+and deployment is handled by good old trusted [rsync](https://en.wikipedia.org/wiki/Rsync).
 
 *(Makes for some wickedly fast write-deploy cycles)*
 
 ## Moving parts
 
- - [Hugo](http://gohugo.io/)
- - [Sass](http://sass-lang.com/)
+ - [Hugo](https://gohugo.io/)
+ - [Sass](https://sass-lang.com/)
  - [Skeleton](http://getskeleton.com/)
