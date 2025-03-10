@@ -1,7 +1,7 @@
 ---
-draft: false
 type: article
 date: 2024-09-17
+updated: 2025-03-10
 url: /webassembly-plugins-for-typst-in-zig/
 title: WebAssembly plugins for Typst, in Zig
 summary:
@@ -32,7 +32,7 @@ that hopefully will be useful when writing plugins for [Typst](https://typst.app
 The `typ` module can be fetched and saved into your `build.zig.zon` like this;
 
 ```sh
-zig fetch --save git+https://github.com/peterhellberg/typ#main
+zig fetch --save https://github.com/peterhellberg/typ/archive/refs/tags/v0.1.0.tar.gz
 ```
 
 Then you will add the dependency in `build.zig` _(under the call to `b.addExecutable`)_
@@ -126,7 +126,7 @@ the plugin we just compiled.
 
 #let imgdata = read("wave.png", encoding: none)
 
-#image.decode(wasm.echo(imgdata), width: 100pt)
+#image(wasm.echo(imgdata), width: 100pt)
 ```
 
 > **Important:**
