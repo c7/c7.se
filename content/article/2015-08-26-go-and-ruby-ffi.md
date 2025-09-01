@@ -94,7 +94,9 @@ You probably also want to read [C? Go? Cgo!](https://blog.golang.org/c-go-cgo)
 
 ## Bonus rounds
 
-### Binding directly from [Crystal](http://crystal-lang.org/) (No need for FFI)
+### Crystal
+
+Binding directly from [Crystal](http://crystal-lang.org/) _(No need for FFI)_
 
 ```ruby
 @[Link(ldflags: "-L. -lsum")]
@@ -105,8 +107,11 @@ end
 puts Sum.add(15,27) #=> 42
 ```
 
-### Linking from [Zig](https://ziglang.org/) 0.16.0-dev (Also no need for FFI)
+### Zig
 
+Linking from [Zig](https://ziglang.org/) `0.16.0-dev` _(Also no need for FFI)_
+
+#### sum.zig
 ```zig
 const std = @import("std");
 
@@ -121,7 +126,9 @@ pub fn main() void {
 
 Which can then be built via `zig build-exe sum.zig -L. -lc -lsum`
 
-But you would most likely want to have a `build.zig` instead, something like;
+#### build.zig
+
+> **Note:** You would most likely want to have a `build.zig` instead, something like;
 
 ```zig
 const std = @import("std");
@@ -152,3 +159,5 @@ pub fn build(b: *std.Build) void {
     run_cmd.step.dependOn(b.getInstallStep());
 }
 ```
+
+Now you should be able to `zig build run`
