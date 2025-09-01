@@ -92,7 +92,9 @@ There is a section on [memory management](https://github.com/ffi/ffi/wiki/Core-C
 
 You probably also want to read [C? Go? Cgo!](https://blog.golang.org/c-go-cgo)
 
-## Bonus round: Binding directly from [Crystal](http://crystal-lang.org/) (No need for FFI)
+## Bonus rounds
+
+### Binding directly from [Crystal](http://crystal-lang.org/) (No need for FFI)
 
 ```ruby
 @[Link(ldflags: "-L. -lsum")]
@@ -101,4 +103,52 @@ lib Sum
 end
 
 puts Sum.add(15,27) #=> 42
+```
+
+### Linking from [Zig](https://ziglang.org/) 0.16.0-dev (Also no need for FFI)
+
+```zig
+const std = @import("std");
+
+extern fn add(a: i32, b: i32) i32;
+
+pub fn main() void {
+    std.debug.print("{d}\n", .{
+        add(15, 27),
+    });
+}
+```
+
+Which can then be built via `zig build-exe sum.zig -L. -lc -lsum`
+
+But you would most likely want to have a `build.zig` instead, something like;
+
+```zig
+const std = @import("std");
+
+pub fn build(b: *std.Build) void {
+    const exe = b.addExecutable(.{
+        .name = "sum",
+        .root_module = b.createModule(.{
+            .root_source_file = b.path("sum.zig"),
+            .target = b.standardTargetOptions(.{}),
+            .optimize = b.standardOptimizeOption(.{}),
+        }),
+    });
+
+    const mod = exe.root_module;
+
+    mod.link_libc = true;
+    mod.addLibraryPath(b.path("."));
+    mod.linkSystemLibrary("sum", .{});
+
+    b.installArtifact(exe);
+
+    const run_step = b.step("run", "Run the app");
+
+    const run_cmd = b.addRunArtifact(exe);
+    run_step.dependOn(&run_cmd.step);
+
+    run_cmd.step.dependOn(b.getInstallStep());
+}
 ```
