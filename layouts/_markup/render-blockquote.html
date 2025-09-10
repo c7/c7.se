@@ -1,0 +1,7 @@
+<blockquote {{
+  with .Attributes.type
+}}class="{{ . }}"{{ end }}{{ 
+  with .Attributes.style 
+}} style="{{ . | safeCSS }}"{{ end }}>
+  {{ .Text }}
+</blockquote>
