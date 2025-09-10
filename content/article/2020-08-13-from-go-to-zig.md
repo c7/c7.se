@@ -35,7 +35,8 @@ Let’s start off by listing some of the characteristics shared between Go and Z
 ## How is it different from Go?
 
 > **Note:** These are just a few of the things I’ve picked up when reading about Zig.
-I still have a lot to learn before I feel confident in using the language.
+> I still have a lot to learn before I feel confident in using the language.
+{type="note"}
 
   - Build modes on scope level
   - [Zig Build System](https://ziglang.org/#Zig-Build-System)
@@ -117,6 +118,7 @@ func main() {
 This can be compiled with `go build -ldflags "-s -w" -trimpath main.go` and results in a `~1.6 MB` executable (when using Go version `1.15` under macOS)
 
 > **Note:** The size of your binaries doesn’t matter in most cases, but sometimes it matters a lot, for example when compiling to [WebAssembly](https://webassembly.org/)
+{type="note"}
 
 ## Learn more about Zig
 
@@ -149,3 +151,4 @@ Then you can compile this by calling `zig -isystem . --library ./libsum.so build
 --------------------------------------
 
 > **Captain:** Take off every 'ZIG'!!
+{type="warning"}

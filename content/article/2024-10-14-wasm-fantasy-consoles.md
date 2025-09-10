@@ -16,6 +16,7 @@ That is all well and good, _for your day job_.
 > A _somewhat_ <ins>less</ins> serious, but arguably more ✨ **fun**✨ use case of
 > WebAssembly [^webassembly] is to rely on it when developing games
 > _(or other art for that matter)_ targeting a Fantasy Console. [^fantasy console]
+{type="tip"}
 
 ## Fantasy consoles
 

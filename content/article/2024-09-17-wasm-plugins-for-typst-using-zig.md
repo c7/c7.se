@@ -23,6 +23,7 @@ support was a pleasant surprise, and I naturally wanted to use
 >
 > _(Precompiled binaries are available for both)_
 >
+{type="note"}
 
 I've made a small module (called [typ](https://github.com/peterhellberg/typ))
 that hopefully will be useful when writing plugins for [Typst](https://typst.app/).
@@ -132,6 +133,7 @@ the plugin we just compiled.
 > **Important:**
 > The [Typst CLI](https://github.com/typst/typst) is all you need!
 > _(No requirement on using the [collaborative online editor](https://typst.app/))_
+{type="important"}
 
 Running `typst compile hello.typ hello.svg` should, if all goes well, result
 in a [SVG](https://en.wikipedia.org/wiki/SVG) file that looks something like this;

@@ -59,6 +59,7 @@ void main() {
 ```
 
 > **Note**: The uniforms are provided by a `.wasm` compiled from [code written in Zig](https://art.c7.se/shaders/res/src/webgl.zig) ⚡
+{type="note"}
 
 Adding mouse position input is as easy as providing a uniform `vec2` for this purpose.
 
