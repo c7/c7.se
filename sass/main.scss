@@ -2,11 +2,20 @@
 ================================================== */
 
 $white: #fdfefd;
-$green: #7CAF3C;
-$lightgreen: #cbd9ba7d;
 $gray:  #f7f7f6;
 $light: #e8e8e8;
 $black: #333332;
+
+$blue: #3498DB;
+$lightblue: #b3d7f57d;
+$green: #7CAF3C;
+$lightgreen: #cbd9ba7d;
+$purple: #9B59B6;
+$lightpurple: #d1b3f57d;
+$yellow: #F1C40F;       
+$lightyellow: #f9f1b47d;
+$red: #E74C3C;          
+$lightred: #f5b3b07d;   
 
 // https://colordesigner.io/color-palette-builder
 
@@ -154,12 +163,13 @@ a { color: $green; text-decoration: underline; }
 code {
   font-family: "Source Code Pro", monospace;
   font-weight: 500;
-  font-size: 0.8em;
+  font-size: 0.85em;
 }
 
 pre code {
   font-weight: 525;
   line-height: 1.25;
+  font-size: 0.5em;
 }
 
 iframe {
@@ -213,8 +223,36 @@ pre {
     padding: 0.1em 0.2em;
   }
 
-  blockquote p code {
-    background: $lightgreen;
+  blockquote p { code { background: $lightgreen; } a { color: $green; } }
+  blockquote.note p { code { background: $lightblue; } a { color: $blue; } }
+  blockquote.tip p { code { background: $lightgreen; } a { color: $green; } }
+  blockquote.important p { code { background: $lightpurple; } a { color: $purple; } }
+  blockquote.warning p { code { background: $lightyellow; } a { color: $yellow; } }
+  blockquote.caution p { code { background: $lightred; } a { color: $red; } }
+
+  blockquote.with-top-margin {
+    margin-top: 3rem;
+  }
+
+  .side-gallery {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    padding: 1rem 0 0rem 0;
+  
+    .side-wrapper {
+      flex-grow: calc(var(--ar));
+      flex-basis: 0;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+
+       img {
+        height: 100%;           
+        width: auto;            
+        object-fit: contain;    
+      }
+    }
   }
 }
 

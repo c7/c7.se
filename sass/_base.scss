@@ -53,10 +53,35 @@ body {
     padding: 0.2em 0.5em 0.5em 0.5em;
     border: 0.12em solid $green;
     border-radius: 0.5em;
-    background: #e6eedd;
+    background: $lightgreen;
     p {
       padding-top: 0;
     }
+  }
+  
+  blockquote.note {
+    border-color: $blue; background: $lightblue; 
+    ::selection { color: $white; background: $blue; } 
+  }
+  
+  blockquote.tip {
+    border-color: $green; background: $lightgreen;
+    ::selection { color: $white; background: $green; } 
+  }
+  
+  blockquote.important { 
+    border-color: $purple; background: $lightpurple; 
+    ::selection { color: $white; background: $purple; } 
+  }
+  
+  blockquote.warning { 
+    border-color: $yellow; background: $lightyellow; 
+    ::selection { color: $black; background: $yellow; } 
+  }
+  
+  blockquote.caution { 
+    border-color: $red; background: $lightred; 
+    ::selection { color: $white; background: $red; } 
   }
 
 /* Horizontal line */

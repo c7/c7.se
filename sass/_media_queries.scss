@@ -79,6 +79,21 @@
   }
 }
 
+
+@media (max-width: 750px) {
+  #article .side-gallery {
+    flex-direction: column; 
+    .side-wrapper {
+      flex-grow: 1;
+      flex-basis: auto;
+      height: auto;
+      img {
+        height: auto;
+      }
+    }
+  }
+}
+
 @media (min-width: 650px) {
   :root {
     --font-size-base: var(--font-size-s);
@@ -103,7 +118,6 @@
     background-size: 180px 180px;
     min-height: 165px;
   }
-
 }
 
 @media (min-width: 1000px) {
@@ -137,6 +151,6 @@
   }
 
   .hljs {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
 }
