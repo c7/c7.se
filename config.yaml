@@ -17,5 +17,8 @@ markup:
   highlight:
     codeFences: false
   goldmark:
+    parser:
+      attribute:
+        block: true
     renderer:
       unsafe: true
