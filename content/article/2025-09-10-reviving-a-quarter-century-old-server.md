@@ -274,7 +274,7 @@ Linking: gcc   -L/usr/local/lib -o vim       -lncurses -lgpm -ldl
 
 ### Retrofetch
 
-I made a [small script](/assets/reviving-a-quarter-century-old-server/retrofetch.sh) 
+I made a [small script](/assets/reviving-a-quarter-century-old-server/scripts/retrofetch.sh) 
 akin to Neofetch but compatible with the old version of Bash on the machine.
 
 ```console
