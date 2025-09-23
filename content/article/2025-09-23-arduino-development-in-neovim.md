@@ -141,7 +141,7 @@ Installed SparkFun MicroView@1.0.2
 {type="important with-top-margin"}
 
 
-So, the library was installed to `/home/peter/Code/Arduino/libraries/SparkFun_MicroView`
+So, the library was installed as `SparkFun_MicroView` in `~/Code/Arduino/libraries/`
 
 ### MicroViewBounce.ino
 ```ino
