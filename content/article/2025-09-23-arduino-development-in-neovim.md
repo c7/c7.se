@@ -99,7 +99,7 @@ $ go install github.com/arduino/arduino-language-server@v0.7.7
 > This allows for functionality such as go to definition, show documentation, etc;
 >
 > ![Neovim: MicroView circle](/assets/arduino-development-in-neovim/Neovim-MicroView-circle.png)
-> {style="margin: 0.5em 0; overflow: hidden; border-radius: 1rem;"}
+> {style="display:inline-block;margin-top:0.5em;overflow:hidden;border-radius:1.2rem;aspect-ratio:2556/1402;"}
 
 
 ## Time to finally write some code!
