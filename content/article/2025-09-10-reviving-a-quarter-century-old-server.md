@@ -2,9 +2,10 @@
 type: article
 date: 2025-09-10
 url: /reviving-a-quarter-century-old-server/
+image: /assets/reviving-a-quarter-century-old-server/Dwarf-Back.jpg
 title: Reviving a Quarter Century-Old Server
 summary:
-    I recently brought down one of my old servers from the attic, 
+    I recently brought down one of my old servers from the attic,
     where it had been stored for almost two decades.
 ---
 
@@ -15,7 +16,7 @@ summary:
 
 > ⚠️ **Don't worry**… I am <u>**NOT**</u> exposing this machine directly to the Internet.
 >
-{type="warning with-top-margin"} 
+{type="warning with-top-margin"}
 
 {{< gallery class="side" >}}
   {{< img src="/assets/reviving-a-quarter-century-old-server/Dwarf-Back.jpg" alt="" >}}
@@ -43,7 +44,7 @@ Video Memory:   4 MB SGRAM
 
 ## How old is it actually?
 
-There are a few markings on the chassis, such as `ASSY 85179 22NOV97 85189` and `P/N 82898 14NOV97`, 
+There are a few markings on the chassis, such as `ASSY 85179 22NOV97 85189` and `P/N 82898 14NOV97`,
 making it roughly **28 years old** as I write this.
 
 {{< gallery class="side" >}}
@@ -62,31 +63,31 @@ making it roughly **28 years old** as I write this.
 
 ## Does it even boot?
 
-<u>**Yes!**</u> Fortunately the power supply still worked. 
+<u>**Yes!**</u> Fortunately the power supply still worked.
 
-The machine <u>appeared</u> to <abbr>POST</abbr> 
-_([Power-On Self Test](https://en.wikipedia.org/wiki/Power-on_self-test))_; 
-however, because its only video output is [VGA](https://en.wikipedia.org/wiki/VGA_connector) 
-over [D-SUB](https://en.wikipedia.org/wiki/D-subminiature#DE-15_connectors), 
+The machine <u>appeared</u> to <abbr>POST</abbr>
+_([Power-On Self Test](https://en.wikipedia.org/wiki/Power-on_self-test))_;
+however, because its only video output is [VGA](https://en.wikipedia.org/wiki/VGA_connector)
+over [D-SUB](https://en.wikipedia.org/wiki/D-subminiature#DE-15_connectors),
 I first had to track down an appropriate cable before I could actually <u>see</u> what was happening.
 
 > ♻️ As it turns out, I’ve been **surprisingly** good at getting rid of cables I no longer need.
 {type="tip"}
 
-I then thought; Maybe I could log into the machine directly using an ethernet cable, 
+I then thought; Maybe I could log into the machine directly using an ethernet cable,
 or even via the local network.
 
 ### So, did it show up on the network?
 
-<u>**No!**</u> And I was _pretty_ sure that the machine had a static IP set, and that it 
+<u>**No!**</u> And I was _pretty_ sure that the machine had a static IP set, and that it
 wouldn't rely on [DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol)
-to assign its IP. The machine didn't show up on the network, at all. 
+to assign its IP. The machine didn't show up on the network, at all.
 
 <u>Even with a direct Ethernet connection, I couldn’t reach it.</u>
 
 ### Local I/O to the rescue!
 
-Pretty soon after that my friend **Matti** came over with a VGA cable, somewhat surprisingly labeled 
+Pretty soon after that my friend **Matti** came over with a VGA cable, somewhat surprisingly labeled
   as being an `AWM E101344 STYLE 2919 80°C 30V SPACE SHUTTLE VW-1 LOW VOLTAGE COMPUTER CABLE`
 
 {{< gallery class="side" >}}
@@ -98,7 +99,7 @@ Pretty soon after that my friend **Matti** came over with a VGA cable, somewhat 
 
 #### Monitor
 
-My TV is showing its age in the best way possible—it has a VGA input. ✨ Thanks to that, 
+My TV is showing its age in the best way possible—it has a VGA input. ✨ Thanks to that,
 I could finally see the server’s first message in decades:
 
 ```console
@@ -110,17 +111,17 @@ To change setup option press F2 key
 
 Not surprised about the alert though, since I’ve never actually had a cover for this machine.
 
-> **Note:** The reason for this alert was that the CMOS battery had gone flat, 
+> **Note:** The reason for this alert was that the CMOS battery had gone flat,
 > wiping out the BIOS settings.
 {type="note"}
 
 #### Keyboard
 
-This surfaced the next problem: to get past the alert, I had to press a key on the keyboard. 
+This surfaced the next problem: to get past the alert, I had to press a key on the keyboard.
 
-_(Plugging in a USB keyboard did nothing)_ 
+_(Plugging in a USB keyboard did nothing)_
 
-That meant another trip up to the attic to dig out one of those green **PS/2-to-USB** adapters 
+That meant another trip up to the attic to dig out one of those green **PS/2-to-USB** adapters
 that had once been everywhere, and then suddenly vanished.
 
 {{< gallery class="side" >}}
@@ -130,10 +131,10 @@ that had once been everywhere, and then suddenly vanished.
 
 #### Battery
 
-I popped in a fresh [`CR2032`](https://en.wikipedia.org/wiki/Button_cell), 
+I popped in a fresh [`CR2032`](https://en.wikipedia.org/wiki/Button_cell),
 and now with both the keyboard and monitor connected, I was able to;
 
-- Set the BIOS clock 
+- Set the BIOS clock
 - Disable the Chassis Intrusion alarm
 - Continue booting the machine
 
@@ -141,40 +142,40 @@ and now with both the keyboard and monitor connected, I was able to;
   {{< img src="/assets/reviving-a-quarter-century-old-server/Dwarf-Login-Incorrect.jpg" alt="Welcome to Linux 2.6.8.1 (tty) dwarf login: root Password: Login incorrect" style="--ar: 16/9;" >}}
 {{< /gallery >}}
 
-## Welcome to Linux 2.6.8.1 (tty1) 
+## Welcome to Linux 2.6.8.1 (tty1)
 
 At last—one step closer to bringing this old machine to life.
 
 ### Did I remember the **root** password?
 
-<u>**No!**</u> Since it had been quite a while since I last powered up the server, 
-I had no idea <u>what</u> **root** password I’d left on it. 
+<u>**No!**</u> Since it had been quite a while since I last powered up the server,
+I had no idea <u>what</u> **root** password I’d left on it.
 
 > **Note:** Resetting the password wasn’t much of an issue, since the drive **wasn’t encrypted**.
 {type="note"}
 
 ### How to reset the root password?
 
-You can replace the `init` process at boot—for example, with a shell of your choice—and you can 
+You can replace the `init` process at boot—for example, with a shell of your choice—and you can
 also request that the file system be mounted as read-write. **Convenient!**
 
-> So I typed `2.6.8.1 init=/bin/bash rw` at the [LILO](https://www.joonet.de/lilo/) 
+> So I typed `2.6.8.1 init=/bin/bash rw` at the [LILO](https://www.joonet.de/lilo/)
 > boot prompt, then ran `passwd root`.
-{type="important"} 
+{type="important"}
 
 Success! I was now able to log in as both **root** and my personal user **zil**.
 
 ### Convincing modern SSH clients to talk to Dwarf
 
-These days your SSH client will refuse to connect to a server with **wildly** 
+These days your SSH client will refuse to connect to a server with **wildly**
 out of date algorithms for <u>key exchange</u>, <u>authentication</u> and <u>encryption</u>.
 
 So you need to reconfigure your client to allow this.
 
 In this specific case I added a `Host` section to my `~/.ssh/config` with the following content;
 ```
-Host dwarf 
-  User zil 
+Host dwarf
+  User zil
   KexAlgorithms=+diffie-hellman-group-exchange-sha1
   HostKeyAlgorithms=+ssh-rsa
   PubkeyAcceptedAlgorithms=+ssh-rsa
@@ -183,19 +184,19 @@ Host dwarf
 This allows me to `ssh dwarf` from my other machines, without having to specify the username, or those old algorithms each time I'm connecting.
 
 ```console
-tiny ~ 
+tiny ~
 $ ssh dwarf
          @@@@@@@  @@@@@@@@    @@@@@@   @@@@@@@@
-        @@@@@@@@  @@@@@@@@   @@@@@@@   @@@@@@@@      
-        !@@            @@!   !@@       @@!           
-        !@!           !@!    !@!       !@!          
-        !@!          @!!     !!@@!!    @!!!:!        
-        !!!         !!!       !!@!!!   !!!!!:        
-        :!!        !!:            !:!  !!:           
-        :!:       :!:   :!:      !:!   :!:           
-         ::: :::   ::   :::  :::: ::    :: ::::      
-         :: :: :  : :   :::  :: : :    : :: ::       
-		 
+        @@@@@@@@  @@@@@@@@   @@@@@@@   @@@@@@@@
+        !@@            @@!   !@@       @@!
+        !@!           !@!    !@!       !@!
+        !@!          @!!     !!@@!!    @!!!:!
+        !!!         !!!       !!@!!!   !!!!!:
+        :!!        !!:            !:!  !!:
+        :!:       :!:   :!:      !:!   :!:
+         ::: :::   ::   :::  :::: ::    :: ::::
+         :: :: :  : :   :::  :: : :    : :: ::
+
  +---------------------------------------------------+
  |       Welcome to dwarf, a small Dell NetPC        |
  |---------------------------------------------------|
@@ -208,7 +209,7 @@ $ ssh dwarf
  +-------------------------+-------------------------+
  |         Admin: ziL (#nudel @ chatsociety)         |
  +---------------------------------------------------+
- 
+
 Last login: Wed Sep 10 04:39:07 2025 from tiny
 Linux 2.6.8.1.
 
@@ -219,14 +220,14 @@ If you just try long enough and hard enough, you can always manage to
 boot yourself in the posterior.
 		-- A.J. Liebling
 
-[zil@dwarf] █ 
+[zil@dwarf] █
 ```
 
 ## Software
 
-Now that I’m able to log into the machine, it’s time to take inventory of 
-the hardware and software installed on it. I mainly ran 
-[Slackware](http://www.slackware.com/) on my machines back then, 
+Now that I’m able to log into the machine, it’s time to take inventory of
+the hardware and software installed on it. I mainly ran
+[Slackware](http://www.slackware.com/) on my machines back then,
 but also some [DragonflyBSD](https://www.dragonflybsd.org/).
 
 - Slackware [`10.2.0`](http://www.slackware.com/announce/10.2.php)
@@ -241,7 +242,7 @@ but also some [DragonflyBSD](https://www.dragonflybsd.org/).
   {{< img src="/assets/reviving-a-quarter-century-old-server/Dwarf-Vim63.png" alt="Vim 6.3 on Dwarf" style="--ar: 1963/608;" >}}
 {{< /gallery >}}
 
-I naturally wrote a new [.vimrc](https://github.com/peterhellberg/dotfiles/blob/master/.dwarf.vimrc) 
+I naturally wrote a new [.vimrc](https://github.com/peterhellberg/dotfiles/blob/master/.dwarf.vimrc)
 for this ancient version of [Vim](https://www.vim.org/)
 
 ```console
@@ -250,36 +251,36 @@ VIM - Vi IMproved 6.3 (2004 June 7, compiled Sep 10 2005 15:22:09)
 Included patches: 1-86
 Compiled by root@midas
 Big version without GUI.  Features included (+) or not (-):
-+arabic +autocmd -balloon_eval -browse ++builtin_terms +byte_offset +cindent 
--clientserver -clipboard +cmdline_compl +cmdline_hist +cmdline_info +comments 
-+cryptv +cscope +dialog_con +diff +digraphs -dnd -ebcdic +emacs_tags +eval 
-+ex_extra +extra_search +farsi +file_in_path +find_in_path +folding -footer 
++arabic +autocmd -balloon_eval -browse ++builtin_terms +byte_offset +cindent
+-clientserver -clipboard +cmdline_compl +cmdline_hist +cmdline_info +comments
++cryptv +cscope +dialog_con +diff +digraphs -dnd -ebcdic +emacs_tags +eval
++ex_extra +extra_search +farsi +file_in_path +find_in_path +folding -footer
 +fork() +gettext -hangul_input +iconv +insert_expand +jumplist +keymap +langmap
- +libcall +linebreak +lispindent +listcmds +localmap +menu +mksession 
-+modify_fname +mouse -mouseshape +mouse_dec +mouse_gpm -mouse_jsbterm 
-+mouse_netterm +mouse_xterm +multi_byte +multi_lang -netbeans_intg -osfiletype 
-+path_extra -perl +postscript +printer -python +quickfix +rightleft -ruby 
-+scrollbind +signs +smartindent -sniff +statusline -sun_workshop +syntax 
-+tag_binary +tag_old_static -tag_any_white -tcl +terminfo +termresponse 
-+textobjects +title -toolbar +user_commands +vertsplit +virtualedit +visual 
-+visualextra +viminfo +vreplace +wildignore +wildmenu +windows +writebackup 
--X11 -xfontset -xim -xsmp -xterm_clipboard -xterm_save 
+ +libcall +linebreak +lispindent +listcmds +localmap +menu +mksession
++modify_fname +mouse -mouseshape +mouse_dec +mouse_gpm -mouse_jsbterm
++mouse_netterm +mouse_xterm +multi_byte +multi_lang -netbeans_intg -osfiletype
++path_extra -perl +postscript +printer -python +quickfix +rightleft -ruby
++scrollbind +signs +smartindent -sniff +statusline -sun_workshop +syntax
++tag_binary +tag_old_static -tag_any_white -tcl +terminfo +termresponse
++textobjects +title -toolbar +user_commands +vertsplit +virtualedit +visual
++visualextra +viminfo +vreplace +wildignore +wildmenu +windows +writebackup
+-X11 -xfontset -xim -xsmp -xterm_clipboard -xterm_save
    system vimrc file: "$VIM/vimrc"
      user vimrc file: "$HOME/.vimrc"
       user exrc file: "$HOME/.exrc"
   fall-back for $VIM: "/usr/share/vim"
-Compilation: gcc -c -I. -Iproto -DHAVE_CONFIG_H     -O2       
-Linking: gcc   -L/usr/local/lib -o vim       -lncurses -lgpm -ldl       
+Compilation: gcc -c -I. -Iproto -DHAVE_CONFIG_H     -O2
+Linking: gcc   -L/usr/local/lib -o vim       -lncurses -lgpm -ldl
 ```
 
 ### Retrofetch
 
-I made a [small script](/assets/reviving-a-quarter-century-old-server/scripts/retrofetch.sh) 
+I made a [small script](/assets/reviving-a-quarter-century-old-server/scripts/retrofetch.sh)
 akin to Neofetch but compatible with the old version of Bash on the machine.
 
 ```console
-[zil@dwarf] ./retrofetch.sh 
-                      
+[zil@dwarf] ./retrofetch.sh
+
       .--.            User:   zil@dwarf
      |o_o |           OS:     Slackware 10.2.0
      |:_/ |           Linux:  2.6.8.1 #1 Sat Oct 16 12:53:05 CEST 2004 i686
@@ -312,13 +313,13 @@ akin to Neofetch but compatible with the old version of Bash on the machine.
 01:00.0 VGA compatible controller: ATI Technologies Inc 3D Rage Pro AGP 1X/2X (rev 5c)
 ```
 
-> **Note:** The eagle eyed might have spotted that extra Ethernet interface. 
-> I pulled that from a machine with a dead PSU when bringing **dwarf** down from the attic. 
+> **Note:** The eagle eyed might have spotted that extra Ethernet interface.
+> I pulled that from a machine with a dead PSU when bringing **dwarf** down from the attic.
 > So it was not installed back in the day.
 {type="note"}
 
 ```console
-[zil@dwarf] cat /proc/cpuinfo 
+[zil@dwarf] cat /proc/cpuinfo
 processor     : 0
 vendor_id     : GenuineIntel
 cpu family    : 6
@@ -335,7 +336,7 @@ fpu	          : yes
 fpu_exception : yes
 cpuid level	  : 2
 wp            : yes
-flags         : fpu vme de pse tsc msr pae mce cx8 
+flags         : fpu vme de pse tsc msr pae mce cx8
                 sep mtrr pge mca cmov pat pse36 mmx fxsr
 bogomips      : 585.72
 ```
