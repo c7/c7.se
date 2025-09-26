@@ -1,6 +1,6 @@
 {{- $base := strings.TrimSuffix "/" .Site.BaseURL -}}
 {{- $image := printf "%s%s" $base (default "/images/logo_square.png" .Params.image) -}}
-{{- $image_type := cond (strings.Contains (default "" .Params.image) "png") "png" "jpeg" -}}
+{{- $image_type := cond (strings.Contains (default "" .Params.image) "jpg") "jpeg" "png" -}}
 <!DOCTYPE html>
 <html lang="en">
   <head>
