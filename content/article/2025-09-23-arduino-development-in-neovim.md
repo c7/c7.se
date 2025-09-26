@@ -2,6 +2,7 @@
 type: article
 date: 2025-09-23
 url: /arduino-development-in-neovim/
+image: /assets/arduino-development-in-neovim/MicroView-Breadboard-16x9.jpg
 title: Arduino development in Neovim
 summary:
     If you’d rather skip the Arduino IDE,
