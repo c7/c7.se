@@ -1,7 +1,7 @@
 /* TEAM */
 
   Developer:    Peter Hellberg
-  Twitter:      @peterhellberg
+  Bluesky:      @c7.se
   Location:     Stockholm, Sweden
 
 /* SITE */
@@ -11,8 +11,8 @@
   Standards:    HTML5, CSS3
   Microformats: hCard, Open Graph
 
-  Components:   Hugo, Skeleton CSS, Rake
-  Software:     vim, git, rsync
+  Components:   Hugo, Skeleton CSS, Make
+  Software:     neovim, git, rsync
 
   Fonts:        FF Tisa Web Pro <https://typekit.com/fonts/ff-tisa-web-pro/>
                 Yanone Kaffeesatz <http://www.yanone.de/typedesign/kaffeesatz/>
