@@ -16,9 +16,11 @@ I live in Stockholm, Sweden.
 
 ## The company
 
-Code7 Interactive was established in late 2001 and is now a side business to my day job as a System Developer at [Athega](http://athega.se).
+Code7 Interactive was established in late 2001 and was a side business to my day job as a System Developer at [Athega](http://athega.se).
 
-What this means is that I only pick projects that are **interesting** and don't have a strict **time frame** for completion.
+> In late 2026, <ins>after many years of inactivity</ins>, I decided to officially deregister 
+> the company. While its journey as a business came to an end, Code7 will continue 
+> as a home for personal projects, blog posts and other creative pursuits.
 
 ### Hosting
 c7.se is hosted in Stockholm by [GleSYS](http://glesys.se). They offer a variety of hosting options,
