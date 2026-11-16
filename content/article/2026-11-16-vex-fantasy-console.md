@@ -83,13 +83,15 @@ Both SDKs are a single file that you drop next to your cart:
 [`vex.h`](https://github.com/peterhellberg/vex/blob/main/vex.h) for C and
 [`vex.zig`](https://github.com/peterhellberg/vex/blob/main/vex.zig) for Zig.
 
+**mycart.c**
+
 ```c
 #include "vex.h"
 
 VEX_EXPORT("update") void update(void) {
-  cls(0);                     // dark background
+  cls(0);                      // dark background
   text("HELLO VEX", 8, 8, 12); // white text
-  circ(160, 90, 20, 10);      // yellow circle
+  circ(160, 90, 20, 10);       // yellow circle
 }
 ```
 
