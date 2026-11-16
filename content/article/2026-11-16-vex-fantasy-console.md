@@ -71,6 +71,12 @@ Prebuilt binaries for Linux, macOS and Windows are on the
 checkout, `make` builds `vex`, `vex-init` and `vex-web` into `./bin`, and
 `make install` copies them to `~/.local/bin` _(override with `PREFIX`)_.
 
+> **Important:** To build vex from source, use a stable version of Zig
+> _(0.17.1 as of this writing)_, not a nightly. `std.Build`'s API changes
+> between development builds, and a mismatched compiler breaks both the
+> project and raylib's `build.zig`.
+{type="important"}
+
 ## Writing a cart
 
 Both SDKs are a single file that you drop next to your cart:
@@ -86,11 +92,6 @@ VEX_EXPORT("update") void update(void) {
   circ(160, 90, 20, 10);      // yellow circle
 }
 ```
-
-> **Important:** Use a stable version of Zig _(0.17.1 as of this writing)_
-> rather than a nightly. `std.Build`'s API changes between development builds,
-> and a mismatched compiler breaks both this project and raylib's `build.zig`.
-{type="important"}
 
 Compile it with the Zig toolchain, no extra SDK install needed:
 
