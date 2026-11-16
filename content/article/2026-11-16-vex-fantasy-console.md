@@ -108,8 +108,7 @@ Then run it:
 vex mycart.wasm
 ```
 
-For something less trivial than a circle, `vex-init` scaffolds a standalone
-Zig project with the SDK already pinned:
+`vex-init` scaffolds a standalone Zig cart project with the SDK pinned:
 
 ```sh
 vex-init mygame
