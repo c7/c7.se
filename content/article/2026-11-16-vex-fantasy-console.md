@@ -55,9 +55,9 @@ without touching the drawing code.
 ### Carts in the wild
 
 {{< gallery class="side" >}}
-  {{< img src="/assets/vex-fantasy-console/teapot.png" alt="A 3D Utah teapot rendered by a vex cart" style="--ar: 16/9;" >}}
-  {{< img src="/assets/vex-fantasy-console/raycaster.png" alt="A raycaster vex cart with a minimap" style="--ar: 16/9;" >}}
-  {{< img src="/assets/vex-fantasy-console/plasma.png" alt="A plasma effect vex cart" style="--ar: 16/9;" >}}
+  {{< img src="/assets/vex-fantasy-console/teapot.png" href="https://play.c7.se/vex/vex-teapot/" alt="A 3D Utah teapot rendered by a vex cart" style="--ar: 16/9;" >}}
+  {{< img src="/assets/vex-fantasy-console/raycaster.png" href="https://play.c7.se/vex/vex-raycaster/" alt="A raycaster vex cart with a minimap" style="--ar: 16/9;" >}}
+  {{< img src="/assets/vex-fantasy-console/plasma.png" href="https://play.c7.se/vex/vex-plasma/" alt="A plasma effect vex cart" style="--ar: 16/9;" >}}
 {{< /gallery >}}
 
 A [3D Utah teapot](https://play.c7.se/vex/vex-teapot/), a
