@@ -71,10 +71,10 @@ Prebuilt binaries for Linux, macOS and Windows are on the
 checkout, `make` builds `vex`, `vex-init` and `vex-web` into `./bin`, and
 `make install` copies them to `~/.local/bin` _(override with `PREFIX`)_.
 
-> **Important:** To build vex from source, use a stable version of Zig
-> _(0.17.1 as of this writing)_, not a nightly. `std.Build`'s API changes
-> between development builds, and a mismatched compiler breaks both the
-> project and raylib's `build.zig`.
+> **Important:** To build vex from source, use a stable version of
+> [Zig](https://ziglang.org/) _(0.17.1 as of this writing)_, not a nightly.
+> `std.Build`'s API changes between development builds, and a mismatched
+> compiler breaks both the project and raylib's `build.zig`.
 {type="important"}
 
 ## Writing a cart
@@ -178,10 +178,10 @@ interpreter. That keeps the native host easy to build and easy to trust:
 no JIT, no platform-specific runtime, just an interpreter and a framebuffer.
 
 The second host runs in the browser. [`vex-web`](https://github.com/peterhellberg/vex/tree/main/cmd/vex-web)
-is a small Go server that serves a page embedding the same carts in a
-`<canvas>`. The console API is reimplemented in JavaScript, including the
-shared 8×8 bitmap font, and the cart file is read from disk on every
-request. The page watches it over
+is a small [Go](https://go.dev/) server that serves a page embedding the same
+carts in a `<canvas>`. The console API is reimplemented in JavaScript,
+including the shared 8×8 bitmap font, and the cart file is read from disk on
+every request. The page watches it over
 [Server-Sent Events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events),
 so rebuilding the cart live-reloads it in the browser.
 
