@@ -1,9 +1,10 @@
 {{- $src := .Get "src" -}}
 {{- $alt := .Get "alt" -}}
 {{- $style := default "--ar: 16/9;" (.Get "style") -}}
+{{- $href := default $src (.Get "href") -}}
 {{- with .Parent }}
           <div class="{{.Get "class" }}-wrapper" style="{{ $style | safeCSS }}">
-            <a href="{{ $src }}" target="_blank">
+            <a href="{{ $href }}" target="_blank">
               <img src="{{ $src }}" alt="{{ $alt }}" tooltip="{{ $alt }}" class="{{.Get "class" }}-image">
             </a>
           </div>
