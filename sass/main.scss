@@ -136,16 +136,7 @@ $lightred: #f5b3b07d;
   --logo-image: url("/images/logo_square-dark.svg");
 }
 
-:root {
-  --font-size-default: 15px;
-  --font-size-s: calc(var(--font-size-default) * 1.0);
-  --font-size-m: calc(var(--font-size-default) * 1.17);
-  --font-size-l: calc(var(--font-size-default) * 1.25);
-  --font-size-xl: calc(var(--font-size-default) * 1.38);
-  --font-size-base: var(--font-size-default);
-  --body-line-height: 1.428;
-  --heading-scale: 1.0667;
-
+@mixin light-theme {
   --bg: #{$gray};
   --surface: #{$white};
   --text: #{$black};
@@ -167,15 +158,28 @@ $lightred: #f5b3b07d;
   --tint-red: #{$lightred};
   --on-accent: #{$white};
   --logo-image: url("/images/logo_square.svg");
+}
+
+:root {
+  --font-size-default: 15px;
+  --font-size-s: calc(var(--font-size-default) * 1.0);
+  --font-size-m: calc(var(--font-size-default) * 1.17);
+  --font-size-l: calc(var(--font-size-default) * 1.25);
+  --font-size-xl: calc(var(--font-size-default) * 1.38);
+  --font-size-base: var(--font-size-default);
+  --body-line-height: 1.428;
+  --heading-scale: 1.0667;
+
+  @include dark-theme;
 
   scrollbar-color: var(--link) transparent;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) { @include dark-theme; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) { @include light-theme; }
 }
 
-:root[data-theme="dark"] { @include dark-theme; }
+:root[data-theme="light"] { @include light-theme; }
 
 ::selection {
   color: var(--on-accent);
@@ -456,22 +460,20 @@ pre {
     height: 24px;
     border-radius: 50%;
     background: var(--link);
+    transform: translateX(30px);
     transition: transform 0.15s ease, background 0.15s ease;
   }
 }
 
-@mixin dark-toggle {
-  #theme-toggle span {
-    transform: translateX(30px);
-    background: var(--link);
-  }
+@mixin light-toggle {
+  #theme-toggle span { transform: translateX(0); }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) { @include dark-toggle; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) { @include light-toggle; }
 }
 
-:root[data-theme="dark"] { @include dark-toggle; }
+:root[data-theme="light"] { @include light-toggle; }
 
 @import "media_queries";
 
