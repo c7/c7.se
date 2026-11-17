@@ -124,20 +124,36 @@ zig build run   # builds, installs and runs the cart with watch enabled
 
 ## The API {#api}
 
-- **Draw:** `cls(color)`, `pset(x, y, color)`, `rect(x, y, w, h, color)`,
-  `rectb(x, y, w, h, color)`, `circ(x, y, r, color)`, `circb(x, y, r, color)`,
-  `line(x0, y0, x1, y1, color)`, `tri(x1, y1, x2, y2, x3, y3, color)`,
-  `trib(x1, y1, x2, y2, x3, y3, color)`
-- **Sprites:** `blit(data, x, y, w, h, key)`,
-  `blitm(data, x, y, w, h, key, map)`
-- **Text:** `text(s, x, y, color)`, `title(s)`
-- **Palette:** `pal(index, rgb)`, `palreset()`
-- **Input:** `btn(button)`, `btnp(button)`, `mx()`, `my()`, `mbtn(button)`
-- **Audio:** `tone(freq, duration, volume, flags)`
+- **Draw**
+  - [`cls`](https://peterhellberg.github.io/vex/#vex.cls)`(color)`
+  - [`pset`](https://peterhellberg.github.io/vex/#vex.pset)`(x, y, color)`
+  - [`rect`](https://peterhellberg.github.io/vex/#vex.rect)`(x, y, w, h, color)`
+  - [`rectb`](https://peterhellberg.github.io/vex/#vex.rectb)`(x, y, w, h, color)`
+  - [`circ`](https://peterhellberg.github.io/vex/#vex.circ)`(x, y, r, color)`
+  - [`circb`](https://peterhellberg.github.io/vex/#vex.circb)`(x, y, r, color)`
+  - [`line`](https://peterhellberg.github.io/vex/#vex.line)`(x0, y0, x1, y1, color)`
+  - [`tri`](https://peterhellberg.github.io/vex/#vex.tri)`(x1, y1, x2, y2, x3, y3, color)`
+  - [`trib`](https://peterhellberg.github.io/vex/#vex.trib)`(x1, y1, x2, y2, x3, y3, color)`
+- **Sprites**
+  - [`blit`](https://peterhellberg.github.io/vex/#vex.blit)`(data, x, y, w, h, key)`
+  - [`blitm`](https://peterhellberg.github.io/vex/#vex.blitm)`(data, x, y, w, h, key, map)`
+- **Text**
+  - [`text`](https://peterhellberg.github.io/vex/#vex.text)`(s, x, y, color)`
+  - [`title`](https://peterhellberg.github.io/vex/#vex.title)`(s)`
+- **Palette**
+  - [`pal`](https://peterhellberg.github.io/vex/#vex.pal)`(index, rgb)`
+  - [`palreset`](https://peterhellberg.github.io/vex/#vex.palreset)`()`
+- **Input**
+  - [`btn`](https://peterhellberg.github.io/vex/#vex.btn)`(button)` — reports a held button
+  - [`btnp`](https://peterhellberg.github.io/vex/#vex.btnp)`(button)` — only the frame it was pressed
+  - [`mx`](https://peterhellberg.github.io/vex/#vex.mx)`()`
+  - [`my`](https://peterhellberg.github.io/vex/#vex.my)`()`
+  - [`mbtn`](https://peterhellberg.github.io/vex/#vex.mbtn)`(button)`
+- **Audio**
+  - [`tone`](https://peterhellberg.github.io/vex/#vex.tone)`(freq, duration, volume, flags)`
 
-`btn()` reports a held button, `btnp()` only the frame it was pressed, and
-every `color` is a palette index `0..15`. Details are in the
-[README](https://github.com/peterhellberg/vex#api).
+Every `color` is a palette index `0..15`  
+Full details are in the [API documentation](https://peterhellberg.github.io/vex/).
 
 ### Sprites
 
