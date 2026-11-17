@@ -40,6 +40,12 @@
 
   .article-footer #byline h2 { text-align: center; }
 
+  #theme-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
   #byline {
     .photo {
       margin-bottom: 0;

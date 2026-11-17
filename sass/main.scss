@@ -112,6 +112,30 @@ $lightred: #f5b3b07d;
 }
 /* font-fallback:end */
 
+@mixin dark-theme {
+  --bg: #161616;
+  --surface: #202020;
+  --text: #e6e6e4;
+  --muted: #a0a09c;
+  --border: #3a3a38;
+  --link: #a8d46a;
+  --link-hover: #ffffff;
+  --table-bg: #262626;
+  --table-alt: #202020;
+  --accent-blue: #4d9bc8;
+  --accent-green: #83ad50;
+  --accent-purple: #a37cc4;
+  --accent-yellow: #c9a510;
+  --accent-red: #c86b57;
+  --tint-blue: #1d2d3a;
+  --tint-green: #25331f;
+  --tint-purple: #2c2238;
+  --tint-yellow: #332d12;
+  --tint-red: #38211d;
+  --on-accent: #161616;
+  --logo-image: url("/images/logo_square-dark.svg");
+}
+
 :root {
   --font-size-default: 15px;
   --font-size-s: calc(var(--font-size-default) * 1.0);
@@ -122,19 +146,47 @@ $lightred: #f5b3b07d;
   --body-line-height: 1.428;
   --heading-scale: 1.0667;
 
-  scrollbar-color: $green transparent;
+  --bg: #{$gray};
+  --surface: #{$white};
+  --text: #{$black};
+  --muted: #777777;
+  --border: #{$light};
+  --link: #{$green};
+  --link-hover: #000000;
+  --table-bg: #f8f8f8;
+  --table-alt: #ffffff;
+  --accent-blue: #{$blue};
+  --accent-green: #{$green};
+  --accent-purple: #{$purple};
+  --accent-yellow: #{$yellow};
+  --accent-red: #{$red};
+  --tint-blue: #{$lightblue};
+  --tint-green: #{$lightgreen};
+  --tint-purple: #{$lightpurple};
+  --tint-yellow: #{$lightyellow};
+  --tint-red: #{$lightred};
+  --on-accent: #{$white};
+  --logo-image: url("/images/logo_square.svg");
+
+  scrollbar-color: var(--link) transparent;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { @include dark-theme; }
+}
+
+:root[data-theme="dark"] { @include dark-theme; }
+
 ::selection {
-  color: $white;
-  background: $green;
+  color: var(--on-accent);
+  background: var(--link);
 }
 
 /* #Logo
 ================================================== */
 
 #logo {
-  background: transparent url("/images/logo_square.svg") no-repeat top center;
+  background: var(--logo-image) no-repeat top center;
   background-size: 192px 192px;
   min-height: 175px;
   text-indent: -6000em;
@@ -165,7 +217,14 @@ $lightred: #f5b3b07d;
 }
 
 #main_header {
+  position: relative;
   margin-bottom: calc(var(--font-size-base) * 1.5);
+}
+
+.logo_link {
+  display: block;
+  width: 192px;
+  margin: 0 auto;
 }
 
 .vcard .photo {
@@ -178,6 +237,13 @@ $lightred: #f5b3b07d;
 
 #hcard-Peter-Hellberg div {
   margin-bottom: calc(var(--font-size-base) * 0.2);
+}
+
+#hcard-Peter-Hellberg .photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  display: block;
 }
 
 #byline {
@@ -238,8 +304,8 @@ $lightred: #f5b3b07d;
 }
 
 .footnotes ol li:target{
-  background-color: $lightgreen;
-  border: 0.12em solid $green;
+  background-color: var(--tint-green);
+  border: 0.12em solid var(--accent-green);
   border-radius: 0.5em;
   padding: 0.2em 0.5em 0.5em 0.5em;
   p {
@@ -267,10 +333,10 @@ $lightred: #f5b3b07d;
 ================================================== */
 
 html {
-  background: $gray;
+  background: var(--bg);
 }
 
-a { color: $green; text-decoration: underline; }
+a { color: var(--link); text-decoration: underline; }
 
 code {
   font-family: "Source Code Pro", monospace;
@@ -302,11 +368,11 @@ pre {
   font-weight: 500;
   margin-top: calc(var(--font-size-base) * 0.5);
   margin-bottom: var(--font-size-base);
-  border: 1px solid $light;
+  border: 1px solid var(--border);
   border-radius: var(--font-size-base);
-  outline: 1em solid $gray;
-  background: $white;
-  color:      $black;
+  outline: 1em solid var(--bg);
+  background: var(--surface);
+  color:      var(--text);
 }
 
 #article {
@@ -330,17 +396,17 @@ pre {
 
   li code, p code {
     font-weight: 600;
-    background: $gray;
+    background: var(--table-bg);
     border-radius: 0.3em;
     padding: 0.1em 0.2em;
   }
 
-  blockquote p { code { background: $lightgreen; } a { color: $green; } }
-  blockquote.note p { code { background: $lightblue; } a { color: $blue; } }
-  blockquote.tip p { code { background: $lightgreen; } a { color: $green; } }
-  blockquote.important p { code { background: $lightpurple; } a { color: $purple; } }
-  blockquote.warning p { code { background: $lightyellow; } a { color: $yellow; } }
-  blockquote.caution p { code { background: $lightred; } a { color: $red; } }
+  blockquote p { code { background: var(--tint-green); } a { color: var(--accent-green); } }
+  blockquote.note p { code { background: var(--tint-blue); } a { color: var(--accent-blue); } }
+  blockquote.tip p { code { background: var(--tint-green); } a { color: var(--accent-green); } }
+  blockquote.important p { code { background: var(--tint-purple); } a { color: var(--accent-purple); } }
+  blockquote.warning p { code { background: var(--tint-yellow); } a { color: var(--accent-yellow); } }
+  blockquote.caution p { code { background: var(--tint-red); } a { color: var(--accent-red); } }
 
   blockquote.with-top-margin {
     margin-top: 3rem;
@@ -371,6 +437,42 @@ pre {
 #page-not-found {
   padding-bottom: 5em;
 }
+
+#theme-toggle {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  z-index: 10;
+  width: 2.6em;
+  height: 1.4em;
+  padding: 0.15em;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--table-bg);
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background: var(--link);
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+}
+
+@mixin dark-toggle {
+  #theme-toggle span {
+    transform: translateX(1.2em);
+    background: var(--link);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { @include dark-toggle; }
+}
+
+:root[data-theme="dark"] { @include dark-toggle; }
 
 @import "media_queries";
 

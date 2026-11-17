@@ -21,12 +21,12 @@ body {
 
   h1 {
     font-weight: 900;
-    color: #333332;
+    color: var(--text);
   }
 
   h2, h3, h4 {
     font-weight: 600;
-    color: #333332;
+    color: var(--text);
   }
 
   h1 { font-size: calc(var(--font-size-base) * 2.0 * var(--heading-scale)); line-height: 1.1; margin-bottom: 0.4em; }
@@ -37,60 +37,60 @@ body {
 
   p  { margin-bottom: 27px; }
 
-  .subheader { color: #777; }
+  .subheader { color: var(--muted); }
 
   p img { margin: 0; }
-  p.lead { font-size: 21px; line-height: 27px; color: #777;  }
+  p.lead { font-size: 21px; line-height: 27px; color: var(--muted);  }
 
   em { font-style: italic; }
-  strong { font-weight: bold; color: #333; }
+  strong { font-weight: bold; color: var(--text); }
   small { font-size: 80%; }
 
 /*  Blockquotes  */
   blockquote, blockquote p { font-style: italic; margin-bottom: 0; }
   blockquote {
     margin: 0 0 1em 0;
-    padding: 0.2em 0.5em 0.5em 0.5em;
-    border: 0.12em solid $green;
+    padding: 0.5em;
+    border: 0.12em solid var(--accent-green);
     border-radius: 0.5em;
-    background: $lightgreen;
+    background: var(--tint-green);
     p {
       padding-top: 0;
     }
   }
-  
+
   blockquote.note {
-    border-color: $blue; background: $lightblue; 
-    ::selection { color: $white; background: $blue; } 
+    border-color: var(--accent-blue); background: var(--tint-blue);
+    ::selection { color: var(--on-accent); background: var(--accent-blue); }
   }
-  
+
   blockquote.tip {
-    border-color: $green; background: $lightgreen;
-    ::selection { color: $white; background: $green; } 
+    border-color: var(--accent-green); background: var(--tint-green);
+    ::selection { color: var(--on-accent); background: var(--accent-green); }
   }
-  
-  blockquote.important { 
-    border-color: $purple; background: $lightpurple; 
-    ::selection { color: $white; background: $purple; } 
+
+  blockquote.important {
+    border-color: var(--accent-purple); background: var(--tint-purple);
+    ::selection { color: var(--on-accent); background: var(--accent-purple); }
   }
-  
-  blockquote.warning { 
-    border-color: $yellow; background: $lightyellow; 
-    ::selection { color: $black; background: $yellow; } 
+
+  blockquote.warning {
+    border-color: var(--accent-yellow); background: var(--tint-yellow);
+    ::selection { color: var(--on-accent); background: var(--accent-yellow); }
   }
-  
-  blockquote.caution { 
-    border-color: $red; background: $lightred; 
-    ::selection { color: $white; background: $red; } 
+
+  blockquote.caution {
+    border-color: var(--accent-red); background: var(--tint-red);
+    ::selection { color: var(--on-accent); background: var(--accent-red); }
   }
 
 /* Horizontal line */
-  hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
+  hr { border: solid var(--border); border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
 
 /* #Links
 ================================================== */
   a, a:visited { text-decoration: none; outline: 0; }
-  a:hover, a:focus { color: #000; text-decoration: underline; }
+  a:hover, a:focus { color: var(--link-hover); text-decoration: underline; }
   p a, p a:visited { line-height: inherit; }
 
 
@@ -121,18 +121,18 @@ body {
   .add-bottom { margin-bottom: 20px !important; }
 
 tbody tr {
-  background-color: #F8F8F8;
-  border-top: 1px solid #CCC;
+  background-color: var(--table-bg);
+  border-top: 1px solid var(--border);
   margin: 0;
   padding: 0;
 }
 
 tr:nth-child(2n) {
-  background-color: white;
+  background-color: var(--table-alt);
 }
 
 th,td {
-  border: 1px solid #CCC;
+  border: 1px solid var(--border);
   text-align: left;
   margin: 0;
   padding: 6px 13px;

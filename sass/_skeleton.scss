@@ -123,7 +123,7 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222; }
+  color: var(--text, #222); }
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -154,9 +154,9 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
+  color: var(--link, #1EAEDB); }
 a:hover {
-  color: #0FA0CE; }
+  color: var(--link-hover, #0FA0CE); }
 
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -182,7 +182,7 @@ th,
 td {
   padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid #E1E1E1; }
+  border-bottom: 1px solid var(--border, #E1E1E1); }
 th:first-child,
 td:first-child {
   padding-left: 0; }
@@ -230,7 +230,7 @@ hr {
   margin-top: 3rem;
   margin-bottom: 3.5rem;
   border-width: 0;
-  border-top: 1px solid #E1E1E1; }
+  border-top: 1px solid var(--border, #E1E1E1); }
 
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
