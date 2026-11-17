@@ -2,7 +2,7 @@
 ================================================== */
 
 body {
-  line-height:      1.428;
+  line-height:      var(--body-line-height, 1.428);
   font-weight:      400;
   font-size:        var(--font-size-base);
   font-size-adjust: none;
@@ -29,11 +29,11 @@ body {
     color: #333332;
   }
 
-  h1 { font-size: calc(var(--font-size-base) * 2.0); line-height: 1.1; margin-bottom: 0.4em; }
-  h2 { font-size: calc(var(--font-size-base) * 1.4); line-height: 1.2; margin-bottom: 0.7em; margin-top: 0.3em; }
-  h3 { font-size: calc(var(--font-size-base) * 1.17); margin-bottom: 4px; }
-  h4 { font-size: calc(var(--font-size-base) * 1.0); margin-top: 20px; }
-  h5 { font-size: calc(var(--font-size-base) * 0.83); }
+  h1 { font-size: calc(var(--font-size-base) * 2.0 * var(--heading-scale)); line-height: 1.1; margin-bottom: 0.4em; }
+  h2 { font-size: calc(var(--font-size-base) * 1.4 * var(--heading-scale)); line-height: 1.2; margin-bottom: 0.7em; margin-top: 0.3em; }
+  h3 { font-size: calc(var(--font-size-base) * 1.17 * var(--heading-scale)); margin-bottom: 4px; }
+  h4 { font-size: calc(var(--font-size-base) * 1.0 * var(--heading-scale)); margin-top: 20px; }
+  h5 { font-size: calc(var(--font-size-base) * 0.83 * var(--heading-scale)); }
 
   p  { margin-bottom: 27px; }
 

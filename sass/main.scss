@@ -19,13 +19,74 @@ $lightred: #f5b3b07d;
 
 // https://colordesigner.io/color-palette-builder
 
+/* font-fallback:start */
+@font-face {
+  font-family: "Faustina Fallback";
+  src: local("Georgia");
+  size-adjust: 93.61%;
+  ascent-override: 104.3%;
+  descent-override: 21.7%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Source Serif 4 Fallback";
+  src: local("Georgia");
+  size-adjust: 108.12%;
+  ascent-override: 103.6%;
+  descent-override: 33.5%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "PT Serif Fallback";
+  src: local("Georgia");
+  size-adjust: 101.14%;
+  ascent-override: 103.9%;
+  descent-override: 28.6%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Bitter Fallback";
+  src: local("Georgia");
+  size-adjust: 105.02%;
+  ascent-override: 93.5%;
+  descent-override: 26.5%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Charis SIL Fallback";
+  src: local("Georgia");
+  size-adjust: 101.19%;
+  ascent-override: 119.63%;
+  descent-override: 43.95%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Inter Fallback";
+  src: local("Arial");
+  size-adjust: 107.09%;
+  ascent-override: 96.88%;
+  descent-override: 24.12%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Lora Fallback";
+  src: local("Georgia");
+  size-adjust: 105.64%;
+  ascent-override: 100.6%;
+  descent-override: 27.4%;
+  line-gap-override: 0%;
+}
+/* font-fallback:end */
+
 :root {
-  --font-size-default: 16px;
+  --font-size-default: 15px;
   --font-size-s: calc(var(--font-size-default) * 1.0);
   --font-size-m: calc(var(--font-size-default) * 1.17);
   --font-size-l: calc(var(--font-size-default) * 1.25);
   --font-size-xl: calc(var(--font-size-default) * 1.38);
   --font-size-base: var(--font-size-default);
+  --body-line-height: 1.428;
+  --heading-scale: 1.0667;
 
   scrollbar-color: $green transparent;
 }
@@ -108,12 +169,12 @@ $lightred: #f5b3b07d;
 .hidden { display: none; }
 
 .main-title {
-  font-size: 3em;
+  font-size: calc(3em * var(--heading-scale));
 }
 
 .footnotes::before {
   content: 'Footnotes';
-  font-size: calc(var(--font-size-base) * 1.4);
+  font-size: calc(var(--font-size-base) * 1.4 * var(--heading-scale));
   line-height: 1.6;
   display: block;
   margin-top: 2em;
@@ -163,7 +224,7 @@ a { color: $green; text-decoration: underline; }
 code {
   font-family: "Source Code Pro", monospace;
   font-weight: 500;
-  font-size: 0.85em;
+  font-size: 0.95em;
 }
 
 pre code {
@@ -186,8 +247,8 @@ pre {
 }
 
 .container {
-  font-family: "ff-tisa-web-pro",Georgia,Cambria,serif;
-  font-weight: 400;
+  font-family: "Bitter", "Bitter Fallback",Georgia,Cambria,serif;
+  font-weight: 500;
   margin-top: calc(var(--font-size-base) * 0.5);
   margin-bottom: var(--font-size-base);
   border: 1px solid $light;

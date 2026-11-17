@@ -14,7 +14,8 @@
   Components:   Hugo, Skeleton CSS, Make
   Software:     neovim, git, rsync
 
-  Fonts:        FF Tisa Web Pro <https://typekit.com/fonts/ff-tisa-web-pro/>
+  Fonts:        Bitter <https://fonts.google.com/specimen/Bitter>
+                Source Code Pro <https://fonts.google.com/specimen/Source+Code+Pro>
                 Yanone Kaffeesatz <http://www.yanone.de/typedesign/kaffeesatz/>
 
   Hosting:      GleSYS <http://glesys.com/>

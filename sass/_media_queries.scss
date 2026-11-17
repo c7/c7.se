@@ -27,7 +27,7 @@
   }
 
   .main-title {
-    font-size: calc(var(--font-size-base) * 1.8);
+    font-size: calc(var(--font-size-base) * 1.8 * var(--heading-scale));
   }
 
   #byline {
