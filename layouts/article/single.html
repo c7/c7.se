@@ -86,6 +86,11 @@
           wrapper.querySelector('.embed-open').hidden = false;
           frame.focus();
         });
+
+        document.querySelectorAll('.embed-wrapper').forEach(function (wrapper) {
+          var frame = wrapper.querySelector('.embed-frame');
+          frame.addEventListener('click', function () { frame.focus(); });
+        });
       })();
     </script>
 {{ partial "footer.html" . }}
