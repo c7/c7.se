@@ -162,11 +162,9 @@ $lightred: #f5b3b07d;
 
 :root {
   --font-size-default: 15px;
-  --font-size-s: calc(var(--font-size-default) * 1.0);
-  --font-size-m: calc(var(--font-size-default) * 1.17);
   --font-size-l: calc(var(--font-size-default) * 1.25);
   --font-size-xl: calc(var(--font-size-default) * 1.38);
-  --font-size-base: var(--font-size-default);
+  --font-size-base: var(--font-size-l);
   --body-line-height: 1.428;
   --heading-scale: 1.0667;
 
@@ -278,8 +276,10 @@ $lightred: #f5b3b07d;
   }
 }
 
-.hljs {
-  font-size: 1em;
+pre code.hljs {
+  font-size: 0.95em;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
 
 .social li {
@@ -351,7 +351,7 @@ code {
 pre code {
   font-weight: 525;
   line-height: 1.25;
-  font-size: 0.5em;
+  font-size: 0.95em;
 }
 
 iframe {

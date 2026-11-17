@@ -2,10 +2,6 @@
 ================================================== */
 
 @media (max-width: 550px) {
-  :root {
-    --font-size-base: var(--font-size-l);
-  }
-
   #logo {
     background-size: 164px 164px;
     min-height: 164px;
@@ -55,10 +51,6 @@
     }
   }
 
-
-  .hljs {
-    font-size: 0.7em;
-  }
 }
 
 @media (max-width: 650px) {
@@ -80,8 +72,8 @@
     display: block;
   }
 
-  .hljs {
-    font-size: 0.7em;
+  pre code.hljs {
+    padding: 0.6em;
   }
 
   iframe {
@@ -105,14 +97,6 @@
 }
 
 @media (min-width: 650px) {
-  :root {
-    --font-size-base: var(--font-size-s);
-  }
-
-  .hljs {
-    font-size: 0.85em;
-  }
-
   #logo {
     background-size: 128px 128px;
     min-height: 118px;
@@ -120,10 +104,6 @@
 }
 
 @media (min-width: 750px) {
-  :root {
-    --font-size-base: var(--font-size-m);
-  }
-
   #logo {
     background-size: 180px 180px;
     min-height: 165px;
@@ -131,14 +111,6 @@
 }
 
 @media (min-width: 1000px) {
-  :root {
-    --font-size-base: var(--font-size-l);
-  }
-
-  .hljs {
-    font-size: 0.9em;
-  }
-
   #logo {
     background-size: 220px 220px;
     min-height: 200px;
@@ -160,9 +132,6 @@
     --font-size-base: var(--font-size-xl);
   }
 
-  .hljs {
-    font-size: 0.85em;
-  }
 }
 
 @media (min-width: 1261px) {
