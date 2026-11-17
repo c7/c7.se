@@ -40,12 +40,6 @@
 
   .article-footer #byline h2 { text-align: center; }
 
-  #theme-toggle {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-
   #byline {
     .photo {
       margin-bottom: 0;
@@ -168,5 +162,24 @@
 
   .hljs {
     font-size: 0.85em;
+  }
+}
+
+@media (min-width: 1261px) {
+  #theme-toggle {
+    position: fixed;
+    top: auto;
+    bottom: 16px;
+    right: 16px;
+    z-index: 10;
+    width: 54px;
+    height: 30px;
+
+    span { width: 20px; height: 20px; }
+  }
+
+  :root:not([data-theme="light"]) #theme-toggle span,
+  :root[data-theme="dark"] #theme-toggle span {
+    transform: translateX(28px);
   }
 }

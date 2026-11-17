@@ -439,13 +439,12 @@ pre {
 }
 
 #theme-toggle {
-  position: fixed;
-  top: 1em;
-  right: 1em;
-  z-index: 10;
-  width: 2.6em;
-  height: 1.4em;
-  padding: 0.15em;
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  width: 60px;
+  height: 34px;
+  padding: 3px;
   border: 1px solid var(--border);
   border-radius: 999px;
   background: var(--table-bg);
@@ -453,8 +452,8 @@ pre {
 
   span {
     display: block;
-    width: 1em;
-    height: 1em;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     background: var(--link);
     transition: transform 0.15s ease, background 0.15s ease;
@@ -463,7 +462,7 @@ pre {
 
 @mixin dark-toggle {
   #theme-toggle span {
-    transform: translateX(1.2em);
+    transform: translateX(30px);
     background: var(--link);
   }
 }
