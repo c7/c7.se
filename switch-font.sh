@@ -74,8 +74,13 @@ case "${1:-}" in
     ;;
 esac
 
-# Replace only the line inside the body-font markers.
-awk -v link="    <link href=\"$href\" rel=\"stylesheet\">" '
+# Replace only the line inside the body-font markers. Bitter is self-hosted,
+# so it has no stylesheet link; the other options still come from Google.
+font_link="    <link href=\"$href\" rel=\"stylesheet\">"
+if [ "$family" = "Bitter" ]; then
+  font_link="    <!-- Bitter is self-hosted in sass/main.scss -->"
+fi
+awk -v link="$font_link" '
   /<!-- body-font:start -->/ { print; getline; print link; inside = 1; next }
   inside && /<!-- body-font:end -->/   { print; inside = 0; next }
   inside { next }
