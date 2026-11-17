@@ -61,7 +61,7 @@ WASM-4 [^wasm4] is currently my favorite fantasy console, it is severely limited
 #### Example of a WASM-4 cart I've written
 
 <script>window.addEventListener('touchstart', {});</script>
-<iframe src="https://assets.c7.se/games/w4-balls/" width="100%" allow="fullscreen; gamepad; autoplay" style="max-height: 100dvh; aspect-ratio: 1/1.7;" frameborder="0"></iframe>
+<iframe src="https://assets.c7.se/games/w4-balls/" width="100%" allow="fullscreen; gamepad; autoplay" style="max-width: 100dvh; aspect-ratio: 1/1;" frameborder="0"></iframe>
 
 ---------
 
