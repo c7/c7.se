@@ -1,0 +1,26 @@
+<button id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Toggle dark mode"><span></span></button>
+<script>
+  (function () {
+    var b = document.getElementById('theme-toggle');
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    function current() {
+      var t = document.documentElement.dataset.theme;
+      return t || (mq.matches ? 'dark' : 'light');
+    }
+    function label() {
+      var dark = current() === 'dark';
+      b.setAttribute('aria-checked', dark ? 'true' : 'false');
+      b.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+    label();
+    b.addEventListener('click', function () {
+      var next = current() === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      label();
+    });
+    var onChange = function () { if (!document.documentElement.dataset.theme) label(); };
+    if (mq.addEventListener) mq.addEventListener('change', onChange);
+    else mq.addListener(onChange);
+  })();
+</script>
