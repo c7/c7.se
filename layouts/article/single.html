@@ -66,4 +66,26 @@
     <script src="/js/zig.min.js"></script>
     <script src="/js/typ.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script>
+      (function () {
+        document.addEventListener('click', function (event) {
+          var button = event.target.closest('.embed-button');
+          if (!button) return;
+          var wrapper = button.closest('.embed-wrapper');
+
+          document.querySelectorAll('.embed-wrapper').forEach(function (other) {
+            other.querySelector('.embed-frame').hidden = true;
+            other.querySelector('.embed-button').hidden = false;
+            other.querySelector('.embed-open').hidden = true;
+          });
+
+          var frame = wrapper.querySelector('.embed-frame');
+          frame.src = wrapper.dataset.embed;
+          frame.hidden = false;
+          button.hidden = true;
+          wrapper.querySelector('.embed-open').hidden = false;
+          frame.focus();
+        });
+      })();
+    </script>
 {{ partial "footer.html" . }}

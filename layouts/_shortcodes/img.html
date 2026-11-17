@@ -2,12 +2,32 @@
 {{- $alt := .Get "alt" -}}
 {{- $style := default "--ar: 16/9;" (.Get "style") -}}
 {{- $href := default $src (.Get "href") -}}
-{{- with .Parent }}
-          <div class="{{.Get "class" }}-wrapper" style="{{ $style | safeCSS }}">
-            <a href="{{ $href }}" target="_blank">
-              <img src="{{ $src }}" alt="{{ $alt }}" tooltip="{{ $alt }}" class="{{.Get "class" }}-image">
+{{- $play := .Get "play" -}}
+{{- $parent := .Parent -}}
+{{- $class := "" -}}
+{{- if $parent }}{{ $class = $parent.Get "class" }}{{ else }}{{ $class = .Get "class" }}{{ end -}}
+{{- $wrapperClass := "" -}}
+{{- with $class }}{{ $wrapperClass = printf "%s-wrapper" . }}{{ end -}}
+{{- $imageClass := "" -}}
+{{- with $class }}{{ $imageClass = printf "%s-image" . }}{{ end -}}
+{{- if $play }}
+          <div class="{{ $wrapperClass }} embed-wrapper" style="{{ $style | safeCSS }}" data-embed="{{ $href }}">
+            <button type="button" class="embed-button" aria-label="Play {{ $alt }}">
+              <img src="{{ $src }}" alt="{{ $alt }}" tooltip="{{ $alt }}" class="embed-image {{ $imageClass }}">
+            </button>
+            <iframe class="embed-frame" title="{{ $alt }}" allow="fullscreen" allowfullscreen hidden></iframe>
+            <a class="embed-open" href="{{ $href }}" target="_blank" rel="noopener" aria-label="Open {{ $alt }} in a new tab" hidden>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M15 3h6v6M10 14 21 3M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6"></path>
+              </svg>
             </a>
           </div>
-{{- else -}}
+{{- else if $parent }}
+          <div class="{{ $wrapperClass }}" style="{{ $style | safeCSS }}">
+            <a href="{{ $href }}" target="_blank">
+              <img src="{{ $src }}" alt="{{ $alt }}" tooltip="{{ $alt }}" class="{{ $imageClass }}">
+            </a>
+          </div>
+{{- else }}
           <img src="{{ $src }}" style="{{ $style | safeCSS }}">
-{{- end -}}
+{{- end }}
