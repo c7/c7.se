@@ -31,7 +31,7 @@ There is no IDE, no proprietary cartridge format and no custom toolchain. If
 your language can compile to `wasm32-freestanding` and call imported
 functions, it can make a vex cart.
 
-### Specs
+### Hardware specs
 
 - **Display:** 320×180 framebuffer, scaled with nearest-neighbour filtering.
 - **Palette:** 16 [SWEETIE-16](https://lospec.com/palette-list/sweetie-16)
@@ -121,9 +121,7 @@ zig build run   # builds, installs and runs the cart with watch enabled
 > No restart.
 {type="tip with-top-margin"}
 
-## The API
-
-### Cheatsheet
+## The API {#api}
 
 - **Draw:** `cls(color)`, `pset(x, y, color)`, `rect(x, y, w, h, color)`,
   `rectb(x, y, w, h, color)`, `circ(x, y, r, color)`, `circb(x, y, r, color)`,
