@@ -30,6 +30,16 @@
     font-size: calc(var(--font-size-base) * 1.8 * var(--heading-scale));
   }
 
+  .article-footer #byline .vcard {
+    flex-direction: column;
+    align-items: center;
+
+    .photo-container { flex: 0 0 128px; }
+    .photo { width: 128px; max-height: 128px; }
+  }
+
+  .article-footer #byline h2 { text-align: center; }
+
   #byline {
     .photo {
       margin-bottom: 0;

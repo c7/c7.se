@@ -182,13 +182,29 @@ $lightred: #f5b3b07d;
 
 #byline {
   padding-top: 1em;
-  h2 { font-weight: 700; }
+  h2 { font-weight: 700; text-align: center; }
   .photo {
-    margin-bottom: 0;
+    margin-bottom: 0.75em;
     max-height: 192px;
     margin-left: auto;
     margin-right: auto;
     display: block;
+  }
+}
+
+.byline-card {
+  margin-top: 1.5em;
+}
+
+.article-footer {
+  #byline {
+    padding: 1.5em;
+
+    .vcard { display: flex; flex-direction: row-reverse; align-items: center; gap: 1.5em; }
+    .vcard > div:not(.photo-container) { flex: 1; }
+    .photo-container { flex: 0 0 96px; }
+    .photo { width: 96px; max-height: 96px; margin: 0; }
+    h2 { font-size: 26px; line-height: 1.5; font-weight: 600; text-align: left; margin: 0; }
   }
 }
 
