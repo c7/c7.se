@@ -27,9 +27,10 @@ drawing, input and audio API from the host. The host opens a window, calls
 `update()` sixty times per second, and blits the fixed 320×180 framebuffer
 to the screen.
 
-There is no IDE, no proprietary cartridge format and no custom toolchain. If
-your language can compile to `wasm32-freestanding` and call imported
-functions, it can make a vex cart.
+> There is no IDE, no proprietary cartridge format and no custom toolchain. If
+> your language can compile to `wasm32-freestanding` and call imported
+> functions, it can make a vex cart.
+{type="tip"}
 
 ### Hardware specs
 
