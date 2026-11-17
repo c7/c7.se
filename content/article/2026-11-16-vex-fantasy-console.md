@@ -4,10 +4,10 @@ type: article
 date: 2026-11-16
 url: /vex-fantasy-console/
 image: /assets/vex-fantasy-console/teapot.png
-title: Vex, a small WebAssembly fantasy console
+title: Vex, my WebAssembly fantasy console
 summary:
-    Building a small fantasy console that runs WebAssembly carts
-    on a 320×180, sixteen-color screen.
+    A 320×180, sixteen-color console that runs wasm32 carts,
+    with single-file C and Zig SDKs.
 ---
 
 A couple of years ago I wrote about
