@@ -167,13 +167,19 @@ decodes it into that block at compile time.
 
 ### Audio
 
-Audio is a single `tone()` call with four bit-packed integers: `freq`
-carries an optional slide target, `duration` holds the four
-[ADSR](https://en.wikipedia.org/wiki/ADSR_envelope) segment lengths in
-frames, `volume` holds the sustain level and any FM parameters,
-and `flags` picks the channel, waveform, duty cycle and panning, plus
-switches for hold, release, PWM and FM. The SDKs provide helpers so you
-never pack those bits by hand. Middle C for one second on channel 0:
+A single `tone()` call covers all audio, with four bit-packed integers:
+
+- `freq` carries an optional slide target
+- `duration` holds the four
+  [ADSR](https://en.wikipedia.org/wiki/ADSR_envelope) segment lengths in
+  frames
+- `volume` holds the sustain level and any FM parameters
+- `flags` picks the channel, waveform, duty cycle and panning, plus switches
+  for hold, release, PWM and FM
+
+The SDKs provide helpers so you never pack those bits by hand.
+
+Middle C for one second on channel 0:
 
 ```c
 tone(262, VEX_TONE_DURATION(0, 0, 60, 0), VEX_TONE_VOLUME(100, 0),
